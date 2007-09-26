@@ -1,3 +1,7 @@
 R1-0:
 The first release of ISEG VHS x0x driver and device support
 
+VHSx0x-R1-0:
+The above has no funtional changes. Only following
+the LCLS convention for cvs tags.
+

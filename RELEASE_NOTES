@@ -1,0 +1,10 @@
+
+VHSx0x-R1-1:
+Built against EPICS R3.14.8.2 and RTEMS 4.7.1 (base-R3-14-8-2-lcls2)
+
+VHSx0x-R1-0:
+The above has no funtional changes. Only following
+the LCLS convention for cvs tags.
+
+R1-0:
+The first release of ISEG VHS x0x driver and device support

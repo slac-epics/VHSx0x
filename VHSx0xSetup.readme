@@ -14,7 +14,7 @@ To change the base address, follow the procedure below:
 a. Unless you know the current base address,
    set "ADR" jumper to force the base address to 0x4000;
 b. Load iocBoot/iocVHSx0xTest/st.cmd.setup
-c. Run VHSx0xSetup(oldBaseAddr, newBaseAddr)
+c. Run VHSx0xSetup(oldBaseAddr, newBaseAddr), if you are using RTEMS, do "bspExtVerbosity=0" before you run VHSx0xSetup.
 d. Power down and make sure "ADR" is NOT set
    if you don't want base address to be 0x4000;
 e. Power on and use the new base address;

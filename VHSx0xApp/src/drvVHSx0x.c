@@ -1,5 +1,5 @@
 /***************************************************************************\
- *   $Id: drvVHSx0x.c,v 1.1.1.1 2007/03/26 05:38:30 peng Exp $
+ *   $Id: drvVHSx0x.c,v 1.1.1.1 2007/08/16 23:10:54 pengs Exp $
  *   File:		drvVHSx0x.c
  *   Author:		Sheng Peng
  *   Email:		pengsh2003@yahoo.com
@@ -116,7 +116,8 @@ int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr)
     
     printf("We found iseg VHSx0x at VME A16 0x%0X\n", oldVMEBaseAddr);
 
-    if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) )
+    /* if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) ) */
+    if(1)
     {/* system byte order matches VHS board byte order */
         printf("Serial Number = %d\n", serialNumber);
         printf("Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);
@@ -229,7 +230,8 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
     
     printf("We found iseg VHSx0x at VME A16 0x%0X\n", VMEBaseAddr);
 
-    if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) )
+    /* if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) ) */
+    if(1)
     {/* system byte order matches VHS board byte order */
         printf("Serial Number = %d\n", serialNumber);
         printf("Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);

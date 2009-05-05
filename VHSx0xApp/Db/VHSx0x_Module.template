@@ -8,14 +8,14 @@
 # DI             - Device Instance
 # CARD           - VHSx0x Card Number (0, 1, 2, ...)
 
-record(mbbiDirect, "$(S)_$(SS):$(DVC)$(N)$(DI):ModuleStatus") {
+record(mbbiDirect, "$(S):$(SS):$(DVC)$(N)$(DI):ModuleStatus") {
   field(DESC, "Module Status")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP,  "#C$(CARD) S0 @ModuleStatus")
 }
 
-record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):ModuleControlKILena") {
+record(bo, "$(S):$(SS):$(DVC)$(N)$(DI):ModuleControlKILena") {
   field(DESC, "Enable Kill")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S0 @ModuleControlKILena")
@@ -23,7 +23,7 @@ record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):ModuleControlKILena") {
   field(ONAM, "Enable")
 }
 
-record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):ModuleControlCLEAR") {
+record(bo, "$(S):$(SS):$(DVC)$(N)$(DI):ModuleControlCLEAR") {
   field(DESC, "Clear Kill")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S0 @ModuleControlCLEAR")
@@ -31,7 +31,7 @@ record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):ModuleControlCLEAR") {
   field(ONAM, "Clear")
 }
 
-record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageRampSpeed") {
+record(ao, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageRampSpeed") {
   field(DESC, "VoltageRampSpeed")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S0 @VoltageRampSpeed")
@@ -43,7 +43,7 @@ record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageRampSpeed") {
   field(EGU,  "%NominalV")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageMax") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageMax") {
   field(DESC, "VoltageMax")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -54,7 +54,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageMax") {
   field(EGU,  "%NominalV")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentMax") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):CurrentMax") {
   field(DESC, "CurrentMax")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -65,7 +65,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentMax") {
   field(EGU,  "%NominalI")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):SupplyP5") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):SupplyP5") {
   field(DESC, "Supply +5V")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -84,7 +84,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):SupplyP5") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):SupplyP12") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):SupplyP12") {
   field(DESC, "Supply +12V")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -103,7 +103,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):SupplyP12") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):SupplyN12") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):SupplyN12") {
   field(DESC, "Supply -12V")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -122,7 +122,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):SupplyN12") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):Temperature") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):Temperature") {
   field(DESC, "Temperature")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -141,7 +141,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):Temperature") {
   field(LLSV, "MAJOR")
 }
 
-record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):AllChannelEMCY") {
+record(bo, "$(S):$(SS):$(DVC)$(N)$(DI):AllChannelEMCY") {
   field(DESC, "All Channel Off")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S0 @AllChannelEMCY")
@@ -149,15 +149,16 @@ record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):AllChannelEMCY") {
   field(ONAM, "Off")
 }
 
-record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):AllChannelOnOff") {
+record(bo, "$(S):$(SS):$(DVC)$(N)$(DI):AllChannelOnOff") {
   field(DESC, "All Channel OnOff")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S0 @AllChannelOnOff")
   field(ZNAM, "Off")
   field(ONAM, "On")
+#  field(PINI, "YES")
 }
 
-record(stringin, "$(S)_$(SS):$(DVC)$(N)$(DI):DeviceInfo") {
+record(stringin, "$(S):$(SS):$(DVC)$(N)$(DI):DeviceInfo") {
   field(DESC, "DeviceInfo")
   field(DTYP, "VHSx0x")
   field(INP,  "#C$(CARD) S0 @DeviceInfo")

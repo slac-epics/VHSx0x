@@ -23,39 +23,40 @@
 # HV.SMOO
 # HV.HYST
 
-record(mbbiDirect, "$(S)_$(SS):$(DVC)$(N)$(DI):ChannelStatus") {
+record(mbbiDirect, "$(S):$(SS):$(DVC)$(N)$(DI):ChannelStatus") {
   field(DESC, "Channel Status")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP,  "#C$(CARD) S$(SIGNAL) @ChannelStatus")
 }
 
-record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):ChannelControlEMCY") {
+record(bo, "$(S):$(SS):$(DVC)$(N)$(DI):ChannelControlEMCY") {
   field(DESC, "Channel Off")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S$(SIGNAL) @ChannelControlEMCY")
   field(ZNAM, "Off")
   field(ONAM, "Off")
-  field(FLNK, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageSet0")
+  field(FLNK, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageSet0")
 }
 
-record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageSet0") {
+record(ao, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageSet0") {
   field(DESC, "VoltageSet 0")
   field(VAL,  "0")
   field(PREC, "3")
   field(EGU,  "Volts")
-  field(OUT,  "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageSet PP")
+  field(OUT,  "$(S):$(SS):$(DVC)$(N)$(DI):VoltageSet PP")
 }
 
-record(bo, "$(S)_$(SS):$(DVC)$(N)$(DI):ChannelControlOnOff") {
+record(bo, "$(S):$(SS):$(DVC)$(N)$(DI):ChannelControlOnOff") {
   field(DESC, "Channel OnOff")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S$(SIGNAL) @ChannelControlOnOff")
   field(ZNAM, "Off")
   field(ONAM, "On")
+#  field(PINI, "YES")
 }
 
-record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageSet") {
+record(ao, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageSet") {
   field(DESC, "VoltageSet")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S$(SIGNAL) @VoltageSet")
@@ -73,9 +74,10 @@ record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageSet") {
   field(HSV,  "MINOR")
   field(LSV,  "MINOR")
   field(LLSV, "MAJOR")
+#  field(PINI, "YES")
 }
 
-record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentTrip") {
+record(ao, "$(S):$(SS):$(DVC)$(N)$(DI):CurrentTrip") {
   field(DESC, "CurrentTrip")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S$(SIGNAL) @CurrentSet")
@@ -83,7 +85,7 @@ record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentTrip") {
   field(EGU,  "Amps")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageMeasure") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageMeasure") {
   field(DESC, "VoltageMeasure")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -106,7 +108,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageMeasure") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentMeasure") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):CurrentMeasure") {
   field(DESC, "CurrentMeasure")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -115,7 +117,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentMeasure") {
   field(EGU,  "Amps")
 }
 
-record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageBounds") {
+record(ao, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageBounds") {
   field(DESC, "VoltageBounds")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S$(SIGNAL) @VoltageBounds")
@@ -123,7 +125,7 @@ record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageBounds") {
   field(EGU,  "Volts")
 }
 
-record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentBounds") {
+record(ao, "$(S):$(SS):$(DVC)$(N)$(DI):CurrentBounds") {
   field(DESC, "CurrentBounds")
   field(DTYP, "VHSx0x")
   field(OUT,  "#C$(CARD) S$(SIGNAL) @CurrentBounds")
@@ -131,7 +133,7 @@ record(ao, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentBounds") {
   field(EGU,  "Amps")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageNominal") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageNominal") {
   field(DESC, "VoltageNominal")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -140,7 +142,7 @@ record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):VoltageNominal") {
   field(EGU,  "Volts")
 }
 
-record(ai, "$(S)_$(SS):$(DVC)$(N)$(DI):CurrentNominal") {
+record(ai, "$(S):$(SS):$(DVC)$(N)$(DI):CurrentNominal") {
   field(DESC, "CurrentNominal")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")

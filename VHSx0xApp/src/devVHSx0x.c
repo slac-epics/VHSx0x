@@ -1,5 +1,5 @@
 /***************************************************************************\
- *   $Id: devVHSx0x.c,v 1.1.1.1 2007/03/26 05:38:30 peng Exp $
+ *   $Id: devVHSx0x.c,v 1.1.1.1 2007/08/16 23:10:54 pengs Exp $
  *   File:		devVHSx0x.c
  *   Author:		Sheng Peng
  *   Email:		pengsh2003@yahoo.com

@@ -1,7 +1,32 @@
-1. How to user VHSx0xSetup:
+#==============================================================
+#
+#  Name: README
+#
+#  This is a driver for the ISEG VHSx0x High Voltage Modules
+#
+#==============================================================
 
-The iseg VHSx0x module needs 1KB VME A16 address space.
-So we could select A15 ~ A10.
+1.	How to use this module in your IOC
+Add the following lines in your iocTop/configure/RELEASE:
+VHSX0X=$(EPICS_MODULES)/VHSx0x/$(VHSX0X_MODULE_VERSION)
+
+Copy the following files to your iocTop/<iocName>/<iocName>App/Db directory:
+	VHSx0xApp/Db/vhs.substitutions
+Modify as needed for your ioc
+
+Add the following lines in your iocTop/<iocName>/<iocName>App/Db/Makefile:
+DB += vhs.db
+
+Add the following lines in your iocTop/<iocName>/<iocName>App/src/Makefile:
+<iocName>_DBD += VHSx0x.dbd
+<iocName>_LIBS += VHSx0x
+
+2.	Setup for first time board is installed
+
+The iseg VHSx0x module needs 1KB VME A16 address space,
+so valid addresses are:
+	0x0400, 0x0800, 0x0C00, 0x1000, 0x1400, ... 0xFC00
+
 The way to set base address for VHSx0x is unusual.
 It doesn't have 6 jumpers for A15 ~ A10 as you usually expect.
 
@@ -13,14 +38,75 @@ To change the base address, follow the procedure below:
 
 a. Unless you know the current base address,
    set "ADR" jumper to force the base address to 0x4000;
-b. Load iocBoot/iocVHSx0xTest/st.cmd.setup
-c. Run VHSx0xSetup(oldBaseAddr, newBaseAddr), if you are using RTEMS, do "bspExtVerbosity=0" before you run VHSx0xSetup.
+b. Load the VHSx0xLib module
+c. Run VHSx0xSetup(oldBaseAddr, newBaseAddr)
+   (If you are using RTEMS, do "bspExtVerbosity=0" before you run VHSx0xSetup)
 d. Power down and make sure "ADR" is NOT set
    if you don't want base address to be 0x4000;
 e. Power on and use the new base address;
 
-2. Performance comparison for vxMemProbe:
+3.	Final st.cmd initialization commands
 
+Add the following lines in your iocTop/<iocName>/iocBoot/ioc<iocName>/st.cmd:
+
+# Initialize the ISEG High Voltage cards
+VHSx0xRegister( 0, 0x5000 )		# substitute your VME addr
+VHSx0xRegister( 1, 0x6000 )
+...
+
+# Load the EPICS records
+dbLoadRecords("db/vhs.db","IOC=<your_ioc_name>")
+
+EPICS PV Values:
+----------------------
+Some of the PV names created by the db template and substitution files
+in this module are shown below.  These can be customized after you copy the
+template and substitution files to your ioc.
+------------------
+PV Name:					Type:			Description:
+$(DEV):DeviceInfo			stringin		Device information
+$(DEV):ModuleStatus			mbbiDirect		Bit flags for module status, see manual for 16 bit definitions
+$(DEV):Temperature			ai				Card temperature
+$(DEV):VoltageMax			ai				Maximum voltage percentage
+$(DEV):CurrentMax			ai				Maximum current percentage
+$(DEV):SupplyP12			ai				+12V Supply voltage
+$(DEV):SupplyN12			ai				-12V Supply voltage
+$(DEV):SupplyP5				ai				+5V Supply voltage
+$(DEV):AllChannelOnOff		bo				Turn all channels on (or off)
+$(DEV):AllChannelEMCY		bo				All channel emergency off
+$(DEV):ModuleControlKILena	bo				Kill Enable - If on, exceeding V or I limit kills channel
+$(DEV):ModuleControlCLEAR	bo				Clear Kill - Set on to clear any kill signals
+$(DEV):VoltageRampSpeed		ao				Percentage change per second
+$(DEV):VoltageRampSteps		mbbo			Selected voltage ramp speeds (1%,2%,5%,10%,20%)
+$(CHAN):ChannelStatus		mbbiDirect		Bit flags for channel status, see manual for bit definitions
+$(CHAN):STATUS				mbbi			Summary of status bits
+$(CHAN):VoltageMeasure		ai				Channel Voltage Measurement
+$(CHAN):VoltageNominal		ai				Max possible output voltage of channel
+$(CHAN):CurrentMeasure		ai				Channel Current Measurement
+$(CHAN):CurrentNominal		ai				Max possible output current of channel
+$(CHAN):VoltageMax			calc			Max possible output voltage of channel
+$(CHAN):Resistance			calc			Resistance across channel output
+$(CHAN):ChannelControlEMCY	bo				Channel Emergency Off
+$(CHAN):ChannelControlOnOff	bo				Channel On (or Off)
+$(CHAN):VoltageSet0			ao				Channel Voltage
+$(CHAN):VoltageSet			ao				Channel Voltage
+$(CHAN):VoltageBounds		ao				Voltage range for out of bounds event
+$(CHAN):CurrentTrip			ao				Channel Current Trip limit
+$(CHAN):CurrentBounds		ao				Current range for out of bounds event
+
+------------------
+4.  Test screens
+This module contains edm test screens that can be used as desired.
+cd to VHSx0xTest/display and launch edm via:
+	edm -x -m "DEV=<your_VHS_dev_name>" VHSx0xTest.edl
+
+Note:	This screen appends ":CH0" to the device name to get the
+channel name.   If your naming scheme doesn't match this, you will
+need to customize VHSx0xTest.edl.
+
+------------------
+5. Misc Info
+Performance comparison for vxMemProbe:
 vxStatsTest>timexN VHSx0xSafeReadUINT16,0xf1fffc00,0,0x500002
 timex: 16250 reps, time per rep = 44 +/- 1 (2%) microsecs
 value = 58 = 0x3a = ':'
@@ -39,4 +125,3 @@ value = 58 = 0x3a = ':'
 vxStatsTest>timexN bcopyWords,0xf1fffc00,0x500000,1
 timex: 125000 reps, time per rep = 1 +/- 0 (0%) microsecs
 value = 58 = 0x3a = ':'
-

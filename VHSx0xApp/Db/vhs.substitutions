@@ -1,0 +1,115 @@
+#==============================================================================
+#
+# Abs:  Substitution file for ISEG VHSx0x High Voltage Modules
+#
+# Name: vhs.substitutions
+#
+#  Auth: 26-JUN-2009, B. Hill         (bhill)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name (USERNAME)
+#
+#==============================================================================
+
+file VHSx0x_Module.template
+{
+	pattern
+	{	DEV,				CARD	}
+	{	$(IOC):VHS$(CARD),	0		}
+	{	$(IOC):VHS$(CARD),	1		}
+}
+
+#	Acronyms for EPICS record fields
+#	DRVH	Drive High Limit
+#	DRVL	Drive Low  Limit
+#		EPICS constrains VAL to:	DRVL <= VAL <= DRVH
+#	HOPR	High operating range
+#	LOPR	Low  operating range
+#		EPICS constrains operator display values to:
+#			DRVL <= LOPR <= ... <= HOPR <= DRVH
+#	Alarm limits
+#   HIHI	High High Limit
+#	HIGH	High Limit
+#	LOW		Low Limit
+#	LOLO	Low Low Limit
+#
+#	ADEL	Archive Deadband
+#	MDEL	Monitor Deadband
+#	HYST	Alarm Deadband
+#	SMOO	Analog input smoothing factor
+
+file VHSx0x_Channel.template
+{
+    pattern
+	{
+		CHAN,			DEV,		CARD,				SIGNAL,
+		HV.DRVH,		HV.DRVL,	HV.HOPR,			HV.LOPR,
+	    HV.HIHI,		HV.HIGH,	HV.LOW,				HV.LOLO,
+		HV.ADEL,		HV.MDEL,	HV.SMOO,			HV.HYST,
+		HC.HIHI,		HC.HIGH,	HC.LOW,				HC.LOLO,
+		HC.ADEL,		HC.MDEL,	HC.HOPR,			HC.LOPR
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		0,	0,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		0,	1,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		0,	2,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		0,	3,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		1,	0,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		1,	1,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		1,	2,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+	{
+		$(DEV):CH$(SIGNAL),	$(IOC):VHS$(CARD),		1,	3,
+		5100,			0,			5100,				0,
+		5000,			4950,		1000,				0,
+		0,				0,			0,					0,
+		0.006,			0.005,		0.003,				0,
+		0,				0,			0.004,				0  
+	}
+}
+

@@ -1,5 +1,5 @@
 /***************************************************************************\
- *   $Id: drvVHSx0x.c,v 1.1.1.1 2007/08/16 23:10:54 pengs Exp $
+ *   $Id: drvVHSx0x.c,v 1.2 2007/11/30 23:54:39 pengs Exp $
  *   File:		drvVHSx0x.c
  *   Author:		Sheng Peng
  *   Email:		pengsh2003@yahoo.com

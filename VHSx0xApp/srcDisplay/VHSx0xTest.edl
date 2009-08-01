@@ -49,7 +49,7 @@ menuLabel {
   0 "Module"
 }
 symbols {
-  0 "S=ICS,SS=Test,DVC=ISEG,N=_DEV,DI=1"
+  0 "DEV=$(DEV)"
 }
 endObjectProperties
 
@@ -78,7 +78,7 @@ menuLabel {
   0 "Channel A"
 }
 symbols {
-  0 "S=ICS,SS=Test,DVC=ISEG,N=_CH,DI=1A"
+  0 "CHAN=$(DEV):CH0"
 }
 endObjectProperties
 
@@ -107,7 +107,7 @@ menuLabel {
   0 "Channel B"
 }
 symbols {
-  0 "S=ICS,SS=Test,DVC=ISEG,N=_CH,DI=1B"
+  0 "CHAN=$(DEV):CH1"
 }
 endObjectProperties
 
@@ -136,7 +136,7 @@ menuLabel {
   0 "Channel C"
 }
 symbols {
-  0 "S=ICS,SS=Test,DVC=ISEG,N=_CH,DI=1C"
+  0 "CHAN=$(DEV):CH2"
 }
 endObjectProperties
 
@@ -165,7 +165,7 @@ menuLabel {
   0 "Channel D"
 }
 symbols {
-  0 "S=ICS,SS=Test,DVC=ISEG,N=_CH,DI=1D"
+  0 "CHAN=$(DEV):CH3"
 }
 endObjectProperties
 

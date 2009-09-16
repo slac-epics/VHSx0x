@@ -12,6 +12,7 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 DB += VHSx0x_Module.template
 DB += VHSx0x_Channel.template
+DB += VHSx0x_Interlock.template
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

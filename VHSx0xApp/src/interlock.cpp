@@ -10,6 +10,7 @@
 //		and auto-on for each channel.
 
 #include <stdio.h>
+#include "drvVHSx0xLib.h"
 
 #include <registryFunction.h>
 #include <epicsExport.h>
@@ -49,11 +50,19 @@ inline void turnOnChannel(
 }
 
 
-inline void turnOffChannel(
+inline void emergencyChannelOff(
 	const string &	strChanName	)
 {
 	if ( strChanName.size() == 0 )
 		return;
+
+	//	If channel is off, no need to do emergency off
+	string	strChanStatus( strChanName );
+	strChanStatus += ":ChannelStatus";
+	UINT16	status	= dbgf( strChanStatus.c_str() );
+	if ( (status & VHSX0X_CHNL_STATUS_BIT_CHANNEL_ON) == 0 )
+		return;
+
 	string	strChanOff( strChanName );
 	strChanOff += ":ChannelControlEMCY";
 	dbpf( strChanOff.c_str(), "1" );
@@ -62,7 +71,7 @@ inline void turnOffChannel(
 
 
 extern "C" static long
-InterlockInit( subRecord *psub)
+InterlockInit( subRecord	* pSub )
 {
 	return 0;
 }
@@ -80,9 +89,9 @@ InterlockInit( subRecord *psub)
 //	INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
  
 extern "C" static long
-InterlockProcess( subRecord *psub)
+InterlockProcess( subRecord	*	pSub )
 {
-    if( psub == NULL)
+    if( pSub == NULL)
 		return -1;
 
 	//	If no change to our interlock, just return
@@ -90,14 +99,14 @@ InterlockProcess( subRecord *psub)
 		return 0;
 
 	//	Get arguments
-    bool		fHvEnable	= psub->a;
-	string		strDev		= getStringFromInput( psub->inpb, "INPB" );
-	string		strChan0	= getStringFromInput( psub->inpc, "INPC" );
-	string		strChan1	= getStringFromInput( psub->inpd, "INPD" );
-	string		strChan2	= getStringFromInput( psub->inpe, "INPE" );
-	string		strChan3	= getStringFromInput( psub->inpf, "INPF" );
-    bool		fAutoClear	= psub->g;
-    bool		fAutoOn		= psub->h;
+    bool		fHvEnable	= pSub->a;
+	string		strDev		= getStringFromInput( pSub->inpb, "INPB" );
+	string		strChan0	= getStringFromInput( pSub->inpc, "INPC" );
+	string		strChan1	= getStringFromInput( pSub->inpd, "INPD" );
+	string		strChan2	= getStringFromInput( pSub->inpe, "INPE" );
+	string		strChan3	= getStringFromInput( pSub->inpf, "INPF" );
+    bool		fAutoClear	= pSub->g;
+    bool		fAutoOn		= pSub->h;
 
 	if ( fHvEnable )
 	{
@@ -123,13 +132,13 @@ InterlockProcess( subRecord *psub)
 	}
 	else
 	{
-		turnOffChannel( strChan0	);
-		turnOffChannel( strChan1	);
-		turnOffChannel( strChan2	);
-		turnOffChannel( strChan3	);
+		emergencyChannelOff( strChan0	);
+		emergencyChannelOff( strChan1	);
+		emergencyChannelOff( strChan2	);
+		emergencyChannelOff( strChan3	);
 	}
 
-    psub->val = fHvEnable;
+    pSub->val = fHvEnable;
     return 0;
 }
 

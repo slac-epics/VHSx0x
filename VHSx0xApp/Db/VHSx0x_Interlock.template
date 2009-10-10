@@ -11,6 +11,7 @@
 # Desc			- Description of the purpose of this interlock record
 # DEV			- Device name,	for example AMO:R13:IOC:14:VHS3
 # InterlockPV	- Name of binary PV that triggers interlock (high = OK, low = Inhibit)
+# tyInterlockPV	- Type for InterlockPV (ENUM, LONG, CHAR, ... )
 # AutoEnable	- True to auto-clear kill signals when interlock is OK
 # AutoOn		- True to auto turn on channels when interlock is OK
 # Chan0			- Channel 0 name, set to "" if channel not controlled by this interlock
@@ -21,7 +22,7 @@
 #
 
 # Subroutine Inputs
-# INPA:	Name of Interlock PV, high = OK, low = Inhibit
+# INPA:	Interlock PV, high = OK, low = Inhibit
 # INPB:	Name of VHS Device
 # INPC:	Name of VHS Channel 0, "" if not inhibited by this interlock
 # INPD:	Name of VHS Channel 1, "" if not inhibited by this interlock
@@ -30,21 +31,64 @@
 # INPG:	AutoClear, Set to "1" to automatically clear kill signals
 # INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
 
-record( sub, "$(Interlock)" )
+record( stringin, "$(DEV):NAME" )
+{
+	field( VAL, "$(DEV)" )
+}
+
+record( stringin, "$(Chan0):NAME" )
+{
+	field( VAL, "$(Chan0)" )
+}
+
+record( stringin, "$(Chan1):NAME" )
+{
+	field( VAL, "$(Chan1)" )
+}
+
+record( stringin, "$(Chan2):NAME" )
+{
+	field( VAL, "$(Chan2)" )
+}
+
+record( stringin, "$(Chan3):NAME" )
+{
+	field( VAL, "$(Chan3)" )
+}
+ 
+record( longout, "$(IOC):genSubPriorInterlock" )
+{
+  field( VAL,  "-1" )
+}
+
+
+record( genSub, "$(Interlock)" )
 {
   field( DESC, "$(Desc)" )
-  field( SCAN, ".1 second" )
+  field( SCAN, "$(tyScan)" )
   field( PINI, "YES" )
-  field( INAM, "VHSInterlockInit" )
-  field( SNAM, "VHSInterlockProcess" )
+  field( INAM, "InterlockInit" )
+  field( SNAM, "InterlockProcess" )
   field( INPA, "$(InterlockPV)" )
-  field( INPB, "$(DEV)" )
-  field( INPC, "$(Chan0)" )
-  field( INPD, "$(Chan1)" )
-  field( INPE, "$(Chan2)" )
-  field( INPF, "$(Chan3)" )
+  field( FTA,  "$(tyInterlockPV)" )
+  field( INPB, "$(DEV):NAME" )
+  field( FTB,  "STRING" )
+  field( INPC, "$(Chan0):NAME" )
+  field( FTC,  "STRING" )
+  field( INPD, "$(Chan1):NAME" )
+  field( FTD,  "STRING" )
+  field( INPE, "$(Chan2):NAME" )
+  field( FTE,  "STRING" )
+  field( INPF, "$(Chan3):NAME" )
+  field( FTF,  "STRING" )
   field( INPG, "$(AutoClear)" )
+  field( FTG,  "LONG" )
   field( INPH, "$(AutoOn)" )
+  field( FTH,  "LONG" )
+  field( INPO, "$(IOC):genSubPriorInterlock NPP" )
+  field( FTO,  "$(tyInterlockPV)" )
+  field( OUTO, "$(IOC):genSubPriorInterlock PP" )
+  field( FTVO,  "LONG" )
   field( FLNK, "$(FwdLink)" )
 }
 

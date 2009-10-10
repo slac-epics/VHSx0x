@@ -93,7 +93,7 @@ $(CHAN):VoltageSet			ao				Channel Voltage
 $(CHAN):VoltageBounds		ao				Voltage range for out of bounds event
 $(CHAN):CurrentTrip			ao				Channel Current Trip limit
 $(CHAN):CurrentBounds		ao				Current range for out of bounds event
-
+$(CHAN):ChannelEventStatus	ao				Event status bits
 ------------------
 4.  Test screens
 This module contains edm test screens that can be used as desired.

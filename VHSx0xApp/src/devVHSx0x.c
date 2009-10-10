@@ -134,6 +134,7 @@ static SIGNAL_DATA signalData[] = {
 {"Temperature",		EPICS_RECTYPE_AI,	VHSX0X_REGTYPE_MODULE,	VHSX0X_MODULE_TEMP_OFFSET,	DATA_TYPE_FLOAT,	0},
 
 {"ChannelStatus",	EPICS_RECTYPE_MBBID,	VHSX0X_REGTYPE_CHANNEL,	VHSX0X_CHNL_STATUS_OFFSET,	DATA_TYPE_UINT16,	0},
+{"ChannelEventStatus",	EPICS_RECTYPE_MBBID,	VHSX0X_REGTYPE_CHANNEL,	VHSX0X_CHNL_EVTSTS_OFFSET,	DATA_TYPE_UINT16,	0},
 {"ChannelControlEMCY",	EPICS_RECTYPE_BO,	VHSX0X_REGTYPE_CHANNEL,	VHSX0X_CHNL_CONTROL_OFFSET,	DATA_TYPE_BIT,		5},
 {"ChannelControlOnOff",	EPICS_RECTYPE_BO,	VHSX0X_REGTYPE_CHANNEL,	VHSX0X_CHNL_CONTROL_OFFSET,	DATA_TYPE_BIT,		3},
 {"VoltageSet",		EPICS_RECTYPE_AO,	VHSX0X_REGTYPE_CHANNEL,	VHSX0X_CHNL_VSET_OFFSET,	DATA_TYPE_FLOAT,	0},
@@ -160,7 +161,7 @@ static int VHSx0x_Signal_Init(dbCommon * precord, E_EPICS_RECTYPE epics_rtype, c
 
     for(psignal = signalData; psignal < &(signalData[N_SIGNAL_DATAS]); psignal++)
     {
-        if( 0 == strcmp(psignal->func, vmeIoParam) )
+        if( 0 == strcmp( (char *)(psignal->func), vmeIoParam ) )
         {
             if( psignal->recType == EPICS_RECTYPE_NONE || epics_rtype == EPICS_RECTYPE_NONE || psignal->recType == epics_rtype )
             {

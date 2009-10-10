@@ -16,6 +16,13 @@ record(mbbiDirect, "$(CHAN):ChannelStatus") {
   field(INP, "#C$(CARD) S$(SIGNAL) @ChannelStatus")
 }
 
+record(mbbiDirect, "$(CHAN):ChannelEventStatus") {
+  field(DESC, "Channel Event Status")
+  field(SCAN, ".1 second")
+  field(DTYP, "VHSx0x")
+  field(INP, "#C$(CARD) S$(SIGNAL) @ChannelEventStatus")
+}
+
 record(bo, "$(CHAN):ChannelControlEMCY") {
   field(DESC, "Channel Off")
   field(DTYP, "VHSx0x")

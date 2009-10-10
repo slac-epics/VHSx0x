@@ -19,6 +19,13 @@ static unsigned int endianTester = 0x01000000;
 static struct VHSX0X_CARD VHSx0x_cards[VHSX0X_MAX_CARD_NUM];
 static int  global_inited = FALSE;
 
+/* These two lines force interlock.cpp object file to be linked in */
+extern int		dbgVHSx0xInterlock;
+int	get_dbgVHSx0xInterlock()
+{
+	return dbgVHSx0xInterlock;
+}
+
 #if 0
 int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr);
 int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr);
@@ -318,7 +325,7 @@ int VHSx0xClearEvent(unsigned int cardnum)
         for(loopchnl=0; loopchnl < VHSx0x_cards[cardnum].placedChannels; loopchnl++)
         {
             VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, &status16);
-            VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTMSK_OFFSET, &status16);
+            VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTMSK_OFFSET, &mask16 );
             status16 &= mask16;
             VHSx0xWriteUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, status16);
         }

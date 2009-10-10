@@ -12,7 +12,10 @@
 # MODULE		- Module name,	for example AMO:R13:IOC:14:VHS3
 # InterlockPV	- Name of binary PV that triggers interlock (high = OK, low = Inhibit)
 # tyInterlockPV	- Type for InterlockPV (ENUM, LONG, CHAR, ... )
+<<<<<<< HEAD
 #	Optional macros:
+=======
+>>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 # AutoEnable	- True to auto-clear kill signals when interlock is OK
 # AutoOn		- True to auto turn on channels when interlock is OK
 # Chan0			- Channel 0 name, set to "" if channel not controlled by this interlock
@@ -35,7 +38,7 @@ record( stringin, "$(Chan3):NAME"	) { field( VAL, "$(Chan3)"	) }
 
 # Subroutine Inputs
 # INPA:	Interlock PV, high = OK, low = Inhibit
-# INPB:	Name of VHS Module
+# INPB:	Name of VHS Device
 # INPC:	Name of VHS Channel 0, "" if not inhibited by this interlock
 # INPD:	Name of VHS Channel 1, "" if not inhibited by this interlock
 # INPE:	Name of VHS Channel 2, "" if not inhibited by this interlock

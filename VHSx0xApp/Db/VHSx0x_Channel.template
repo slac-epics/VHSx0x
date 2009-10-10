@@ -120,7 +120,7 @@ record(bo, "$(CHAN):ChannelControlEMCY")
 	field(OUT,  "#C$(CARD) S$(SIGNAL) @ChannelControlEMCY")
 	field(ZNAM, "Off")
 	field(ONAM, "Off")
-	field(FLNK, "$(S):$(SS):$(DVC)$(N)$(DI):VoltageSet0")
+	field(FLNK, "$(CHAN):VoltageSet0")
 }
 
 record(ao, "$(CHAN):VoltageSet0")

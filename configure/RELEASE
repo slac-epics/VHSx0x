@@ -11,6 +11,7 @@
 # Check that EPICS_MODULES was defined in a RELEASE_SITE file
 -include $(TOP)/../../RELEASE_SITE.check
 
+<<<<<<< HEAD
 # ==========================================================
 # Define the version strings for all needed modules
 # Use naming pattern:
@@ -19,6 +20,14 @@
 # Don't set your version to anything such as "test" that
 # could match a directory name.
 # ==========================================================
+=======
+# ===============================================================
+# Define version of "meta" modules - BASE and EXTENSIONS.  Must
+# be defined before loading $(EPICS_SITE_CONFIG)
+# ===============================================================
+BASE_MODULE_VERSION=R3.14.9-0.2.0
+EXTENSIONS_MODULE_VERSION=R3.14.9-0.4.0
+>>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 
 # ==========================================================
 # External Support module path definitions
@@ -34,9 +43,23 @@
 # If your build fails, look for these paths in your build output
 # ==========================================================
 
+<<<<<<< HEAD
 # Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
 EPICS_BASE = $(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 
 # Check for invalid or undefined EPICS_BASE
 -include $(TOP)/../../EPICS_BASE.check
 
+=======
+# ===============================================================
+# Define the version of modules needed by
+# IOC apps or other Support apps
+# ===============================================================
+GENSUB_MODULE_VERSION=R1.6.1.2-0.2.0
+
+# ============================================================
+# External Support
+# ============================================================
+# example: IPAC=$(EPICS_MODULES)/ipac/$(IPAC_MODULE_VERSION)
+GENSUB=$(EPICS_MODULES)/genSub/$(GENSUB_MODULE_VERSION)
+>>>>>>> 4380c68... Added new PV for ChannelEventStatus.

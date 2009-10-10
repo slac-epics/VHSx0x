@@ -1,5 +1,4 @@
 /***************************************************************************\
- *   $Id: drvVHSx0x.c,v 1.3 2012/05/11 16:41:31 niafong Exp $
  *   File:		drvVHSx0x.c
  *   Author:		Sheng Peng
  *   Email:		pengsh2003@yahoo.com
@@ -16,10 +15,15 @@
 static unsigned int endianTester = 0x01000000;
 #define SYSTEM_IS_BIG_ENDIAN (*(char *)(&endianTester))
 
-#define numPlacedChannels(channels) ((channels == 0x000F)?4:((channels == 0x0FFF)?12:0))
-
 static struct VHSX0X_CARD VHSx0x_cards[VHSX0X_MAX_CARD_NUM];
 static int  global_inited = FALSE;
+
+/* These two lines force interlock.cpp object file to be linked in */
+extern int		dbgVHSx0xInterlock;
+int	get_dbgVHSx0xInterlock()
+{
+	return dbgVHSx0xInterlock;
+}
 
 #if 0
 int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr);
@@ -105,12 +109,12 @@ int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr)
     }
 
     /* Read some information */
-    if( VHSx0xSafeReadUINT16(	oldLocalBaseAddr, VHSX0X_MODULE_CONTROL_OFFSET, &moduleControl		) ||
-        VHSx0xSafeReadFloat(	oldLocalBaseAddr, VHSX0X_MODULE_TEMP_OFFSET,    &boardTemperature	) ||
-        VHSx0xSafeReadUINT32(	oldLocalBaseAddr, VHSX0X_MODULE_SNUM_OFFSET,    &serialNumber		) ||
-        VHSx0xSafeReadUINT32(	oldLocalBaseAddr, VHSX0X_MODULE_FWRLS_OFFSET,   &firmwareRelease	) ||
-        VHSx0xSafeReadUINT16(	oldLocalBaseAddr, VHSX0X_MODULE_CHNLS_OFFSET,   &placedChannels		) ||
-        VHSx0xSafeReadUINT16(	oldLocalBaseAddr, VHSX0X_MODULE_DEVCLS_OFFSET,  &deviceClass		) )
+    if( VHSx0xSafeReadUINT16(   oldLocalBaseAddr, VHSX0X_MODULE_CONTROL_OFFSET, &moduleControl      ) ||
+        VHSx0xSafeReadFloat(    oldLocalBaseAddr, VHSX0X_MODULE_TEMP_OFFSET,    &boardTemperature   ) ||
+        VHSx0xSafeReadUINT32(   oldLocalBaseAddr, VHSX0X_MODULE_SNUM_OFFSET,    &serialNumber       ) ||
+        VHSx0xSafeReadUINT32(   oldLocalBaseAddr, VHSX0X_MODULE_FWRLS_OFFSET,   &firmwareRelease    ) ||
+        VHSx0xSafeReadUINT16(   oldLocalBaseAddr, VHSX0X_MODULE_CHNLS_OFFSET,   &placedChannels     ) ||
+        VHSx0xSafeReadUINT16(   oldLocalBaseAddr, VHSX0X_MODULE_DEVCLS_OFFSET,  &deviceClass        ) )
     {
     	printf("Fail to access iseg VHSx0x at VME A16 0x%0X\n", oldVMEBaseAddr);
     	return -1;
@@ -123,7 +127,7 @@ int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr)
     {/* system byte order matches VHS board byte order */
         printf( "Serial Number = %d\n", serialNumber);
         printf( "Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);
-		printf( "Number of Channels = %d\n", GetNumOfChan(placedChannels) );
+        printf( "Number of Channels = %d\n", GetNumOfChan(placedChannels) );
         printf( "Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
         printf( "Board Temperature = %f C\n", boardTemperature);
     }
@@ -235,11 +239,11 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
     /* if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) ) */
     if(1)
     {/* system byte order matches VHS board byte order */
-        printf( "Serial Number = %d\n", serialNumber );
-        printf( "Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF );
-		printf( "Number of Channels = %d\n", GetNumOfChan(placedChannels) );
-        printf( "Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown" );
-        printf( "Board Temperature = %f C\n", boardTemperature );
+        printf("Serial Number = %d\n", serialNumber);
+        printf("Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);
+        printf("Number of Channels = %d\n", GetNumOfChan(placedChannels));
+        printf("Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
+        printf("Board Temperature = %f C\n", boardTemperature);
     }
     else
     {
@@ -312,7 +316,7 @@ IOSCANPVT * VHSx0xGetIoScanPvt(unsigned int cardnum)
 
 int VHSx0xClearEvent(unsigned int cardnum)
 {
-    UINT16 status16, mask16, placedChannels;
+    UINT16 status16, mask16;
     UINT32 status32, mask32;
     int loopchnl;
 
@@ -346,7 +350,7 @@ int VHSx0xClearEvent(unsigned int cardnum)
 										+	VHSX0X_CHNL_EVTSTS_OFFSET	), status16);
         }
 
-        VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, &status16);
+		VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, &status16);
         VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHMSK_OFFSET, &mask16);
         status16 &= mask16;
         VHSx0xWriteUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, status16);
@@ -716,7 +720,7 @@ static long VHSx0x_EPICS_Report(int level)
                     printf("\tSerial Number = %d\n", VHSx0x_cards[index].serialNumber);
                     printf("\tFirmware Release = %d.%d.%d\n", VHSx0x_cards[index].firmwareRelease>>16,
                               (VHSx0x_cards[index].firmwareRelease&0xFF00)>>8, VHSx0x_cards[index].firmwareRelease&0xFF);
-					printf( "\tNumber of Channels = %d\n", VHSx0xGetNumOfCHs(index) );
+                    printf("\tNumber of Channels = %d\n", VHSx0xGetNumOfCHs(index));
                     printf("\tDevice Class = %s\n\n",  (VHSx0x_cards[index].deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
                 }
             }

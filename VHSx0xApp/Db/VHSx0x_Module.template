@@ -34,11 +34,10 @@ record(ao, "$(DEV):VoltageRampSpeed") {
   field(DESC, "VoltageRampSpeed")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S0 @VoltageRampSpeed")
-  field(DRVH, "20")
-  field(VAL,  $(RAMP_SPEED) )
-  field(DRVL, $(RAMP_SPEED) )
-  field(HOPR, "20")
-  field(LOPR, $(RAMP_SPEED) )
+  field(DRVH, $(RAMP_SPEED_HI) )
+  field(DRVL, $(RAMP_SPEED_LO) )
+  field(HOPR, $(RAMP_SPEED_HI) )
+  field(LOPR, $(RAMP_SPEED_LO) )
   field(EGU, "%")
 }
 

@@ -56,11 +56,6 @@ record( stringin, "$(Chan3):NAME" )
 	field( VAL, "$(Chan3)" )
 }
  
-record( longout, "$(IOC):genSubPriorInterlock" )
-{
-  field( VAL,  "-1" )
-}
-
 
 record( genSub, "$(Interlock)" )
 {
@@ -85,10 +80,6 @@ record( genSub, "$(Interlock)" )
   field( FTG,  "LONG" )
   field( INPH, "$(AutoOn)" )
   field( FTH,  "LONG" )
-  field( INPO, "$(IOC):genSubPriorInterlock NPP" )
-  field( FTO,  "$(tyInterlockPV)" )
-  field( OUTO, "$(IOC):genSubPriorInterlock PP" )
-  field( FTVO,  "LONG" )
   field( FLNK, "$(FwdLink)" )
 }
 

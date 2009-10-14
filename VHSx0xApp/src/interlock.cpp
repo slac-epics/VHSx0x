@@ -25,6 +25,10 @@ using namespace		std;
 
 int		dbgVHSx0xInterlock	= 0;
 
+typedef struct	InterlockData
+{
+	long		fEnablePrior;
+}	InterlockData;
 
 inline long getEpicsPV( const string & strPvName, long & valueRet )
 {
@@ -92,7 +96,7 @@ inline void turnOnChannel(
 {
 	if ( strChanName.size() == 0 )
 	{
-		fprintf( stderr, "turnOnChannel: Empty PV name!\n" );
+		//	Empty channel names aren't tied to this interlock
 		return;
 	}
 	string	strChanOn( strChanName );
@@ -106,7 +110,8 @@ inline bool isChanInEmergencyOff(
 {
 	if ( strChanName.size() == 0 )
 	{
-		fprintf( stderr, "isChanInEmergencyOff: Empty PV name!\n" );
+		//	Empty channel names aren't tied to this interlock
+		//	Return false to avoid waiting for unused channel
 		return false;
 	}
 
@@ -129,7 +134,7 @@ inline void emergencyChannelOff(
 {
 	if ( strChanName.size() == 0 )
 	{
-		fprintf( stderr, "emergencyChannelOff: Empty PV name!\n" );
+		//	Empty channel names aren't tied to this interlock
 		return;
 	}
 
@@ -183,7 +188,7 @@ InterlockInit( genSubRecord	* pSub )
 	switch ( pSub->fta )
 	{
 	default:
-		fprintf( stderr, "InterlockInit: Invalid type for INPA!\n" );
+		fprintf( stderr, "InterlockInit %s: Invalid type for INPA!\n", pSub->name );
 		return -1;
 	case DBF_CHAR:
 	case DBF_UCHAR:
@@ -199,29 +204,39 @@ InterlockInit( genSubRecord	* pSub )
 
 	if ( pSub->ftb != DBF_STRING )
 	{
-		fprintf( stderr, "InterlockInit: INPB must be type STRING!\n" );
+		fprintf( stderr, "InterlockInit %s: INPB must be type STRING!\n", pSub->name );
 		return -1;
 	}
 
 	if ( pSub->ftc != DBF_STRING )
 	{
-		fprintf( stderr, "InterlockInit: INPC must be type STRING!\n" );
+		fprintf( stderr, "InterlockInit %s: INPC must be type STRING!\n", pSub->name );
 		return -1;
 	}
 
 	if ( pSub->ftd != DBF_STRING )
 	{
-		fprintf( stderr, "InterlockInit: INPD must be type STRING!\n" );
+		fprintf( stderr, "InterlockInit %s: INPD must be type STRING!\n", pSub->name );
 		return -1;
 	}
 
 	if ( pSub->fte != DBF_STRING )
 	{
-		fprintf( stderr, "InterlockInit: INPE must be type STRING!\n" );
+		fprintf( stderr, "InterlockInit %s: INPE must be type STRING!\n", pSub->name );
 		return -1;
 	}
 
-	printf( "\nInterlockInit: Ready for use!\n\n" );
+	if ( pSub->dpvt != NULL )
+	{
+		fprintf( stderr, "InterlockInit %s: Device private (dpvt) non-NULL!\n", pSub->name );
+		return -1;
+	}
+
+	InterlockData	*	pData	= new InterlockData;
+	pData->fEnablePrior = -1;
+	pSub->dpvt = static_cast<void *>( pData );
+
+	printf( "\nInterlockInit %s: Ready for use!\n\n", pSub->name );
 	return 0;
 }
 
@@ -241,28 +256,29 @@ extern "C" long
 InterlockProcess( genSubRecord	*	pSub )
 {
 	if ( dbgVHSx0xInterlock	>= 4 )
-		printf( "InterlockProcess: entry\n" );
+		printf( "InterlockProcess %s: entry\n", pSub->name );
 
     if ( pSub == NULL )
 	{
-		fprintf( stderr, "InterlockProcess: Invalid pSub ptr!\n" );
+		fprintf( stderr, "InterlockProcess %s: Invalid pSub ptr!\n", pSub->name );
 		return -1;
 	}
 
+	InterlockData	*	pData	= reinterpret_cast<InterlockData *>( pSub->dpvt );
+
 	//	Get interlock and prior interlock values
     long		fHvEnable		= genSubGetLong( pSub->fta, pSub->a );
-    long		fHvEnablePrior	= genSubGetLong( pSub->fto, pSub->o );
 
 	//	If no change to our interlock, just return
-	if ( fHvEnable == fHvEnablePrior )
+	if ( fHvEnable == pData->fEnablePrior )
 	{
 		if ( dbgVHSx0xInterlock	>= 4 )
-			printf( "InterlockProcess: No change\n" );
+			printf( "InterlockProcess %s: No change\n", pSub->name );
 		return 0;
 	}
 
 	//	Save prior value for next time
-    *static_cast<long *>( pSub->valo ) = fHvEnable;
+    pData->fEnablePrior = fHvEnable;
 
 	//	Get arguments
 	string		strDev		= static_cast<char *>( pSub->b );
@@ -276,12 +292,12 @@ InterlockProcess( genSubRecord	*	pSub )
 	if ( fHvEnable )
 	{
 		if ( dbgVHSx0xInterlock	>= 1 )
-			printf( "InterlockProcess: HV Enable\n" );
+			printf( "InterlockProcess %s: HV Enable\n", pSub->name );
 		if ( fAutoClear )
 		{
 			if ( strDev.size() == 0 )
 			{
-				fprintf( stderr, "Invalid input for INPB, must be a device name!\n" );
+				fprintf( stderr, "InterlockProcess %s: Empty string for INPB, must be a device name!\n", pSub->name );
 				return -1;
 			}
 
@@ -317,7 +333,7 @@ InterlockProcess( genSubRecord	*	pSub )
 	else
 	{
 		if ( dbgVHSx0xInterlock	>= 1 )
-			printf( "InterlockProcess: HV Inhibit!\n" );
+			printf( "InterlockProcess %s: HV Inhibit!\n", pSub->name );
 		emergencyChannelOff( strChan0	);
 		emergencyChannelOff( strChan1	);
 		emergencyChannelOff( strChan2	);

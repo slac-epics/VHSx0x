@@ -1,0 +1,2731 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 215
+y 391
+w 641
+h 600
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+title "iSEG High Voltage Supply $(iVHS)"
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 640
+h 32
+lineColor index 56
+fill
+fillColor index 56
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 11
+y 12
+w 192
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "iSEG High Voltage Supply $(iVHS)"
+}
+autoSize
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 12
+y 36
+w 615
+h 555
+lineColor index 14
+fill
+fillColor index 5
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 47
+w 77
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Device Info"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 156
+y 47
+w 446
+h 16
+controlPv "$(IOC):VHS$(iVHS):DeviceInfo"
+font "helvetica-bold-r-14.0"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 72
+w 101
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Module Status"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 72
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):ModuleStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 146
+w 87
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Temperature"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 478
+y 146
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):Temperature"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 122
+w 84
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "-12V Supply"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 478
+y 122
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):SupplyN12"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 97
+w 86
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max Current"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 478
+y 97
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):CurrentMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 146
+w 80
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "+5V Supply"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 146
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):SupplyP5"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 122
+w 88
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "+12V Supply"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 122
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):SupplyP12"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 97
+w 85
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max Voltage"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 97
+w 125
+h 16
+controlPv "$(IOC):VHS$(iVHS):VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 169
+w 88
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "All Channels"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 169
+w 129
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable Kill Signals"
+}
+autoSize
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 220
+y 168
+w 62
+h 19
+fgColor index 29
+onColor index 15
+offColor index 2
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
+onLabel "All On"
+offLabel "All Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 523
+y 166
+w 80
+h 21
+fgColor index 29
+onColor index 2
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):ModuleControlKILena"
+onLabel "Enabled"
+offLabel "Disabled"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 220
+y 194
+w 62
+h 22
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):AllChannelEMCY"
+onLabel "Off!!!"
+offLabel "Off"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 523
+y 192
+w 80
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):ModuleControlCLEAR"
+onLabel "Clearing"
+offLabel "Clear"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 231
+w 200
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Voltage Ramp Speed (%/sec)"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 490
+y 231
+w 111
+h 20
+controlPv "$(IOC):VHS$(iVHS):VoltageRampSpeed"
+font "helvetica-bold-r-14.0"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Motif Slider)
+object activeMotifSliderClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 333
+y 225
+w 142
+h 46
+fgColor index 19
+bgColor index 3
+2ndBgColor index 14
+topShadowColor index 0
+botShadowColor index 14
+increment 0.1
+controlPv "$(IOC):VHS$(iVHS):VoltageRampSteps"
+controlLabelType "pvLabel"
+font "helvetica-bold-r-14.0"
+limitsFromDb
+precision 1
+showLimits
+showLabel
+showValue
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 197
+w 147
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "All Ch Emergency Off"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 194
+w 141
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Clear All Kill Signals"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 548
+w 85
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max Voltage"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 566
+w 76
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Status Bits"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 417
+w 81
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "CurrentTrip"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 298
+w 45
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Status"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 317
+w 107
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel On/Off"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 340
+w 125
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Emergency Ch Off"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 361
+w 76
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "VoltageSet"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 379
+w 84
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "VoltageSet0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 398
+w 107
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "VoltageBounds"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 436
+w 108
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "CurrentBounds"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 454
+w 126
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Measured Voltage"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 473
+w 114
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Nominal Voltage"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 492
+w 127
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Measured Current"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 510
+w 115
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Nominal Current"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 529
+w 77
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Resistance"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 566
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:ChannelStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 548
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 529
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:Resistance"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 0
+fieldLen "6"
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 510
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:CurrentNominal"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 492
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:CurrentMeasure"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 473
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:VoltageNominal"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 454
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMeasure"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 436
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:CurrentBounds"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 417
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:CurrentTrip"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 398
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:VoltageBounds"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 379
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:VoltageSet0"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 361
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:VoltageSet"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 171
+y 340
+w 82
+h 18
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 6
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlEMCY"
+onLabel "Off!!!"
+offLabel "Off"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 171
+y 317
+w 82
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlOnOff"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 171
+y 298
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH0:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 171
+y 277
+w 82
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 0"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 566
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:ChannelStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 548
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 529
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:Resistance"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 510
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:CurrentNominal"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 492
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:CurrentMeasure"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 473
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:VoltageNominal"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 454
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMeasure"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 436
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:CurrentBounds"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 417
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:CurrentTrip"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 398
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:VoltageBounds"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 379
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:VoltageSet0"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 281
+y 361
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:VoltageSet"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 282
+y 340
+w 82
+h 18
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlEMCY"
+onLabel "Off!!!"
+offLabel "Off"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 282
+y 317
+w 82
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlOnOff"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 282
+y 298
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH1:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 282
+y 277
+w 82
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 1"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 566
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:ChannelStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 548
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 529
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:Resistance"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 510
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:CurrentNominal"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 492
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:CurrentMeasure"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 473
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:VoltageNominal"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 454
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMeasure"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 436
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:CurrentBounds"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 417
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:CurrentTrip"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 398
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:VoltageBounds"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 379
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:VoltageSet0"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 392
+y 361
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:VoltageSet"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 393
+y 340
+w 82
+h 18
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlEMCY"
+onLabel "Off!!!"
+offLabel "Off"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 393
+y 317
+w 82
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlOnOff"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 393
+y 298
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH2:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 393
+y 277
+w 82
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 2"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 566
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:ChannelStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 548
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 529
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:Resistance"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 510
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:CurrentNominal"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 492
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:CurrentMeasure"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 473
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:VoltageNominal"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 454
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMeasure"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 436
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:CurrentBounds"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 417
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:CurrentTrip"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+autoSelect
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 398
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:VoltageBounds"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 379
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:VoltageSet0"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 496
+y 361
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:VoltageSet"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 497
+y 340
+w 82
+h 18
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlEMCY"
+onLabel "Off!!!"
+offLabel "Off"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 497
+y 317
+w 82
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlOnOff"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 497
+y 298
+w 82
+h 16
+controlPv "$(IOC):VHS$(iVHS):CH3:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 497
+y 277
+w 82
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 3"
+}
+autoSize
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 508
+y 5
+w 56
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Home"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "AMOHome"
+}
+setPosition {
+  0 "parentWindow"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 572
+y 4
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "helvetica-medium-r-10.0"
+3d
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 445
+y 5
+w 56
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Parent"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "gasDetScreens/gasDet_Overview.edl"
+}
+setPosition {
+  0 "parentWindow"
+}
+symbols {
+  0 "IOC=AMO:R15:IOC:40,EVR=AMO:R15:EVR:40"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+

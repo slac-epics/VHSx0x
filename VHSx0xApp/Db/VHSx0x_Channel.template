@@ -14,6 +14,7 @@ record(mbbiDirect, "$(CHAN):ChannelStatus") {
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S$(SIGNAL) @ChannelStatus")
+  field(FLNK, "$(CHAN):ChannelIsOnCalc" )
 }
 
 record(mbbiDirect, "$(CHAN):ChannelEventStatus") {
@@ -21,6 +22,35 @@ record(mbbiDirect, "$(CHAN):ChannelEventStatus") {
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S$(SIGNAL) @ChannelEventStatus")
+  field(FLNK, "$(CHAN):ChannelIsEmergencyCalc" )
+}
+
+record(calcout, "$(CHAN):ChannelIsOnCalc" ) {
+	field( DESC, "True when Channel is On" )
+	field( INPA, "$(CHAN):ChannelStatus" )
+	field( CALC, "(A & 0x0008) ? 1 : 0" )
+	field( OUT,  "$(CHAN):ChannelIsOn PP" )
+}
+
+record(bo, "$(CHAN):ChannelIsOn" ) {
+	field( DESC, "True when Channel is On" )
+	field( DOL,  "$(CHAN):ChannelIsOnCalc NPP" )
+	field( ZNAM, "Off" )
+	field( ONAM, "On" )
+}
+
+record(calcout, "$(CHAN):ChannelIsEmergencyCalc" ) {
+	field( DESC, "True when Channel is On, else False" )
+	field( INPA, "$(CHAN):ChannelEventStatus" )
+	field( CALC, "(A & 0x0020) ? 1 : 0" )
+	field( OUT,  "$(CHAN):ChannelIsEmergency PP" )
+}
+
+record(bo, "$(CHAN):ChannelIsEmergency" ) {
+	field( DESC, "True when Channel is On" )
+	field( DOL,  "$(CHAN):ChannelIsEmergencyCalc NPP" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Killed!" )
 }
 
 record(bo, "$(CHAN):ChannelControlEMCY") {
@@ -38,6 +68,15 @@ record(ao, "$(CHAN):VoltageSet0") {
   field(PREC, "3")
   field(EGU, "V")
   field(OUT, "$(CHAN):VoltageSet PP")
+}
+
+record(bo, "$(CHAN):ChannelControlOnOff") {
+  field(DESC, "Channel OnOff")
+  field(DTYP, "VHSx0x")
+  field(OUT, "#C$(CARD) S$(SIGNAL) @ChannelControlOnOff")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(PINI, "YES")
 }
 
 record(bo, "$(CHAN):ChannelControlOnOff") {

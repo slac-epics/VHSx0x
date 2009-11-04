@@ -156,10 +156,24 @@ inline void emergencyChannelOff(
 	writeEpicsPV( strChanOff.c_str(), 1 );
 
 	// Wait till channel is in emergency off
-	while ( !isChanInEmergencyOff( strChanName ) )
+	bool	fChanInEmergencyOff	= false;
+	for ( unsigned int i = 0; i < 2; ++i ) 
+	{
+		if ( isChanInEmergencyOff( strChanName ) )
+		{
+			fChanInEmergencyOff	= true;
+			break;
+		}
+
     	(void)epicsThreadSleep(0.1);
+	}
 
 	writeEpicsPV( strChanOff.c_str(), 0 );
+	if ( !fChanInEmergencyOff )
+	{
+	//	fprintf( stderr, "ERROR: Unable to put %s in emergency OFF!\n", strChanName.c_str() );
+		fprintf( stderr, "ToDo: Fix interlock status check!\n" );
+	}
 }
 
 
@@ -304,19 +318,38 @@ InterlockProcess( genSubRecord	*	pSub )
 			string	strClearKill	= strDev + ":ModuleControlCLEAR";
 			writeEpicsPV( strClearKill.c_str(), 1 );
 
-			// Wait till all channels are not in emergency off
+			// Wait till all channels are ready
+			const char	*	pszChanStuck	= NULL;
 			for ( unsigned int i = 0; i < 10; i++ )
 			{
 				(void)epicsThreadSleep(0.1);
 				if ( isChanInEmergencyOff( strChan0 ) )
+				{
+					pszChanStuck	= strChan0.c_str();
 					continue;
+				}
 				if ( isChanInEmergencyOff( strChan1 ) )
+				{
+					pszChanStuck	= strChan1.c_str();
 					continue;
+				}
 				if ( isChanInEmergencyOff( strChan2 ) )
+				{
+					pszChanStuck	= strChan2.c_str();
 					continue;
+				}
 				if ( isChanInEmergencyOff( strChan3 ) )
+				{
+					pszChanStuck	= strChan3.c_str();
 					continue;
+				}
+				pszChanStuck	= NULL;
 				break;
+			}
+
+			if ( pszChanStuck )
+			{
+				fprintf( stderr, "ToDo: Fix interlock status check!\n" );
 			}
 
 			//	Clear kill request
@@ -334,6 +367,12 @@ InterlockProcess( genSubRecord	*	pSub )
 	{
 		if ( dbgVHSx0xInterlock	>= 1 )
 			printf( "InterlockProcess %s: HV Inhibit!\n", pSub->name );
+
+		//	Enable kill signals
+		string	strKillEnable( strDev );
+		strKillEnable += ":ModuleControlKILena";
+		writeEpicsPV( strKillEnable.c_str(), 1 );
+
 		emergencyChannelOff( strChan0	);
 		emergencyChannelOff( strChan1	);
 		emergencyChannelOff( strChan2	);

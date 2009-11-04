@@ -12,6 +12,40 @@ record(mbbiDirect, "$(DEV):ModuleStatus") {
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S0 @ModuleStatus")
+  field(FLNK, "$(DEV):ModuleStatusFanout" )
+}
+
+record( fanout, "$(DEV):ModuleStatusFanout" )
+{
+	field( LNK1,	"$(DEV):ModuleIsOKCalc" )
+	field( LNK2,	"$(DEV):ModuleTempOKCalc" )
+}
+
+record(calc, "$(DEV):ModuleIsOKCalc" ) {
+	field( DESC, "True when Module is OK" )
+	field( INPA, "$(DEV):ModuleStatus" )
+	field( CALC, "(A & 0x1120) ? 1 : 0" )
+}
+
+record(bo, "$(DEV):ModuleIsOK" ) {
+	field( DESC, "True when Module is On" )
+	field( DOL,  "$(CHAN):ModuleIsOK NPP" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Fault" )
+}
+
+record(calcout, "$(DEV):ModuleTempOKCalc" ) {
+	field( DESC, "True when Module Temp is OK" )
+	field( INPA, "$(DEV):ModuleStatus" )
+	field( CALC, "(A & 0x0100) ? 1 : 0" )
+	field( OUT,	 "$(DEV):ModuleTempOK" )
+}
+
+record(bo, "$(DEV):ModuleTempOK" ) {
+	field( DESC, "True when Module Temp is On" )
+	field( DOL,  "$(CHAN):ModuleTempOK NPP" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Hot!" )
 }
 
 record(bo, "$(DEV):ModuleControlKILena") {
@@ -148,10 +182,21 @@ record(bo, "$(DEV):AllChannelEMCY") {
 
 record(bo, "$(DEV):AllChannelOnOff") {
   field(DESC, "All Channel OnOff")
-  field(DTYP, "VHSx0x")
-  field(OUT, "#C$(CARD) S0 @AllChannelOnOff")
-  field(ZNAM, "Off")
-  field(ONAM, "On")
+#  field(DTYP, "VHSx0x")
+#  field(OUT, "#C$(CARD) S0 @AllChannelOnOff")
+#  field(ZNAM, "Off")
+#  field(ONAM, "On")
+  field( FLNK, "$(DEV):AllChannelOnOff" )
+}
+
+record(dfanout, "$(DEV):AllChannelOnOffFanOut" ) {
+  field( DESC, "Channel OnOff" )
+  field( DOL,  "$(DEV):AllChannelOnOff" )
+  field( PINI, "NO" )
+  field( OUTA, "$(DEV):CH0:ChannelControlOnOff PP" )
+  field( OUTB, "$(DEV):CH1:ChannelControlOnOff PP" )
+  field( OUTC, "$(DEV):CH2:ChannelControlOnOff PP" )
+  field( OUTD, "$(DEV):CH3:ChannelControlOnOff PP" )
 }
 
 record(stringin, "$(DEV):DeviceInfo") {

@@ -116,6 +116,20 @@ typedef float                   FLOAT32;
 #define VHSX0X_CHNL_INOM_OFFSET			0x24
 
 /*********************************/
+/* Module Status Bits            */
+/*********************************/
+#define VHSX0X_MODULE_STATUS_BIT_KILL_ENABLED	0x8000
+#define VHSX0X_MODULE_STATUS_BIT_TEMP_GOOD		0x4000
+#define VHSX0X_MODULE_STATUS_BIT_SUPPLY_GOOD	0x2000
+#define VHSX0X_MODULE_STATUS_BIT_MODULE_GOOD	0x1000
+#define VHSX0X_MODULE_STATUS_BIT_EVENT_ACTIVE	0x0800
+#define VHSX0X_MODULE_STATUS_BIT_SAFETY_GOOD	0x0400
+#define VHSX0X_MODULE_STATUS_BIT_NOT_RAMPING	0x0200
+#define VHSX0X_MODULE_STATUS_BIT_NO_ERRORS		0x0100
+#define VHSX0X_MODULE_STATUS_BIT_CMDS_COMPLETE	0x0080
+#define VHSX0X_MODULE_STATUS_BIT_IN_ADJUST_MODE	0x0001
+
+/*********************************/
 /* Channel Status Bits           */
 /*********************************/
 #define VHSX0X_CHNL_STATUS_BIT_VLIM_EXCEEDED	0x8000

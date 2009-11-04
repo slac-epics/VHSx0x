@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 215
-y 391
+x 103
+y 392
 w 641
 h 600
 font "helvetica-medium-r-18.0"
@@ -19,7 +19,7 @@ ctlBgColor1 index 0
 ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
-title "iSEG High Voltage Supply $(iVHS)"
+title "$(APP) iSEG High Voltage Supply VHS$(iVHS)"
 endScreenProperties
 
 # (Rectangle)
@@ -53,7 +53,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "iSEG High Voltage Supply $(iVHS)"
+	"$(APP) iSEG High Voltage Supply VHS$(iVHS)"
 }
 autoSize
 endObjectProperties
@@ -219,7 +219,7 @@ minor 1
 release 0
 x 331
 y 122
-w 84
+w 88
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -468,7 +468,7 @@ major 4
 minor 1
 release 0
 x 331
-y 169
+y 225
 w 129
 h 16
 font "helvetica-bold-r-14.0"
@@ -476,7 +476,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Enable Kill Signals"
+  "Enable Current Limit"
 }
 autoSize
 endObjectProperties
@@ -487,32 +487,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 220
-y 168
-w 62
-h 19
-fgColor index 29
-onColor index 15
-offColor index 2
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
-onLabel "All On"
-offLabel "All Off"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
 x 523
-y 166
+y 222
 w 80
 h 21
 fgColor index 29
@@ -587,16 +563,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 231
-w 200
+x 331
+y 171
+w 145
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Voltage Ramp Speed (%/sec)"
+  "Voltage Ramp Speed"
 }
 autoSize
 endObjectProperties
@@ -607,49 +583,24 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 490
-y 231
-w 111
-h 20
+x 484
+y 171
+w 47
+h 16
 controlPv "$(IOC):VHS$(iVHS):VoltageRampSpeed"
 font "helvetica-bold-r-14.0"
-fgColor index 19
+fontAlign "right"
+fgColor index 29
 bgColor index 0
 useDisplayBg
 editable
 autoHeight
-limitsFromDb
+precision 2
 nullColor index 0
 smartRefresh
 useHexPrefix
 newPos
 objType "controls"
-endObjectProperties
-
-# (Motif Slider)
-object activeMotifSliderClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 333
-y 225
-w 142
-h 46
-fgColor index 19
-bgColor index 3
-2ndBgColor index 14
-topShadowColor index 0
-botShadowColor index 14
-increment 0.1
-controlPv "$(IOC):VHS$(iVHS):VoltageRampSteps"
-controlLabelType "pvLabel"
-font "helvetica-bold-r-14.0"
-limitsFromDb
-precision 1
-showLimits
-showLabel
-showValue
 endObjectProperties
 
 # (Static Text)
@@ -687,7 +638,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Clear All Kill Signals"
+  "Clear Kill"
 }
 autoSize
 endObjectProperties
@@ -699,7 +650,7 @@ major 4
 minor 1
 release 0
 x 22
-y 548
+y 489
 w 85
 h 16
 font "helvetica-bold-r-14.0"
@@ -719,7 +670,7 @@ major 4
 minor 1
 release 0
 x 22
-y 566
+y 507
 w 76
 h 16
 font "helvetica-bold-r-14.0"
@@ -739,7 +690,7 @@ major 4
 minor 1
 release 0
 x 22
-y 417
+y 376
 w 81
 h 16
 font "helvetica-bold-r-14.0"
@@ -759,27 +710,7 @@ major 4
 minor 1
 release 0
 x 22
-y 298
-w 45
-h 16
-font "helvetica-bold-r-14.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Status"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 22
-y 317
+y 274
 w 107
 h 16
 font "helvetica-bold-r-14.0"
@@ -799,7 +730,7 @@ major 4
 minor 1
 release 0
 x 22
-y 340
+y 297
 w 125
 h 16
 font "helvetica-bold-r-14.0"
@@ -819,7 +750,7 @@ major 4
 minor 1
 release 0
 x 22
-y 361
+y 318
 w 76
 h 16
 font "helvetica-bold-r-14.0"
@@ -839,27 +770,7 @@ major 4
 minor 1
 release 0
 x 22
-y 379
-w 84
-h 16
-font "helvetica-bold-r-14.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "VoltageSet0"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 22
-y 398
+y 357
 w 107
 h 16
 font "helvetica-bold-r-14.0"
@@ -879,7 +790,7 @@ major 4
 minor 1
 release 0
 x 22
-y 436
+y 395
 w 108
 h 16
 font "helvetica-bold-r-14.0"
@@ -899,7 +810,7 @@ major 4
 minor 1
 release 0
 x 22
-y 454
+y 337
 w 126
 h 16
 font "helvetica-bold-r-14.0"
@@ -919,7 +830,7 @@ major 4
 minor 1
 release 0
 x 22
-y 473
+y 414
 w 114
 h 16
 font "helvetica-bold-r-14.0"
@@ -939,7 +850,7 @@ major 4
 minor 1
 release 0
 x 22
-y 492
+y 433
 w 127
 h 16
 font "helvetica-bold-r-14.0"
@@ -959,7 +870,7 @@ major 4
 minor 1
 release 0
 x 22
-y 510
+y 451
 w 115
 h 16
 font "helvetica-bold-r-14.0"
@@ -967,7 +878,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Nominal Current"
+  "Current Limit"
 }
 autoSize
 endObjectProperties
@@ -979,7 +890,7 @@ major 4
 minor 1
 release 0
 x 22
-y 529
+y 470
 w 77
 h 16
 font "helvetica-bold-r-14.0"
@@ -999,7 +910,7 @@ major 4
 minor 2
 release 0
 x 170
-y 566
+y 507
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:ChannelStatus"
@@ -1026,7 +937,7 @@ major 4
 minor 2
 release 0
 x 170
-y 548
+y 489
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMax"
@@ -1052,7 +963,7 @@ major 4
 minor 2
 release 0
 x 170
-y 529
+y 470
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:Resistance"
@@ -1079,7 +990,7 @@ major 4
 minor 2
 release 0
 x 170
-y 510
+y 451
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentNominal"
@@ -1106,7 +1017,7 @@ major 4
 minor 2
 release 0
 x 170
-y 492
+y 433
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentMeasure"
@@ -1133,7 +1044,7 @@ major 4
 minor 2
 release 0
 x 170
-y 473
+y 414
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageNominal"
@@ -1159,7 +1070,7 @@ major 4
 minor 2
 release 0
 x 170
-y 454
+y 337
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMeasure"
@@ -1185,7 +1096,7 @@ major 4
 minor 2
 release 0
 x 170
-y 436
+y 395
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentBounds"
@@ -1213,7 +1124,7 @@ major 4
 minor 2
 release 0
 x 170
-y 417
+y 376
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentTrip"
@@ -1241,7 +1152,7 @@ major 4
 minor 2
 release 0
 x 170
-y 398
+y 357
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageBounds"
@@ -1267,36 +1178,10 @@ major 4
 minor 2
 release 0
 x 170
-y 379
+y 318
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageSet0"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 170
-y 361
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:VoltageSet"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -1319,7 +1204,7 @@ major 4
 minor 0
 release 0
 x 171
-y 340
+y 297
 w 82
 h 18
 fgColor index 29
@@ -1345,46 +1230,22 @@ major 4
 minor 0
 release 0
 x 171
-y 317
+y 274
 w 82
 h 20
 fgColor index 29
 onColor index 15
 offColor index 3
-inconsistentColor index 14
+inconsistentColor index 36
 topShadowColor index 2
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlOnOff"
+indicatorPv "$(IOC):VHS$(iVHS):CH0:ChannelIsOn"
 onLabel "On"
 offLabel "Off"
 3d
 font "helvetica-bold-r-14.0"
 objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 171
-y 298
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:STATUS"
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
 endObjectProperties
 
 # (Static Text)
@@ -1394,7 +1255,7 @@ major 4
 minor 1
 release 0
 x 171
-y 277
+y 252
 w 82
 h 21
 font "helvetica-medium-r-18.0"
@@ -1414,7 +1275,7 @@ major 4
 minor 2
 release 0
 x 281
-y 566
+y 507
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:ChannelStatus"
@@ -1441,7 +1302,7 @@ major 4
 minor 2
 release 0
 x 281
-y 548
+y 489
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMax"
@@ -1467,7 +1328,7 @@ major 4
 minor 2
 release 0
 x 281
-y 529
+y 470
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:Resistance"
@@ -1493,7 +1354,7 @@ major 4
 minor 2
 release 0
 x 281
-y 510
+y 451
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentNominal"
@@ -1520,7 +1381,7 @@ major 4
 minor 2
 release 0
 x 281
-y 492
+y 433
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentMeasure"
@@ -1547,7 +1408,7 @@ major 4
 minor 2
 release 0
 x 281
-y 473
+y 414
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageNominal"
@@ -1573,7 +1434,7 @@ major 4
 minor 2
 release 0
 x 281
-y 454
+y 337
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMeasure"
@@ -1599,7 +1460,7 @@ major 4
 minor 2
 release 0
 x 281
-y 436
+y 395
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentBounds"
@@ -1627,7 +1488,7 @@ major 4
 minor 2
 release 0
 x 281
-y 417
+y 376
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentTrip"
@@ -1655,7 +1516,7 @@ major 4
 minor 2
 release 0
 x 281
-y 398
+y 357
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageBounds"
@@ -1681,7 +1542,7 @@ major 4
 minor 2
 release 0
 x 281
-y 379
+y 318
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageSet0"
@@ -1700,32 +1561,6 @@ newPos
 objType "controls"
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 281
-y 361
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:VoltageSet"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
 # (Button)
 object activeButtonClass
 beginObjectProperties
@@ -1733,7 +1568,7 @@ major 4
 minor 0
 release 0
 x 282
-y 340
+y 297
 w 82
 h 18
 fgColor index 29
@@ -1752,55 +1587,6 @@ font "helvetica-bold-r-14.0"
 objType "controls"
 endObjectProperties
 
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 282
-y 317
-w 82
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 14
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlOnOff"
-onLabel "On"
-offLabel "Off"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 282
-y 298
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:STATUS"
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -1808,7 +1594,7 @@ major 4
 minor 1
 release 0
 x 282
-y 277
+y 252
 w 82
 h 21
 font "helvetica-medium-r-18.0"
@@ -1828,7 +1614,7 @@ major 4
 minor 2
 release 0
 x 392
-y 566
+y 507
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:ChannelStatus"
@@ -1855,7 +1641,7 @@ major 4
 minor 2
 release 0
 x 392
-y 548
+y 489
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMax"
@@ -1881,7 +1667,7 @@ major 4
 minor 2
 release 0
 x 392
-y 529
+y 470
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:Resistance"
@@ -1907,7 +1693,7 @@ major 4
 minor 2
 release 0
 x 392
-y 510
+y 451
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentNominal"
@@ -1934,7 +1720,7 @@ major 4
 minor 2
 release 0
 x 392
-y 492
+y 433
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentMeasure"
@@ -1961,7 +1747,7 @@ major 4
 minor 2
 release 0
 x 392
-y 473
+y 414
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageNominal"
@@ -1987,7 +1773,7 @@ major 4
 minor 2
 release 0
 x 392
-y 454
+y 337
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMeasure"
@@ -2013,7 +1799,7 @@ major 4
 minor 2
 release 0
 x 392
-y 436
+y 395
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentBounds"
@@ -2041,7 +1827,7 @@ major 4
 minor 2
 release 0
 x 392
-y 417
+y 376
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentTrip"
@@ -2069,7 +1855,7 @@ major 4
 minor 2
 release 0
 x 392
-y 398
+y 357
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageBounds"
@@ -2095,7 +1881,7 @@ major 4
 minor 2
 release 0
 x 392
-y 379
+y 318
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageSet0"
@@ -2114,32 +1900,6 @@ newPos
 objType "controls"
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 392
-y 361
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:VoltageSet"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
 # (Button)
 object activeButtonClass
 beginObjectProperties
@@ -2147,7 +1907,7 @@ major 4
 minor 0
 release 0
 x 393
-y 340
+y 297
 w 82
 h 18
 fgColor index 29
@@ -2166,55 +1926,6 @@ font "helvetica-bold-r-14.0"
 objType "controls"
 endObjectProperties
 
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 393
-y 317
-w 82
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 14
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlOnOff"
-onLabel "On"
-offLabel "Off"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 393
-y 298
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:STATUS"
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -2222,7 +1933,7 @@ major 4
 minor 1
 release 0
 x 393
-y 277
+y 252
 w 82
 h 21
 font "helvetica-medium-r-18.0"
@@ -2242,7 +1953,7 @@ major 4
 minor 2
 release 0
 x 496
-y 566
+y 507
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:ChannelStatus"
@@ -2269,7 +1980,7 @@ major 4
 minor 2
 release 0
 x 496
-y 548
+y 489
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMax"
@@ -2295,7 +2006,7 @@ major 4
 minor 2
 release 0
 x 496
-y 529
+y 470
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:Resistance"
@@ -2321,7 +2032,7 @@ major 4
 minor 2
 release 0
 x 496
-y 510
+y 451
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentNominal"
@@ -2348,7 +2059,7 @@ major 4
 minor 2
 release 0
 x 496
-y 492
+y 433
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentMeasure"
@@ -2375,7 +2086,7 @@ major 4
 minor 2
 release 0
 x 496
-y 473
+y 414
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageNominal"
@@ -2401,7 +2112,7 @@ major 4
 minor 2
 release 0
 x 496
-y 454
+y 337
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMeasure"
@@ -2427,7 +2138,7 @@ major 4
 minor 2
 release 0
 x 496
-y 436
+y 395
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentBounds"
@@ -2455,7 +2166,7 @@ major 4
 minor 2
 release 0
 x 496
-y 417
+y 376
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentTrip"
@@ -2483,7 +2194,7 @@ major 4
 minor 2
 release 0
 x 496
-y 398
+y 357
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageBounds"
@@ -2509,7 +2220,7 @@ major 4
 minor 2
 release 0
 x 496
-y 379
+y 318
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageSet0"
@@ -2528,32 +2239,6 @@ newPos
 objType "controls"
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 496
-y 361
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:VoltageSet"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
 # (Button)
 object activeButtonClass
 beginObjectProperties
@@ -2561,7 +2246,7 @@ major 4
 minor 0
 release 0
 x 497
-y 340
+y 297
 w 82
 h 18
 fgColor index 29
@@ -2580,55 +2265,6 @@ font "helvetica-bold-r-14.0"
 objType "controls"
 endObjectProperties
 
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 497
-y 317
-w 82
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 14
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlOnOff"
-onLabel "On"
-offLabel "Off"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 497
-y 298
-w 82
-h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:STATUS"
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -2636,7 +2272,7 @@ major 4
 minor 1
 release 0
 x 497
-y 277
+y 252
 w 82
 h 21
 font "helvetica-medium-r-18.0"
@@ -2716,16 +2352,159 @@ buttonLabel "Parent"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "gasDetScreens/gasDet_Overview.edl"
+  0 "$(PARENT)"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "IOC=AMO:R15:IOC:40,EVR=AMO:R15:EVR:40"
+  0 ""
 }
 replaceSymbols {
   0 1
 }
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 156
+y 170
+w 60
+h 19
+fgColor index 29
+onColor index 2
+offColor index 2
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
+pressValue "0"
+onLabel "All Off"
+offLabel "All Off"
+3d
+useEnumNumeric
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 221
+y 170
+w 60
+h 19
+fgColor index 29
+onColor index 2
+offColor index 2
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
+pressValue "1"
+onLabel "All On"
+offLabel "All On"
+3d
+useEnumNumeric
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 540
+y 171
+w 51
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "(%/sec)"
+}
+autoSize
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 282
+y 273
+w 82
+h 23
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 36
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlOnOff"
+indicatorPv "$(IOC):VHS$(iVHS):CH1:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 393
+y 275
+w 82
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 36
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlOnOff"
+indicatorPv "$(IOC):VHS$(iVHS):CH2:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 498
+y 275
+w 82
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 36
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlOnOff"
+indicatorPv "$(IOC):VHS$(iVHS):CH3:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
 endObjectProperties
 

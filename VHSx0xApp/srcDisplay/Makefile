@@ -11,6 +11,7 @@ include $(TOP)/configure/CONFIG
 
 EDLS += VHSx0x_Channel.edl
 EDLS += VHSx0x_Module.edl
+EDLS += vhsN.edl
 
 # Install images to be used by EDM (Gif and Png are supported)
 # PNG is better and preferred.

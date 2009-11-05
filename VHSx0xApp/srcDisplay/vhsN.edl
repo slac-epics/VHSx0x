@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 103
-y 392
-w 641
-h 600
+x 612
+y 75
+w 637
+h 557
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-medium-r-18.0"
 btnFont "helvetica-bold-r-14.0"
@@ -46,14 +46,14 @@ minor 1
 release 0
 x 11
 y 12
-w 192
+w 264
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-	"$(APP) iSEG High Voltage Supply VHS$(iVHS)"
+  "$(APP) iSEG High Voltage Supply VHS$(iVHS)"
 }
 autoSize
 endObjectProperties
@@ -67,7 +67,7 @@ release 0
 x 12
 y 36
 w 615
-h 555
+h 516
 lineColor index 14
 fill
 fillColor index 5
@@ -219,7 +219,7 @@ minor 1
 release 0
 x 331
 y 122
-w 88
+w 84
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -468,8 +468,8 @@ major 4
 minor 1
 release 0
 x 331
-y 225
-w 129
+y 198
+w 142
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -487,8 +487,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 523
-y 222
+x 519
+y 195
 w 80
 h 21
 fgColor index 29
@@ -500,6 +500,7 @@ botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):ModuleControlKILena"
 onLabel "Enabled"
 offLabel "Disabled"
+labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
 objType "controls"
@@ -537,8 +538,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 523
-y 192
+x 202
+y 224
 w 80
 h 20
 fgColor index 29
@@ -583,10 +584,10 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 484
+x 487
 y 171
 w 47
-h 16
+h 20
 controlPv "$(IOC):VHS$(iVHS):VoltageRampSpeed"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -595,11 +596,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 2
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -629,9 +635,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 331
-y 194
-w 141
+x 23
+y 226
+w 63
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -649,8 +655,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 489
+x 21
+y 502
 w 85
 h 16
 font "helvetica-bold-r-14.0"
@@ -669,8 +675,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 507
+x 21
+y 520
 w 76
 h 16
 font "helvetica-bold-r-14.0"
@@ -689,8 +695,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 376
+x 21
+y 385
 w 81
 h 16
 font "helvetica-bold-r-14.0"
@@ -730,7 +736,7 @@ major 4
 minor 1
 release 0
 x 22
-y 297
+y 298
 w 125
 h 16
 font "helvetica-bold-r-14.0"
@@ -750,7 +756,7 @@ major 4
 minor 1
 release 0
 x 22
-y 318
+y 322
 w 76
 h 16
 font "helvetica-bold-r-14.0"
@@ -769,8 +775,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 357
+x 21
+y 366
 w 107
 h 16
 font "helvetica-bold-r-14.0"
@@ -789,8 +795,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 395
+x 21
+y 404
 w 108
 h 16
 font "helvetica-bold-r-14.0"
@@ -809,8 +815,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 337
+x 21
+y 346
 w 126
 h 16
 font "helvetica-bold-r-14.0"
@@ -829,8 +835,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 414
+x 21
+y 427
 w 114
 h 16
 font "helvetica-bold-r-14.0"
@@ -849,8 +855,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 433
+x 21
+y 446
 w 127
 h 16
 font "helvetica-bold-r-14.0"
@@ -869,9 +875,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 451
-w 115
+x 21
+y 464
+w 91
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -889,8 +895,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 470
+x 21
+y 483
 w 77
 h 16
 font "helvetica-bold-r-14.0"
@@ -909,8 +915,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 507
+x 169
+y 520
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:ChannelStatus"
@@ -936,8 +942,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 489
+x 169
+y 502
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMax"
@@ -962,8 +968,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 470
+x 169
+y 483
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:Resistance"
@@ -989,8 +995,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 451
+x 169
+y 464
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentNominal"
@@ -1016,8 +1022,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 433
+x 169
+y 446
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentMeasure"
@@ -1043,8 +1049,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 414
+x 169
+y 427
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageNominal"
@@ -1069,8 +1075,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 337
+x 169
+y 346
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMeasure"
@@ -1095,8 +1101,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 395
+x 169
+y 404
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentBounds"
@@ -1108,12 +1114,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1123,8 +1134,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 376
+x 169
+y 385
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH0:CurrentTrip"
@@ -1136,12 +1147,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1151,23 +1167,28 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 357
+x 169
+y 366
 w 82
-h 16
+h 20
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageBounds"
 font "helvetica-bold-r-14.0"
-fontAlign "right"
+fontAlign "center"
 fgColor index 29
 bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1178,9 +1199,9 @@ major 4
 minor 2
 release 0
 x 170
-y 318
+y 322
 w 82
-h 16
+h 20
 controlPv "$(IOC):VHS$(iVHS):CH0:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1189,11 +1210,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1204,9 +1230,9 @@ major 4
 minor 0
 release 0
 x 171
-y 297
+y 298
 w 82
-h 18
+h 20
 fgColor index 29
 onColor index 20
 offColor index 3
@@ -1215,34 +1241,9 @@ topShadowColor index 6
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlEMCY"
 onLabel "Off!!!"
-offLabel "Off"
+offLabel "Normal"
 labelType "literal"
 buttonType "push"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 171
-y 274
-w 82
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlOnOff"
-indicatorPv "$(IOC):VHS$(iVHS):CH0:ChannelIsOn"
-onLabel "On"
-offLabel "Off"
 3d
 font "helvetica-bold-r-14.0"
 objType "controls"
@@ -1274,8 +1275,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 507
+x 280
+y 520
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:ChannelStatus"
@@ -1301,8 +1302,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 489
+x 280
+y 502
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMax"
@@ -1327,8 +1328,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 470
+x 280
+y 483
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:Resistance"
@@ -1353,8 +1354,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 451
+x 280
+y 464
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentNominal"
@@ -1380,8 +1381,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 433
+x 280
+y 446
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentMeasure"
@@ -1407,8 +1408,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 414
+x 280
+y 427
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageNominal"
@@ -1433,8 +1434,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 337
+x 280
+y 346
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMeasure"
@@ -1459,8 +1460,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 395
+x 280
+y 404
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentBounds"
@@ -1472,12 +1473,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1487,8 +1493,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 376
+x 280
+y 385
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:CurrentTrip"
@@ -1500,12 +1506,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1515,8 +1526,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 357
+x 280
+y 366
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageBounds"
@@ -1527,11 +1538,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1542,9 +1558,9 @@ major 4
 minor 2
 release 0
 x 281
-y 318
+y 322
 w 82
-h 16
+h 20
 controlPv "$(IOC):VHS$(iVHS):CH1:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1553,11 +1569,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1568,9 +1589,9 @@ major 4
 minor 0
 release 0
 x 282
-y 297
+y 298
 w 82
-h 18
+h 20
 fgColor index 29
 onColor index 20
 offColor index 3
@@ -1579,7 +1600,7 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlEMCY"
 onLabel "Off!!!"
-offLabel "Off"
+offLabel "Normal"
 labelType "literal"
 buttonType "push"
 3d
@@ -1613,8 +1634,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 507
+x 391
+y 520
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:ChannelStatus"
@@ -1640,8 +1661,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 489
+x 391
+y 502
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMax"
@@ -1666,8 +1687,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 470
+x 391
+y 483
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:Resistance"
@@ -1692,8 +1713,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 451
+x 391
+y 464
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentNominal"
@@ -1719,8 +1740,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 433
+x 391
+y 446
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentMeasure"
@@ -1746,8 +1767,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 414
+x 391
+y 427
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageNominal"
@@ -1772,8 +1793,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 337
+x 391
+y 346
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMeasure"
@@ -1798,8 +1819,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 395
+x 391
+y 404
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentBounds"
@@ -1811,12 +1832,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1826,8 +1852,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 376
+x 391
+y 385
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:CurrentTrip"
@@ -1839,12 +1865,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1854,8 +1885,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 392
-y 357
+x 391
+y 366
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageBounds"
@@ -1866,11 +1897,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1881,9 +1917,9 @@ major 4
 minor 2
 release 0
 x 392
-y 318
+y 322
 w 82
-h 16
+h 20
 controlPv "$(IOC):VHS$(iVHS):CH2:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1892,11 +1928,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1907,9 +1948,9 @@ major 4
 minor 0
 release 0
 x 393
-y 297
+y 298
 w 82
-h 18
+h 20
 fgColor index 29
 onColor index 20
 offColor index 3
@@ -1918,7 +1959,7 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlEMCY"
 onLabel "Off!!!"
-offLabel "Off"
+offLabel "Normal"
 labelType "literal"
 buttonType "push"
 3d
@@ -1952,8 +1993,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 507
+x 495
+y 520
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:ChannelStatus"
@@ -1979,8 +2020,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 489
+x 495
+y 502
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMax"
@@ -2005,8 +2046,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 470
+x 495
+y 483
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:Resistance"
@@ -2031,8 +2072,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 451
+x 495
+y 464
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentNominal"
@@ -2058,8 +2099,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 433
+x 495
+y 446
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentMeasure"
@@ -2085,8 +2126,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 414
+x 495
+y 427
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageNominal"
@@ -2111,8 +2152,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 337
+x 495
+y 346
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMeasure"
@@ -2137,8 +2178,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 395
+x 495
+y 404
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentBounds"
@@ -2150,12 +2191,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2165,8 +2211,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 376
+x 495
+y 385
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:CurrentTrip"
@@ -2178,12 +2224,17 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
 autoSelect
+useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2193,8 +2244,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 496
-y 357
+x 495
+y 366
 w 82
 h 16
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageBounds"
@@ -2205,11 +2256,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2220,9 +2276,9 @@ major 4
 minor 2
 release 0
 x 496
-y 318
+y 322
 w 82
-h 16
+h 20
 controlPv "$(IOC):VHS$(iVHS):CH3:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2231,11 +2287,16 @@ bgColor index 0
 useDisplayBg
 editable
 autoHeight
+motifWidget
 limitsFromDb
 nullColor index 0
 smartRefresh
+useKp
+changeValOnLoseFocus
+autoSelect
 useHexPrefix
 newPos
+inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2246,9 +2307,9 @@ major 4
 minor 0
 release 0
 x 497
-y 297
+y 298
 w 82
-h 18
+h 20
 fgColor index 29
 onColor index 20
 offColor index 3
@@ -2257,7 +2318,7 @@ topShadowColor index 0
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlEMCY"
 onLabel "Off!!!"
-offLabel "Off"
+offLabel "Normal"
 labelType "literal"
 buttonType "push"
 3d
@@ -2357,12 +2418,6 @@ displayFileName {
 setPosition {
   0 "parentWindow"
 }
-symbols {
-  0 ""
-}
-replaceSymbols {
-  0 1
-}
 endObjectProperties
 
 # (Message Button)
@@ -2382,6 +2437,7 @@ topShadowColor index 2
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
 pressValue "0"
+releaseValue "0"
 onLabel "All Off"
 offLabel "All Off"
 3d
@@ -2406,6 +2462,7 @@ topShadowColor index 2
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
 pressValue "1"
+releaseValue "1"
 onLabel "All On"
 offLabel "All On"
 3d
@@ -2419,7 +2476,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 540
+x 548
 y 171
 w 51
 h 16
@@ -2433,16 +2490,116 @@ value {
 autoSize
 endObjectProperties
 
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 171
+y 273
+w 82
+h 20
+
+beginGroup
+
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 282
+x 171
 y 273
 w 82
-h 23
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 36
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlOnOff"
+indicatorPv "$(IOC):VHS$(iVHS):CH0:ChannelIsOn"
+labelType "literal"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 171
+y 273
+w 82
+h 20
+controlPv "$(IOC):VHS$(iVHS):CH0:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 171
+y 273
+w 82
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(IOC):VHS$(iVHS):CH0:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 284
+y 273
+w 82
+h 20
+
+beginGroup
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 284
+y 273
+w 82
+h 20
 fgColor index 29
 onColor index 15
 offColor index 3
@@ -2451,12 +2608,74 @@ topShadowColor index 2
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlOnOff"
 indicatorPv "$(IOC):VHS$(iVHS):CH1:ChannelIsOn"
-onLabel "On"
-offLabel "Off"
+labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
 objType "controls"
 endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 284
+y 273
+w 82
+h 20
+controlPv "$(IOC):VHS$(iVHS):CH1:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 284
+y 273
+w 82
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(IOC):VHS$(iVHS):CH1:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 394
+y 273
+w 82
+h 20
+
+beginGroup
 
 # (Button)
 object activeButtonClass
@@ -2464,8 +2683,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 393
-y 275
+x 394
+y 273
 w 82
 h 20
 fgColor index 29
@@ -2476,12 +2695,74 @@ topShadowColor index 2
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlOnOff"
 indicatorPv "$(IOC):VHS$(iVHS):CH2:ChannelIsOn"
-onLabel "On"
-offLabel "Off"
+labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
 objType "controls"
 endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 394
+y 273
+w 82
+h 20
+controlPv "$(IOC):VHS$(iVHS):CH2:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 394
+y 273
+w 82
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(IOC):VHS$(iVHS):CH2:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 499
+y 273
+w 82
+h 20
+
+beginGroup
 
 # (Button)
 object activeButtonClass
@@ -2489,8 +2770,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 498
-y 275
+x 499
+y 273
 w 82
 h 20
 fgColor index 29
@@ -2501,10 +2782,59 @@ topShadowColor index 2
 botShadowColor index 14
 controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlOnOff"
 indicatorPv "$(IOC):VHS$(iVHS):CH3:ChannelIsOn"
-onLabel "On"
-offLabel "Off"
+labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
 objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 499
+y 273
+w 82
+h 20
+controlPv "$(IOC):VHS$(iVHS):CH3:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 499
+y 273
+w 82
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(IOC):VHS$(iVHS):CH3:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
 endObjectProperties
 

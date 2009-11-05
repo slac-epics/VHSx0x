@@ -29,7 +29,7 @@ record(calc, "$(DEV):ModuleIsOKCalc" ) {
 
 record(bo, "$(DEV):ModuleIsOK" ) {
 	field( DESC, "True when Module is On" )
-	field( DOL,  "$(CHAN):ModuleIsOK NPP" )
+	field( DOL,  "$(DEV):ModuleIsOK NPP" )
 	field( ZNAM, "OK" )
 	field( ONAM, "Fault" )
 }
@@ -43,7 +43,7 @@ record(calcout, "$(DEV):ModuleTempOKCalc" ) {
 
 record(bo, "$(DEV):ModuleTempOK" ) {
 	field( DESC, "True when Module Temp is On" )
-	field( DOL,  "$(CHAN):ModuleTempOK NPP" )
+	field( DOL,  "$(DEV):ModuleTempOK NPP" )
 	field( ZNAM, "OK" )
 	field( ONAM, "Hot!" )
 }
@@ -184,14 +184,15 @@ record(bo, "$(DEV):AllChannelOnOff") {
   field(DESC, "All Channel OnOff")
 #  field(DTYP, "VHSx0x")
 #  field(OUT, "#C$(CARD) S0 @AllChannelOnOff")
-#  field(ZNAM, "Off")
-#  field(ONAM, "On")
-  field( FLNK, "$(DEV):AllChannelOnOff" )
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field( FLNK, "$(DEV):AllChannelOnOffFanOut PP" )
 }
 
 record(dfanout, "$(DEV):AllChannelOnOffFanOut" ) {
   field( DESC, "Channel OnOff" )
-  field( DOL,  "$(DEV):AllChannelOnOff" )
+  field( OMSL, "closed_loop" )
+  field( DOL,  "$(DEV):AllChannelOnOff NPP" )
   field( PINI, "NO" )
   field( OUTA, "$(DEV):CH0:ChannelControlOnOff PP" )
   field( OUTB, "$(DEV):CH1:ChannelControlOnOff PP" )

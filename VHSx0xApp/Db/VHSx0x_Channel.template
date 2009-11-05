@@ -40,7 +40,7 @@ record(bo, "$(CHAN):ChannelIsOn" ) {
 }
 
 record(calcout, "$(CHAN):ChannelIsEmergencyCalc" ) {
-	field( DESC, "True when Channel is On, else False" )
+	field( DESC, "True when Channel is On" )
 	field( INPA, "$(CHAN):ChannelEventStatus" )
 	field( CALC, "(A & 0x0020) ? 1 : 0" )
 	field( OUT,  "$(CHAN):ChannelIsEmergency PP" )

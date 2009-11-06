@@ -125,3 +125,50 @@ value = 58 = 0x3a = ':'
 vxStatsTest>timexN bcopyWords,0xf1fffc00,0x500000,1
 timex: 125000 reps, time per rep = 1 +/- 0 (0%) microsecs
 value = 58 = 0x3a = ':'
+
+6.  Safety Loop
+These cards have a safety loop connection on the front panel
+which fits Lemo connector FFA.OS.302.CLAC,
+http://www.lemo.com/display_product_detail.do?partNum=FFA0S302CLAC17
+
+To use, remove the ILK jumper at the top of the card.
+You should be able to reach the jumper without taking the shield off the card.
+
+Run a 24V signal thru each safetyloop, supplying between 4 to 20ma.
+You'll get approx 3V drop across each card.
+
+Note:  We've received several cards where the safety loop did not work.
+When we investigated, we found they were configured to use the SL connector
+as an output.   The fix is to remove 2 diodes located just to the right
+of a 2x3 pin jumper block about 3" behind the SL connector.
+You can test the SL connector from the front panel with a volt meter.
+In diode mode, connect the red lead to the center of the SL socket and the
+black to the side.   If it isn't an open circuit, the diodes need to be removed.
+
+I'd give jumper and component numbers, but there weren't any visible on the board.
+Here's some rough ascii art to help locate them.
+d	diode
+SL	Safety Loop connector
+*	open jumper pin
+~	jumpered pin
+IM	Max current adj
+VM	Max voltage adj
+ADR	Address select jumper
+ILK	Interlock enable jumper
+
+                              |
+                              SL
+                              |
+                              IM
+                              |
+                              VM
+               d d            |  
+            *~~               |
+            *~~               |
+                              |
+                              |
+                              |
+     ADR            ILK       |
+------------------------------+
+
+

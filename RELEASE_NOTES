@@ -9,11 +9,16 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #  Mod:
+#        20-Mar-2010, S. Hoobler          (SONYA)
+#          release VHSx0x-R2-2-0
 #        29-Apr-2009, K. Luchini          (LUCHINI)
 #          release VHSx0x-R2-0-0
 #
 #==============================================================
 #
+VHSx0x-R2-2-0:    Build with base-R3-14-8-2-lcls6
+                  Build with rtems-4.9.4
+
 VHSx0x-R2-1-0:    Build with base-R3-14-8-2-lcls5
                   Build with rtems-4.9.3
 

@@ -601,11 +601,9 @@ precision 2
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1120,11 +1118,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1153,11 +1149,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1184,11 +1178,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1215,11 +1207,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1479,11 +1469,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1512,11 +1500,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1543,11 +1529,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1574,11 +1558,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1838,11 +1820,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1871,11 +1851,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1902,11 +1880,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -1933,11 +1909,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2197,11 +2171,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2230,11 +2202,9 @@ fieldLen "8"
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2261,11 +2231,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 
@@ -2292,11 +2260,9 @@ limitsFromDb
 nullColor index 0
 smartRefresh
 useKp
-changeValOnLoseFocus
 autoSelect
 useHexPrefix
 newPos
-inputFocusUpdates
 objType "controls"
 endObjectProperties
 

@@ -1,0 +1,5 @@
+# VHSx0x_Channel autosave PV's
+$(CHAN):CurrentBounds
+$(CHAN):CurrentTrip
+$(CHAN):VoltageBounds
+$(CHAN):VoltageSet0

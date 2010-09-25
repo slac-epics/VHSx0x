@@ -2,53 +2,64 @@
 #! DBDSTART
 #! DBDEND
 
-
 # EPICS Template for iSeg VHSx0x module
-# Macro Definitions
-# DEV			- Device name,	for example AMO:R13:IOC:14:VHS3
-# CARD			- VHSx0x Card Number (0, 1, 2, ...)
-record(mbbiDirect, "$(DEV):ModuleStatus") {
+# Required Macro Definitions
+#	MODULE			# Module name,	for example AMO:R13:IOC:14:VHS3
+#	CARD			# VHSx0x Card Number (0, 1, 2, ...)
+#	V_MAX			# Maximum nominal voltage for module (absolute value)
+#	POLARITY		# 1 for pos voltage, -1 for neg voltage
+# Optional Macro Definitions
+#	RAMP_SPEED_HI	# Maximum ramp speed ( % range per sec, default = 20% )
+#	RAMP_SPEED_LO	# Minimum ramp speed ( % range per sec, default = 1%, >= 1mV/sec )
+
+record(mbbiDirect, "$(MODULE):ModuleStatus")
+{
   field(DESC, "Module Status")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S0 @ModuleStatus")
-  field(FLNK, "$(DEV):ModuleStatusFanout" )
+  field(FLNK, "$(MODULE):ModuleStatusFanout" )
 }
 
-record( fanout, "$(DEV):ModuleStatusFanout" )
+record( fanout, "$(MODULE):ModuleStatusFanout" )
 {
-	field( LNK1,	"$(DEV):ModuleIsOKCalc" )
-	field( LNK2,	"$(DEV):ModuleTempOKCalc" )
+	field( LNK1,	"$(MODULE):ModuleIsOKCalc" )
+	field( LNK2,	"$(MODULE):ModuleTempOKCalc" )
 }
 
-record(calc, "$(DEV):ModuleIsOKCalc" ) {
+record(calc, "$(MODULE):ModuleIsOKCalc" )
+{
 	field( DESC, "True when Module is OK" )
-	field( INPA, "$(DEV):ModuleStatus" )
+	field( INPA, "$(MODULE):ModuleStatus" )
 	field( CALC, "(A & 0x1120) ? 1 : 0" )
 }
 
-record(bo, "$(DEV):ModuleIsOK" ) {
+record(bo, "$(MODULE):ModuleIsOK" )
+{
 	field( DESC, "True when Module is On" )
-	field( DOL,  "$(DEV):ModuleIsOK NPP" )
+	field( DOL,  "$(MODULE):ModuleIsOK NPP" )
 	field( ZNAM, "OK" )
 	field( ONAM, "Fault" )
 }
 
-record(calcout, "$(DEV):ModuleTempOKCalc" ) {
+record(calcout, "$(MODULE):ModuleTempOKCalc" )
+{
 	field( DESC, "True when Module Temp is OK" )
-	field( INPA, "$(DEV):ModuleStatus" )
+	field( INPA, "$(MODULE):ModuleStatus" )
 	field( CALC, "(A & 0x0100) ? 1 : 0" )
-	field( OUT,	 "$(DEV):ModuleTempOK" )
+	field( OUT,	 "$(MODULE):ModuleTempOK" )
 }
 
-record(bo, "$(DEV):ModuleTempOK" ) {
+record(bo, "$(MODULE):ModuleTempOK" )
+{
 	field( DESC, "True when Module Temp is On" )
-	field( DOL,  "$(DEV):ModuleTempOK NPP" )
+	field( DOL,  "$(MODULE):ModuleTempOK NPP" )
 	field( ZNAM, "OK" )
 	field( ONAM, "Hot!" )
 }
 
-record(bo, "$(DEV):ModuleControlKILena") {
+record(bo, "$(MODULE):ModuleControlKILena")
+{
   field(DESC, "Enable Kill")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S0 @ModuleControlKILena")
@@ -56,7 +67,8 @@ record(bo, "$(DEV):ModuleControlKILena") {
   field(ONAM, "Enable")
 }
 
-record(bo, "$(DEV):ModuleControlCLEAR") {
+record(bo, "$(MODULE):ModuleControlCLEAR")
+{
   field(DESC, "Clear Kill")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S0 @ModuleControlCLEAR")
@@ -64,18 +76,20 @@ record(bo, "$(DEV):ModuleControlCLEAR") {
   field(ONAM, "Clear")
 }
 
-record(ao, "$(DEV):VoltageRampSpeed") {
+record(ao, "$(MODULE):VoltageRampSpeed")
+{
   field(DESC, "VoltageRampSpeed")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S0 @VoltageRampSpeed")
-  field(DRVH, $(RAMP_SPEED_HI) )
-  field(DRVL, $(RAMP_SPEED_LO) )
-  field(HOPR, $(RAMP_SPEED_HI) )
-  field(LOPR, $(RAMP_SPEED_LO) )
+  field(DRVH, $(RAMP_SPEED_HI=20) )
+  field(DRVL, $(RAMP_SPEED_LO=1) )
+  field(HOPR, $(RAMP_SPEED_HI=20) )
+  field(LOPR, $(RAMP_SPEED_LO=1) )
   field(EGU, "%")
 }
 
-record(ai, "$(DEV):VoltageMax") {
+record(ai, "$(MODULE):VoltageMax")
+{
   field(DESC, "VoltageMax")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -85,7 +99,8 @@ record(ai, "$(DEV):VoltageMax") {
   field(EGU, "%")
 }
 
-record(ai, "$(DEV):CurrentMax") {
+record(ai, "$(MODULE):CurrentMax")
+{
   field(DESC, "CurrentMax")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -95,7 +110,8 @@ record(ai, "$(DEV):CurrentMax") {
   field(EGU, "%")
 }
 
-record(ai, "$(DEV):SupplyP5") {
+record(ai, "$(MODULE):SupplyP5")
+{
   field(DESC, "Supply +5V")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -114,7 +130,8 @@ record(ai, "$(DEV):SupplyP5") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(DEV):SupplyP12") {
+record(ai, "$(MODULE):SupplyP12")
+{
   field(DESC, "Supply +12V")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -133,7 +150,8 @@ record(ai, "$(DEV):SupplyP12") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(DEV):SupplyN12") {
+record(ai, "$(MODULE):SupplyN12")
+{
   field(DESC, "Supply -12V")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -152,7 +170,8 @@ record(ai, "$(DEV):SupplyN12") {
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(DEV):Temperature") {
+record(ai, "$(MODULE):Temperature")
+{
   field(DESC, "Temperature")
   field(SCAN, "1 second")
   field(DTYP, "VHSx0x")
@@ -171,7 +190,8 @@ record(ai, "$(DEV):Temperature") {
   field(LLSV, "MAJOR")
 }
 
-record(bo, "$(DEV):AllChannelEMCY") {
+record(bo, "$(MODULE):AllChannelEMCY")
+{
   field(DESC, "All Channel Emergency Off")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S0 @AllChannelEMCY")
@@ -180,27 +200,30 @@ record(bo, "$(DEV):AllChannelEMCY") {
   field(OSV, "MINOR")
 }
 
-record(bo, "$(DEV):AllChannelOnOff") {
+record(bo, "$(MODULE):AllChannelOnOff")
+{
   field(DESC, "All Channel OnOff")
 #  field(DTYP, "VHSx0x")
 #  field(OUT, "#C$(CARD) S0 @AllChannelOnOff")
   field(ZNAM, "Off")
   field(ONAM, "On")
-  field( FLNK, "$(DEV):AllChannelOnOffFanOut PP" )
+  field( FLNK, "$(MODULE):AllChannelOnOffFanOut PP" )
 }
 
-record(dfanout, "$(DEV):AllChannelOnOffFanOut" ) {
+record(dfanout, "$(MODULE):AllChannelOnOffFanOut" )
+{
   field( DESC, "Channel OnOff" )
   field( OMSL, "closed_loop" )
-  field( DOL,  "$(DEV):AllChannelOnOff NPP" )
+  field( DOL,  "$(MODULE):AllChannelOnOff NPP" )
   field( PINI, "NO" )
-  field( OUTA, "$(DEV):CH0:ChannelControlOnOff PP" )
-  field( OUTB, "$(DEV):CH1:ChannelControlOnOff PP" )
-  field( OUTC, "$(DEV):CH2:ChannelControlOnOff PP" )
-  field( OUTD, "$(DEV):CH3:ChannelControlOnOff PP" )
+  field( OUTA, "$(MODULE):CH0:ChannelControlOnOff PP" )
+  field( OUTB, "$(MODULE):CH1:ChannelControlOnOff PP" )
+  field( OUTC, "$(MODULE):CH2:ChannelControlOnOff PP" )
+  field( OUTD, "$(MODULE):CH3:ChannelControlOnOff PP" )
 }
 
-record(stringin, "$(DEV):DeviceInfo") {
+record(stringin, "$(MODULE):DeviceInfo")
+{
   field(DESC, "DeviceInfo")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S0 @DeviceInfo")
@@ -208,7 +231,8 @@ record(stringin, "$(DEV):DeviceInfo") {
 }
 
 # Pick nice 1, 2, 5... sequence for Ramp
-record(mbbo, "$(DEV):VoltageRampSteps") {
+record(mbbo, "$(MODULE):VoltageRampSteps")
+{
   field(DESC, "Pick nice  sequence for Ramp")
   field(ZRVL, "1")
   field(ONVL, "2")
@@ -222,25 +246,39 @@ record(mbbo, "$(DEV):VoltageRampSteps") {
   field(FRST, "20")
   field(PINI, "YES")
   field(DTYP, "Raw Soft Channel")
-  field(OUT, "$(DEV):VoltageRampSpeed PP")
+  field(OUT, "$(MODULE):VoltageRampSpeed PP")
+}
+
+record( ai, "$(MODULE):RatedVoltage" )
+{
+  field( DESC, "RatedVoltage" )
+  field( SCAN, "Passive" )
+  field( DOL, "$(V_MAX)" )
+  field( EGU, "V" )
+}
+
+record(longout, "$(MODULE):Polarity")
+{
+  field( DESC,	"V. Polarity (1 or -1)" )
+  field( DOL,	"$(POLARITY)"	)
 }
 
 #! Further lines contain data used by VisualDCT
 #! View(0,0,1.0)
-#! Record("$(DEV):ModuleStatus",20,28,0,0,"$(DEV):ModuleStatus")
-#! Record("$(DEV):ModuleControlKILena",20,174,0,0,"$(DEV):ModuleControlKILena")
-#! Record("$(DEV):ModuleControlCLEAR",20,334,0,0,"$(DEV):ModuleControlCLEAR")
-#! Record("$(DEV):VoltageRampSpeed",460,99,0,0,"$(DEV):VoltageRampSpeed")
-#! Field("$(DEV):VoltageRampSpeed.VAL",16777215,0,"$(DEV):VoltageRampSpeed.VAL")
-#! Record("$(DEV):VoltageMax",860,12,0,0,"$(DEV):VoltageMax")
-#! Record("$(DEV):CurrentMax",860,192,0,0,"$(DEV):CurrentMax")
-#! Record("$(DEV):SupplyP5",1060,21,0,0,"$(DEV):SupplyP5")
-#! Record("$(DEV):SupplyP12",1060,321,0,0,"$(DEV):SupplyP12")
-#! Record("$(DEV):SupplyN12",680,21,0,0,"$(DEV):SupplyN12")
-#! Record("$(DEV):Temperature",680,321,0,0,"$(DEV):Temperature")
-#! Record("$(DEV):AllChannelEMCY",200,500,0,0,"$(DEV):AllChannelEMCY")
-#! Record("$(DEV):AllChannelOnOff",20,494,0,0,"$(DEV):AllChannelOnOff")
-#! Record("$(DEV):DeviceInfo",680,608,0,0,"$(DEV):DeviceInfo")
-#! Record("$(DEV):VoltageRampSteps",200,29,0,1,"$(DEV):VoltageRampSteps")
-#! Field("$(DEV):VoltageRampSteps.OUT",16777215,1,"$(DEV):VoltageRampSteps.OUT")
-#! Link("$(DEV):VoltageRampSteps.OUT","$(DEV):VoltageRampSpeed.VAL")
+#! Record("$(MODULE):ModuleStatus",20,28,0,0,"$(MODULE):ModuleStatus")
+#! Record("$(MODULE):ModuleControlKILena",20,174,0,0,"$(MODULE):ModuleControlKILena")
+#! Record("$(MODULE):ModuleControlCLEAR",20,334,0,0,"$(MODULE):ModuleControlCLEAR")
+#! Record("$(MODULE):VoltageRampSpeed",460,99,0,0,"$(MODULE):VoltageRampSpeed")
+#! Field("$(MODULE):VoltageRampSpeed.VAL",16777215,0,"$(MODULE):VoltageRampSpeed.VAL")
+#! Record("$(MODULE):VoltageMax",860,12,0,0,"$(MODULE):VoltageMax")
+#! Record("$(MODULE):CurrentMax",860,192,0,0,"$(MODULE):CurrentMax")
+#! Record("$(MODULE):SupplyP5",1060,21,0,0,"$(MODULE):SupplyP5")
+#! Record("$(MODULE):SupplyP12",1060,321,0,0,"$(MODULE):SupplyP12")
+#! Record("$(MODULE):SupplyN12",680,21,0,0,"$(MODULE):SupplyN12")
+#! Record("$(MODULE):Temperature",680,321,0,0,"$(MODULE):Temperature")
+#! Record("$(MODULE):AllChannelEMCY",200,500,0,0,"$(MODULE):AllChannelEMCY")
+#! Record("$(MODULE):AllChannelOnOff",20,494,0,0,"$(MODULE):AllChannelOnOff")
+#! Record("$(MODULE):DeviceInfo",680,608,0,0,"$(MODULE):DeviceInfo")
+#! Record("$(MODULE):VoltageRampSteps",200,29,0,1,"$(MODULE):VoltageRampSteps")
+#! Field("$(MODULE):VoltageRampSteps.OUT",16777215,1,"$(MODULE):VoltageRampSteps.OUT")
+#! Link("$(MODULE):VoltageRampSteps.OUT","$(MODULE):VoltageRampSpeed.VAL")

@@ -1,0 +1,32 @@
+#==============================================================================
+#
+# Abs:  Autosave Substitution file for ISEG VHSx0x High Voltage Modules
+#
+# Name: autosave_VHSx0x.substitutions
+#
+#  Auth: 25-SEP-2010, B. Hill         (bhill)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name (USERNAME)
+#
+#==============================================================================
+
+# Required macros:
+#	MODULE			# Module base PV name
+file autosave_VHSx0x_Module.template
+{
+	{ MODULE	= $(IOC):VHS$(CARD)	}
+}
+
+#
+# Substitutions for iSeg VHSx0x Channel
+#
+# Required Macro Definitions
+# CHAN		# Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
+
+file autosave_VHSx0x_Channel.template
+{
+	{ CHAN		= $(MODULE):CH0, }
+	{ CHAN		= $(MODULE):CH1, }
+	{ CHAN		= $(MODULE):CH2, }
+	{ CHAN		= $(MODULE):CH3, }
+}
+

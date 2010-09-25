@@ -1,0 +1,7 @@
+# TODO: Review this list of archive PV's
+$(MODULE):NAME	30	monitor
+$(Chan0):NAME	30	monitor
+$(Chan1):NAME	30	monitor
+$(Chan2):NAME	30	monitor
+$(Chan3):NAME	30	monitor
+$(Interlock)	1	monitor

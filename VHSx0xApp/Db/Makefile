@@ -8,11 +8,37 @@ include $(TOP)/configure/CONFIG
 #DB_OPT = YES
 
 #----------------------------------------------------
-# Create and install (or just install)
-# databases, templates, substitutions like this
+# Install db templates
 DB += VHSx0x_Module.template
 DB += VHSx0x_Channel.template
 DB += VHSx0x_Interlock.template
+
+#----------------------------------------------------
+# Install sample db substitutions
+DB += VHSx0x.substitutions
+DB += VHSx0x_Interlock.substitutions
+
+#----------------------------------------------------
+# Install archive templates
+ARCHIVE += archive_VHSx0x_Module.template
+ARCHIVE += archive_VHSx0x_Channel.template
+ARCHIVE += archive_VHSx0x_Interlock.template
+
+#----------------------------------------------------
+# Install archive substitutions
+ARCHIVE += archive_VHSx0x.substitutions
+ARCHIVE += archive_VHSx0x_Interlock.substitutions
+
+#----------------------------------------------------
+# Install autosave templates
+REQ += autosave_VHSx0x_Module.template
+REQ += autosave_VHSx0x_Channel.template
+REQ += autosave_VHSx0x_Interlock.template
+
+#----------------------------------------------------
+# Install autosave substitutions
+REQ += autosave_VHSx0x.substitutions
+REQ += autosave_VHSx0x_Interlock.substitutions
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

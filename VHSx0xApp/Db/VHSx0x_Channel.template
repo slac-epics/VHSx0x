@@ -3,13 +3,55 @@
 #! DBDEND
 
 
+#
 # EPICS Template for iSeg VHSx0x Channel
-# Macro Definitions
-# DEV			- Device name,	for example AMO:R13:IOC:14:VHS3
-# CHAN			- Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
-# CARD			- VHSx0x Card Number (0, 1, 2, ...)
-# SIGNAL		- VHSx0x Channel Number on Card (0..3)
-record(mbbiDirect, "$(CHAN):ChannelStatus") {
+#
+# Required Macro Definitions
+# MODULE	# Module name,	for example AMO:R13:IOC:14:VHS3
+# CHAN		# Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
+# CARD		# VHSx0x Card Number (0, 1, 2, ...)
+# SIGNAL	# VHSx0x Channel Number on Card (0..3)
+# V_MAX		# Nominal rated voltage (abs value)
+#
+# Optional macros:
+#
+# HC.* macros are for current limits:
+#
+# HC.HOPR	# High operating range
+# HC.LOPR	# Low  operating range
+#		EPICS constrains operator display values to:
+#			DRVL <= LOPR <= ... <= HOPR <= DRVH
+#	Alarm limits
+# HC.HIHI	# High High Limit
+# HC.HIGH	# High Limit
+# HC.LOW	# Low Limit
+# HC.LOLO	# Low Low Limit
+#
+# HC.ADEL	# Archive Deadband
+# HC.MDEL	# Monitor Deadband
+#
+# HV.* macros are for voltage limits:
+#
+# HV.DRVH	# Drive High Limit
+# HV.DRVL	# Drive Low  Limit
+#		EPICS constrains VAL to:	DRVL <= VAL <= DRVH
+# HV.HOPR	# High operating range
+# HV.LOPR	# Low  operating range
+#		EPICS constrains operator display values to:
+#			DRVL <= LOPR <= ... <= HOPR <= DRVH
+#	Alarm limits
+# HV.HIHI	# High High Limit
+# HV.HIGH	# High Limit
+# HV.LOW	# Low Limit
+# HV.LOLO	# Low Low Limit
+#
+# HV.ADEL	# Archive Deadband
+# HV.MDEL	# Monitor Deadband
+# HV.HYST	# Alarm Deadband
+# HV.SMOO	# Analog input smoothing factor
+
+record(mbbiDirect, "$(CHAN):ChannelStatus")
+{
   field(DESC, "Channel Status")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -17,7 +59,8 @@ record(mbbiDirect, "$(CHAN):ChannelStatus") {
   field(FLNK, "$(CHAN):ChannelIsOnCalc" )
 }
 
-record(mbbiDirect, "$(CHAN):ChannelEventStatus") {
+record(mbbiDirect, "$(CHAN):ChannelEventStatus")
+{
   field(DESC, "Channel Event Status")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -25,35 +68,40 @@ record(mbbiDirect, "$(CHAN):ChannelEventStatus") {
   field(FLNK, "$(CHAN):ChannelIsEmergencyCalc" )
 }
 
-record(calcout, "$(CHAN):ChannelIsOnCalc" ) {
+record(calcout, "$(CHAN):ChannelIsOnCalc" )
+{
 	field( DESC, "True when Channel is On" )
 	field( INPA, "$(CHAN):ChannelStatus" )
 	field( CALC, "(A & 0x0008) ? 1 : 0" )
 	field( OUT,  "$(CHAN):ChannelIsOn PP" )
 }
 
-record(bo, "$(CHAN):ChannelIsOn" ) {
+record(bo, "$(CHAN):ChannelIsOn" )
+{
 	field( DESC, "True when Channel is On" )
 	field( DOL,  "$(CHAN):ChannelIsOnCalc NPP" )
 	field( ZNAM, "Off" )
 	field( ONAM, "On" )
 }
 
-record(calcout, "$(CHAN):ChannelIsEmergencyCalc" ) {
+record(calcout, "$(CHAN):ChannelIsEmergencyCalc" )
+{
 	field( DESC, "True when Channel is On" )
 	field( INPA, "$(CHAN):ChannelEventStatus" )
 	field( CALC, "(A & 0x0020) ? 1 : 0" )
 	field( OUT,  "$(CHAN):ChannelIsEmergency PP" )
 }
 
-record(bo, "$(CHAN):ChannelIsEmergency" ) {
+record(bo, "$(CHAN):ChannelIsEmergency" )
+{
 	field( DESC, "True when Channel is On" )
 	field( DOL,  "$(CHAN):ChannelIsEmergencyCalc NPP" )
 	field( ZNAM, "OK" )
 	field( ONAM, "Killed!" )
 }
 
-record(bo, "$(CHAN):ChannelControlEMCY") {
+record(bo, "$(CHAN):ChannelControlEMCY")
+{
   field(DESC, "Channel Off")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S$(SIGNAL) @ChannelControlEMCY")
@@ -62,7 +110,8 @@ record(bo, "$(CHAN):ChannelControlEMCY") {
   field(FLNK, "$(CHAN):VoltageSet0")
 }
 
-record(ao, "$(CHAN):VoltageSet0") {
+record(ao, "$(CHAN):VoltageSet0")
+{
   field(DESC, "VoltageSet 0")
   field(VAL, "0")
   field(PREC, "3")
@@ -70,7 +119,8 @@ record(ao, "$(CHAN):VoltageSet0") {
   field(OUT, "$(CHAN):VoltageSet PP")
 }
 
-record(bo, "$(CHAN):ChannelControlOnOff") {
+record(bo, "$(CHAN):ChannelControlOnOff")
+{
   field(DESC, "Channel OnOff")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S$(SIGNAL) @ChannelControlOnOff")
@@ -79,29 +129,22 @@ record(bo, "$(CHAN):ChannelControlOnOff") {
   field(PINI, "YES")
 }
 
-record(bo, "$(CHAN):ChannelControlOnOff") {
-  field(DESC, "Channel OnOff")
-  field(DTYP, "VHSx0x")
-  field(OUT, "#C$(CARD) S$(SIGNAL) @ChannelControlOnOff")
-  field(ZNAM, "Off")
-  field(ONAM, "On")
-  field(PINI, "YES")
-}
-
-record(ao, "$(CHAN):VoltageSet") {
+record(ao, "$(CHAN):VoltageSet")
+{
   field(DESC, "VoltageSet")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S$(SIGNAL) @VoltageSet")
   field(PREC, "3")
   field(EGU, "V")
-  field(DRVH, "$(HV.DRVH)")
-  field(DRVL, "$(HV.DRVL)")
-  field(HOPR, "$(HV.HOPR)")
-  field(LOPR, "$(HV.LOPR)")
+  field(DRVH, "$(HV.DRVH=$(V_MAX))")
+  field(DRVL, "$(HV.DRVL=0)")
+  field(HOPR, "$(HV.HOPR=$(V_MAX))")
+  field(LOPR, "$(HV.LOPR=0)")
   field(PINI, "YES")
 }
 
-record(ao, "$(CHAN):CurrentTrip") {
+record(ao, "$(CHAN):CurrentTrip")
+{
   field(DESC, "CurrentTrip")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S$(SIGNAL) @CurrentSet")
@@ -110,51 +153,54 @@ record(ao, "$(CHAN):CurrentTrip") {
   field(PINI, "YES")
 }
 
-record(ai, "$(CHAN):VoltageMeasure") {
+record(ai, "$(CHAN):VoltageMeasure")
+{
   field(DESC, "VoltageMeasure")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S$(SIGNAL) @VoltageMeasure")
   field(PREC, "3")
   field(EGU, "V")
-  field(HOPR, "$(HV.HOPR)")
-  field(LOPR, "$(HV.LOPR)")
-  field(HIHI, "$(HV.HIHI)")
-  field(HIGH, "$(HV.HIGH)")
-  field(LOW, "$(HV.LOW)")
-  field(LOLO, "$(HV.LOLO)")
-  field(ADEL, "$(HV.ADEL)")
-  field(MDEL, "$(HV.MDEL)")
-  field(SMOO, "$(HV.SMOO)")
-  field(HYST, "$(HV.HYST)")
+  field(HOPR, "$(HV.HOPR=$(V_MAX))")
+  field(LOPR, "$(HV.LOPR=0)")
+  field(HIHI, "$(HV.HIHI=$(V_MAX))")
+  field(HIGH, "$(HV.HIGH=$(V_MAX))")
+  field(LOW,  "$(HV.LOW=0)")
+  field(LOLO, "$(HV.LOLO=0)")
+  field(ADEL, "$(HV.ADEL=10)")
+  field(MDEL, "$(HV.MDEL=0)")
+  field(SMOO, "$(HV.SMOO=0)")
+  field(HYST, "$(HV.HYST=10)")
   field(HHSV, "MAJOR")
   field(HSV, "MINOR")
   field(LSV, "MINOR")
   field(LLSV, "MAJOR")
 }
 
-record(ai, "$(CHAN):CurrentMeasure") {
+record(ai, "$(CHAN):CurrentMeasure")
+{
   field(DESC, "CurrentMeasure")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S$(SIGNAL) @CurrentMeasure")
   field(PREC, "8")
   field(EGU, "A")
-  field(HOPR, "$(HC.HOPR)")
-  field(LOPR, "$(HC.LOPR)")
-  field(HIHI, "$(HC.HIHI)")
-  field(HIGH, "$(HC.HIGH)")
-  field(LOW, "$(HC.LOW)")
-  field(LOLO, "$(HC.LOLO)")
-  field(ADEL, "$(HC.ADEL)")
-  field(MDEL, "$(HC.MDEL)")
+  field(HOPR, "$(HC.HOPR=$(V_MAX))")
+  field(LOPR, "$(HC.LOPR=0)")
+  field(HIHI, "$(HC.HIHI=$(V_MAX))")
+  field(HIGH, "$(HC.HIGH$(V_MAX))")
+  field(LOW,  "$(HC.LOW=0)")
+  field(LOLO, "$(HC.LOLO=0)")
+  field(ADEL, "$(HC.ADEL=10)")
+  field(MDEL, "$(HC.MDEL=0)")
   field(HHSV, "MAJOR")
   field(HSV, "MINOR")
   field(LSV, "MINOR")
   field(LLSV, "MAJOR")
 }
 
-record(ao, "$(CHAN):VoltageBounds") {
+record(ao, "$(CHAN):VoltageBounds")
+{
   field(DESC, "VoltageBounds")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S$(SIGNAL) @VoltageBounds")
@@ -163,7 +209,8 @@ record(ao, "$(CHAN):VoltageBounds") {
   field(PINI, "YES")
 }
 
-record(ao, "$(CHAN):CurrentBounds") {
+record(ao, "$(CHAN):CurrentBounds")
+{
   field(DESC, "CurrentBounds")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S$(SIGNAL) @CurrentBounds")
@@ -172,7 +219,8 @@ record(ao, "$(CHAN):CurrentBounds") {
   field(PINI, "YES")
 }
 
-record(ai, "$(CHAN):VoltageNominal") {
+record(ai, "$(CHAN):VoltageNominal")
+{
   field(DESC, "VoltageNominal")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -184,7 +232,8 @@ record(ai, "$(CHAN):VoltageNominal") {
   field(LOPR, "0")
 }
 
-record(ai, "$(CHAN):CurrentNominal") {
+record(ai, "$(CHAN):CurrentNominal")
+{
   field(DESC, "CurrentNominal")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
@@ -194,29 +243,32 @@ record(ai, "$(CHAN):CurrentNominal") {
   field(FLNK, "$(CHAN):CurrentMax")
 }
 
-record(calc, "$(CHAN):VoltageMax") {
+record(calc, "$(CHAN):VoltageMax")
+{
   field(DESC, "Voltage Maximum")
   field(CALC, "A*B/100")
   field(INPA, "$(CHAN):VoltageNominal NPP MS")
-  field(INPB, "$(DEV):VoltageMax NPP MS")
+  field(INPB, "$(MODULE):VoltageMax NPP MS")
   field(EGU, "V")
   field(PREC, "0")
   field(HOPR, "2000")
   field(LOPR, "0")
 }
 
-record(calc, "$(CHAN):CurrentMax") {
+record(calc, "$(CHAN):CurrentMax")
+{
   field(DESC, "Current Maximum")
   field(CALC, "A*B/100")
   field(INPA, "$(CHAN):CurrentNominal NPP MS")
-  field(INPB, "$(DEV):CurrentMax NPP MS")
+  field(INPB, "$(MODULE):CurrentMax NPP MS")
   field(EGU, "A")
   field(PREC, "6")
   field(HOPR, "0.005")
   field(LOPR, "0")
 }
 
-record(calc, "$(CHAN):Resistance") {
+record(calc, "$(CHAN):Resistance")
+{
   field(DESC, "Resistance")
   field(CALC, "K&8?(I>0?E/I/1000000:100):3")
   field(INPE, "$(CHAN):VoltageMeasure CPP MS")
@@ -237,7 +289,8 @@ record(calc, "$(CHAN):Resistance") {
 }
 
 
-record(mbbi, "$(CHAN):STATUS") {
+record(mbbi, "$(CHAN):STATUS")
+{
   field(DESC, "Summary Status")
   field(DTYP, "Raw Soft Channel")
   field(INP, "$(CHAN):ChannelStatus CPP MS")

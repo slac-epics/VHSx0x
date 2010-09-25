@@ -1,0 +1,23 @@
+# TODO: Review this list of archive PV's
+$(MODULE):AllChannelEMCY 1
+$(MODULE):AllChannelOnOff 1
+$(MODULE):CurrentMax 1
+$(MODULE):DeviceInfo 1
+$(MODULE):EmergencyOffFanout 1
+$(MODULE):EmergencyOffLogic 1
+$(MODULE):Interlock 1
+$(MODULE):LowPressureAlarm 1
+$(MODULE):LowPressureAlarmClear 1
+$(MODULE):LowPressureSub 1
+$(MODULE):ModuleControlCLEAR 1
+$(MODULE):ModuleControlKILena 1
+$(MODULE):ModuleStatus 1
+$(MODULE):SupplyN12 1
+$(MODULE):SupplyP12 1
+$(MODULE):SupplyP5 1
+$(MODULE):Temperature 1
+$(MODULE):VoltageMax 1
+$(MODULE):VoltageRampSpeed 1
+$(MODULE):VoltageRampSteps 1
+$(MODULE):RatedVoltage 1
+$(MODULE):Polarity 1

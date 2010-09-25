@@ -3,8 +3,8 @@
 //
 //	Purpose:
 //		Implementation functions for a software interlock
-//		When the interlock is triggered, the emergency channel
-//		off for each selected channel is triggered.
+//		When the interlock is triggered, the emergency off
+//		for each selected channel is triggered.
 //		The interlock subroutine record also supports
 //		auto-clear of the kill signals after the interlock clears,
 //		and auto-on for each channel.

@@ -11,7 +11,7 @@
 # Required Macro Definitions
 # Interlock		- Name of this interlock record
 # Desc			- Description of the purpose of this interlock record
-# DEV			- Device name,	for example AMO:R13:IOC:14:VHS3
+# MODULE			- Device name,	for example AMO:R13:IOC:14:VHS3
 # InterlockPV	- Name of binary PV that triggers interlock (high = OK, low = Inhibit)
 # AutoEnable	- True to auto-clear kill signals when interlock is OK
 # AutoOn		- True to auto turn on channels when interlock is OK
@@ -27,7 +27,7 @@ file VHSx0x_Interlock.template
 	pattern
 	{	Interlock,
 		Desc,
-		DEV,		InterlockPV,
+		MODULE,		InterlockPV,
 		Chan0,		Chan1,
 		Chan2,		Chan3,
 		AutoClear,	AutoOn,	FwdLink

@@ -1,0 +1,24 @@
+#==============================================================================
+#
+# Archive Substitutions file for iSeg VHSx0x Software Interlock
+#
+# Required Macro Definitions
+#	Interlock		- Name of this interlock record
+#	MODULE		- Device name,	for example AMO:R13:IOC:14:VHS3
+# Optional Macro Definitions
+#	Chan0			- Channel 0 name, set to "" if channel not controlled by this interlock
+#	Chan1			- Channel 1 name, set to "" if channel not controlled by this interlock
+#	Chan2			- Channel 2 name, set to "" if channel not controlled by this interlock
+#	Chan3			- Channel 3 name, set to "" if channel not controlled by this interlock
+file archive_VHSx0x_Interlock.template
+{
+	{	
+		Interlock	= $(Interlock),
+		MODULE		= $(MODULE),
+		Chan0		= $(MODULE):CH0,
+		Chan1		= $(MODULE):CH1,
+		Chan2		= $(MODULE):CH2,
+		Chan3		= $(MODULE):CH3
+	}
+}
+

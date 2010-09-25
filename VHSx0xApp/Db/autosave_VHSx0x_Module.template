@@ -1,0 +1,4 @@
+# VHSx0x_Module autosave PV's
+$(MODULE):VoltageRampSpeed
+$(MODULE):VoltageMax
+$(MODULE):CurrentMax

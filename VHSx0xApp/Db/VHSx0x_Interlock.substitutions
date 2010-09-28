@@ -11,7 +11,7 @@
 # Required Macro Definitions
 # Interlock		- Name of this interlock record
 # Desc			- Description of the purpose of this interlock record
-# MODULE			- Device name,	for example AMO:R13:IOC:14:VHS3
+# MODULE		- Device name,	for example AMO:R13:IOC:14:VHS3
 # InterlockPV	- Name of binary PV that triggers interlock (high = OK, low = Inhibit)
 # AutoEnable	- True to auto-clear kill signals when interlock is OK
 # AutoOn		- True to auto turn on channels when interlock is OK
@@ -33,12 +33,11 @@ file VHSx0x_Interlock.template
 		AutoClear,	AutoOn,	FwdLink
 	}
 	{
-		$(IOC):VHS0:Interlock,
-  		"Vacuum HV Interlock for HFP Chamber - VHS0",
-		$(IOC):VHS0,		AMO:HFP:GCC:01:SETPTTRIP,
-		$(IOC):VHS0:CH0,	$(IOC):VHS0:CH1,
-		$(IOC):VHS0:CH2,	$(IOC):VHS0:CH3,
-		1,					0,					""
+		$(MODULE):Interlock,	$(Desc),
+		$(MODULE),				$(InterlockPV),
+		$(MODULE):CH0,			$(MODULE):CH1,
+		$(MODULE):CH2,			$(MODULE):CH3,
+		1,						0,					""
 	}
 }
 

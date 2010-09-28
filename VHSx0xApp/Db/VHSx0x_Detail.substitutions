@@ -4,6 +4,9 @@
 #
 # Name: VHSx0x.substitutions
 #
+# For full access to overriding default values for macros, copy this
+# substitutions file to your IOC and customize it to meet your needs.
+#
 #  Auth: 25-SEP-2010, B. Hill         (bhill)
 #  Rev:  dd-mmm-yyyy, Reviewer's Name (USERNAME)
 #
@@ -20,10 +23,10 @@
 file VHSx0x_Module.template
 {
 	{
-		MODULE			= $(IOC):VHS$(CARD),
+		MODULE			= $(MODULE),
 		CARD			= $(CARD),
 		V_MAX			= $(V_MAX),
-# 		RAMP_SPEED_LO	= 0.001,
+# 		RAMP_SPEED_LO	= 0.1,
 		POLARITY		= $(POLARITY)
 	}
 }
@@ -78,7 +81,7 @@ file VHSx0x_Module.template
 file VHSx0x_Channel.template
 {
 	{
-		MODULE		= $(IOC):VHS$(CARD),
+		MODULE		= $(MODULE),
 		CHAN		= $(MODULE):CH$(SIGNAL),
 		CARD		= $(CARD),
 		SIGNAL		= 0,
@@ -86,23 +89,24 @@ file VHSx0x_Channel.template
 		V_MAX		= $(V_MAX)
 	}
 	{
-		MODULE		= $(IOC):VHS$(CARD),
+		MODULE		= $(MODULE),
 		CHAN		= $(MODULE):CH$(SIGNAL),
 		CARD		= $(CARD),
 		SIGNAL		= 1,
 		V_MAX		= $(V_MAX)
 	}
 	{
-		MODULE		= $(IOC):VHS$(CARD),
+		MODULE		= $(MODULE),
 		CHAN		= $(MODULE):CH$(SIGNAL),
 		CARD		= $(CARD),
 		SIGNAL		= 2,
 		V_MAX		= $(V_MAX)
 	}
 	{
-		MODULE		= $(IOC):VHS$(CARD),
+		MODULE		= $(MODULE),
 		CHAN		= $(MODULE):CH$(SIGNAL),
 		CARD		= $(CARD),
+#		HC.MDEL		= 0.5,
 		SIGNAL		= 3,
 		V_MAX		= $(V_MAX)
 	}

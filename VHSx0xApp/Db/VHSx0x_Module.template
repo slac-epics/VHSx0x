@@ -82,9 +82,9 @@ record(ao, "$(MODULE):VoltageRampSpeed")
   field(DTYP, "VHSx0x")
   field(OUT, "#C$(CARD) S0 @VoltageRampSpeed")
   field(DRVH, $(RAMP_SPEED_HI=20) )
-  field(DRVL, $(RAMP_SPEED_LO=1) )
+  field(DRVL, $(RAMP_SPEED_LO="0.001") )
   field(HOPR, $(RAMP_SPEED_HI=20) )
-  field(LOPR, $(RAMP_SPEED_LO=1) )
+  field(LOPR, $(RAMP_SPEED_LO="0.001") )
   field(EGU, "%")
 }
 
@@ -249,7 +249,7 @@ record(mbbo, "$(MODULE):VoltageRampSteps")
   field(OUT, "$(MODULE):VoltageRampSpeed PP")
 }
 
-record( ai, "$(MODULE):RatedVoltage" )
+record( ao, "$(MODULE):RatedVoltage" )
 {
   field( DESC, "RatedVoltage" )
   field( SCAN, "Passive" )

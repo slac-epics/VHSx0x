@@ -11,22 +11,21 @@
 
 # Required macros:
 #	MODULE			# Module base PV name
-file autosave_VHSx0x_Module.template
+file autosave_VHSx0x_Detail.req
 {
-	{ MODULE	= $(IOC):VHS$(CARD)	}
+	pattern
+	{	MODULE				}
+#	Example
+#	{	$(IOC):VHS$(CARD)	}
+	{	$(MODULE)			}
 }
 
-#
-# Substitutions for iSeg VHSx0x Channel
-#
-# Required Macro Definitions
-# CHAN		# Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
-
-file autosave_VHSx0x_Channel.template
+file autosave_VHSx0x_Interlock.req
 {
-	{ CHAN		= $(MODULE):CH0, }
-	{ CHAN		= $(MODULE):CH1, }
-	{ CHAN		= $(MODULE):CH2, }
-	{ CHAN		= $(MODULE):CH3, }
+	pattern
+	{		MODULE				}
+#	Example
+#	{		$(IOC):VHS$(CARD)	}
+	{		$(MODULE)			}
 }
 

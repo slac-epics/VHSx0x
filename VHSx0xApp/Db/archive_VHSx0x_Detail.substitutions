@@ -1,0 +1,41 @@
+#==============================================================================
+#
+# Abs:  Archive Substitution file for ISEG VHSx0x High Voltage Modules
+#
+# Name: archive_VHSx0x.substitutions
+#
+# For full access to overriding default values for macros, copy this
+# substitutions file to your IOC and customize it to meet your needs.
+#
+#  Auth: 25-SEP-2010, B. Hill         (bhill)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name (USERNAME)
+#
+#==============================================================================
+
+# Required macros:
+#	MODULE			# Module base PV name
+file archive_VHSx0x_Module.template
+{
+	pattern
+	{	MODULE			}
+	{ 	$(MODULE)		}
+}
+
+#
+# Substitutions for iSeg VHSx0x Channel
+#
+# Required Macro Definitions
+# CHAN		# Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
+
+file archive_VHSx0x_Channel.template
+{
+	pattern
+	{	CHAN			}
+	{	$(MODULE):CH0	}
+	{	$(MODULE):CH1	}
+	{	$(MODULE):CH2	}
+	{	$(MODULE):CH3	}
+# Comment out unused channel(s) if you don't want them
+#	{	$(MODULE):CH3	}
+}
+

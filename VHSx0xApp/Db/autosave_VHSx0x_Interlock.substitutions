@@ -1,13 +1,8 @@
 
-file archive_VHSx0x_Interlock.template
+file autosave_VHSx0x_Interlock.template
 {
-	{	
-		Interlock	= $(Interlock),
+	{
 		MODULE		= $(MODULE),
-		Chan0		= $(MODULE):CH0,
-		Chan1		= $(MODULE):CH1,
-		Chan2		= $(MODULE):CH2,
-		Chan3		= $(MODULE):CH3
 	}
 }
 

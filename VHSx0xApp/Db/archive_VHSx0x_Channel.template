@@ -1,19 +1,19 @@
-# TODO: Review this list of archive PV's
-$(CHAN):ChannelControlEMCY 1
-$(CHAN):ChannelControlOnOff 1
-$(CHAN):ChannelIsOn 1
-$(CHAN):ChannelIsEmergency 1
-$(CHAN):ChannelStatus 1
-$(CHAN):CurrentBounds 1
-$(CHAN):CurrentMax 1
-$(CHAN):CurrentMeasure 1
-$(CHAN):CurrentNominal 1
-$(CHAN):CurrentTrip 1
-$(CHAN):Resistance 1
-$(CHAN):STATUS 1
-$(CHAN):VoltageBounds 1
-$(CHAN):VoltageMax 1
-$(CHAN):VoltageMeasure 1
-$(CHAN):VoltageNominal 1
-$(CHAN):VoltageSet 1
-$(CHAN):VoltageSet0 1
+# VHSx0x iSeg HV Module archive PV list
+$(CHAN):ChannelControlEMCY 1 monitor
+$(CHAN):ChannelControlOnOff 0.2 monitor
+$(CHAN):ChannelIsOn 0.2 monitor
+$(CHAN):ChannelIsEmergency 1 monitor
+$(CHAN):ChannelStatus 0.2 monitor
+$(CHAN):CurrentBounds 1 monitor
+$(CHAN):CurrentMax 1 monitor
+$(CHAN):CurrentMeasure 0.2 monitor
+$(CHAN):CurrentNominal 1 monitor
+$(CHAN):CurrentTrip 1 monitor
+$(CHAN):Resistance 0.2 monitor
+$(CHAN):STATUS 0.2 monitor
+$(CHAN):VoltageBounds 1 monitor
+$(CHAN):VoltageMax 1 monitor
+$(CHAN):VoltageMeasure 0.2 monitor
+$(CHAN):VoltageNominal 1 monitor
+$(CHAN):VoltageSet 0.2 monitor
+$(CHAN):VoltageSet0 0.2 monitor

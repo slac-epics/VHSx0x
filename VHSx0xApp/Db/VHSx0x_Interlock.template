@@ -21,7 +21,7 @@
 # Chan3			- Channel 3 name, set to "" if channel not controlled by this interlock
 # FwdLink		- Name of forward link, if any.  Set to "" if unused.
 #
-substitute "Chan0=$(MODULE):CH0, Chan1=$(MODULE):CH1, Chan2=$(MODULE):CH2, Chan1=$(MODULE):CH3"
+substitute "Chan0=$(MODULE):CH0, Chan1=$(MODULE):CH1, Chan2=$(MODULE):CH2, Chan3=$(MODULE):CH3"
 
 # These PV's are used to hold the PV names of the VHS Module and channels.
 # This trick allows the gensub to read PV names as strings so it can build

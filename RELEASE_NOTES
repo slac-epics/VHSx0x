@@ -16,6 +16,9 @@
 #
 #==============================================================
 #
+VHSx0x-R2-2-1:    Use $EPICS_BASE_VER macro in configure/RELEASE
+01/19/2012        Build with base-R3-14-12
+
 VHSx0x-R2-2-0:    Build with base-R3-14-8-2-lcls6
                   Build with rtems-4.9.4
 

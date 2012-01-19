@@ -21,12 +21,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # ==============================================================
 # Define the cvs module version of EPICS BASE that you will use
 # =============================================================
-BASE_MODULE_VERSION=base-R3-14-8-2-lcls6
+#BASE_MODULE_VERSION=base-R3-14-8-2-lcls6
 
 # =================================================================
 # Define EPICS_BASE
 # EPICS_BASE usually appears last so other apps can override stuff:
 # =================================================================
-EPICS_BASE=$(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
+EPICS_BASE=$(EPICS_SITE_TOP)/base/$(EPICS_BASE_VER)
 
 # End of script

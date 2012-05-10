@@ -1,8 +1,0 @@
-
-file autosave_VHSx0x_Interlock.template
-{
-	{
-		MODULE		= $(MODULE),
-	}
-}
-

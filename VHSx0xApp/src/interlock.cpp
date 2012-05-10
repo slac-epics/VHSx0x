@@ -196,8 +196,9 @@ inline long genSubGetLong( epicsEnum16 type, void * ptr )
 	return value;
 }
 
-extern "C" long
-InterlockInit( genSubRecord	* pSub )
+extern "C"
+{
+static long InterlockInit( genSubRecord	* pSub )
 {
 	switch ( pSub->fta )
 	{
@@ -266,8 +267,7 @@ InterlockInit( genSubRecord	* pSub )
 //	INPG:	AutoEnable, Set to "1" to automatically clear kill signals
 //	INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
  
-extern "C" long
-InterlockProcess( genSubRecord	*	pSub )
+static long InterlockProcess( genSubRecord	*	pSub )
 {
 	if ( dbgVHSx0xInterlock	>= 4 )
 		printf( "InterlockProcess %s: entry\n", pSub->name );
@@ -383,5 +383,7 @@ InterlockProcess( genSubRecord	*	pSub )
     return 0;
 }
 
-extern "C" epicsRegisterFunction( InterlockInit );
-extern "C" epicsRegisterFunction( InterlockProcess );
+epicsRegisterFunction( InterlockInit );
+epicsRegisterFunction( InterlockProcess );
+
+} // extern "C"

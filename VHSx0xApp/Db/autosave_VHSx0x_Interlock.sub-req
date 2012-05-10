@@ -1,0 +1,8 @@
+
+file autosave_VHSx0x_Interlock.tpl-req
+{
+	{
+		MODULE		= $(MODULE),
+	}
+}
+

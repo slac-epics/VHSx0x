@@ -35,15 +35,15 @@ DB += VHSx0x_Simple.db
 
 #----------------------------------------------------
 # Install archive templates
-ARCHIVE += archive_VHSx0x_Interlock.template
-ARCHIVE += archive_VHSx0x_Module.template
-ARCHIVE += archive_VHSx0x_Channel.template
+ARCHIVE += archive_VHSx0x_Interlock.tpl-arch
+ARCHIVE += archive_VHSx0x_Module.tpl-arch
+ARCHIVE += archive_VHSx0x_Channel.tpl-arch
 
 #----------------------------------------------------
 # Install archive substitutions
-ARCHIVE += archive_VHSx0x_Interlock.substitutions
-ARCHIVE += archive_VHSx0x_Detail.substitutions
-ARCHIVE += archive_VHSx0x_Simple.substitutions
+ARCHIVE += archive_VHSx0x_Interlock.sub-arch
+ARCHIVE += archive_VHSx0x_Detail.sub-arch
+ARCHIVE += archive_VHSx0x_Simple.sub-arch
 
 #----------------------------------------------------
 # Install sample expanded archive files
@@ -56,16 +56,16 @@ ARCHIVE += archive_VHSx0x_Detail.archive
 ARCHIVE += archive_VHSx0x_Simple.archive
 
 #----------------------------------------------------
-# Install autosave templates
-REQ += autosave_VHSx0x_Interlock.template
-REQ += autosave_VHSx0x_Module.template
-REQ += autosave_VHSx0x_Channel.template
+# Install autosave tpl-reqs
+REQ += autosave_VHSx0x_Interlock.tpl-req
+REQ += autosave_VHSx0x_Module.tpl-req
+REQ += autosave_VHSx0x_Channel.tpl-req
 
 #----------------------------------------------------
 # Install autosave substitutions
-REQ += autosave_VHSx0x_Interlock.substitutions
-REQ += autosave_VHSx0x_Detail.substitutions
-REQ += autosave_VHSx0x_Simple.substitutions
+REQ += autosave_VHSx0x_Interlock.sub-req
+REQ += autosave_VHSx0x_Detail.sub-req
+REQ += autosave_VHSx0x_Simple.sub-req
 
 #----------------------------------------------------
 # Install sample expanded autosave files

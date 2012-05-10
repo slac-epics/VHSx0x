@@ -10,7 +10,7 @@
 #	Chan1			- Channel 1 name, set to "" if channel not controlled by this interlock
 #	Chan2			- Channel 2 name, set to "" if channel not controlled by this interlock
 #	Chan3			- Channel 3 name, set to "" if channel not controlled by this interlock
-file archive_VHSx0x_Interlock.template
+file archive_VHSx0x_Interlock.tpl-arch
 {
 	{	
 		Interlock	= $(Interlock),

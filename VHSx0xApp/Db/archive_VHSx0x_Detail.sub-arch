@@ -1,8 +1,8 @@
 #==============================================================================
 #
-# Abs:  Autosave Substitution file for ISEG VHSx0x High Voltage Modules
+# Abs:  Archive Substitution file for ISEG VHSx0x High Voltage Modules
 #
-# Name: autosave_VHSx0x.substitutions
+# Name: archive_VHSx0x.substitutions
 #
 # For full access to overriding default values for macros, copy this
 # substitutions file to your IOC and customize it to meet your needs.
@@ -14,9 +14,11 @@
 
 # Required macros:
 #	MODULE			# Module base PV name
-file autosave_VHSx0x_Module.template
+file archive_VHSx0x_Module.tpl-arch
 {
-	{ MODULE	= $(MODULE)	}
+	pattern
+	{	MODULE			}
+	{ 	$(MODULE)		}
 }
 
 #
@@ -25,13 +27,15 @@ file autosave_VHSx0x_Module.template
 # Required Macro Definitions
 # CHAN		# Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
 
-file autosave_VHSx0x_Channel.template
+file archive_VHSx0x_Channel.tpl-arch
 {
-	{ CHAN		= $(MODULE):CH0, }
-	{ CHAN		= $(MODULE):CH1, }
-	{ CHAN		= $(MODULE):CH2, }
-	{ CHAN		= $(MODULE):CH3, }
-#	Comment out a channel if desired
-#	{ CHAN		= $(MODULE):CH3, }
+	pattern
+	{	CHAN			}
+	{	$(MODULE):CH0	}
+	{	$(MODULE):CH1	}
+	{	$(MODULE):CH2	}
+	{	$(MODULE):CH3	}
+# Comment out unused channel(s) if you don't want them
+#	{	$(MODULE):CH3	}
 }
 

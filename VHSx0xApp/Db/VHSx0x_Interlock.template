@@ -27,7 +27,7 @@
 substitute "Chan0=$(MODULE):CH0, Chan1=$(MODULE):CH1, Chan2=$(MODULE):CH2, Chan1=$(MODULE):CH3"
 
 # These PV's are used to hold the PV names of the VHS Module and channels.
-# This trick allows the gensub to read PV names as strings so it can build
+# This trick allows the asub to read PV names as strings so it can build
 # other PV's names from them.
 record( stringin, "$(MODULE):NAME"	) { field( VAL, "$(MODULE)"	) }
 record( stringin, "$(Chan0):NAME"	) { field( VAL, "$(Chan0)"	) }
@@ -45,7 +45,7 @@ record( stringin, "$(Chan3):NAME"	) { field( VAL, "$(Chan3)"	) }
 # INPF:	Name of VHS Channel 3, "" if not inhibited by this interlock
 # INPG:	AutoClear, Set to "1" to automatically clear kill signals
 # INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
-record( genSub, "$(Interlock)" )
+record( asub, "$(Interlock)" )
 {
 	field( DESC, "$(Desc)" )
 	field( SCAN, "$(tyScan)" )

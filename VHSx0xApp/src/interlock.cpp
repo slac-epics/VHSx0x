@@ -16,7 +16,7 @@
 #include <epicsExport.h>
 #include <epicsThread.h>
 #include <dbFldTypes.h>
-#include <genSubRecord.h>
+#include <aSubRecord.h>
 #include <dbAddr.h>
 #include <dbAccess.h>
 #include <string>
@@ -25,13 +25,10 @@ using namespace		std;
 
 int		dbgVHSx0xInterlock	= 0;
 
-<<<<<<< HEAD
 typedef struct	InterlockData
 {
 	long		fEnablePrior;
 }	InterlockData;
-=======
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 
 inline long getEpicsPV( const string & strPvName, long & valueRet )
 {
@@ -99,11 +96,8 @@ inline void turnOnChannel(
 {
 	if ( strChanName.size() == 0 )
 	{
-<<<<<<< HEAD
 		//	Empty channel names aren't tied to this interlock
-=======
 		fprintf( stderr, "turnOnChannel: Empty PV name!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return;
 	}
 	string	strChanOn( strChanName );
@@ -117,12 +111,9 @@ inline bool isChanInEmergencyOff(
 {
 	if ( strChanName.size() == 0 )
 	{
-<<<<<<< HEAD
 		//	Empty channel names aren't tied to this interlock
 		//	Return false to avoid waiting for unused channel
-=======
 		fprintf( stderr, "isChanInEmergencyOff: Empty PV name!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return false;
 	}
 
@@ -145,11 +136,8 @@ inline void emergencyChannelOff(
 {
 	if ( strChanName.size() == 0 )
 	{
-<<<<<<< HEAD
 		//	Empty channel names aren't tied to this interlock
-=======
 		fprintf( stderr, "emergencyChannelOff: Empty PV name!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return;
 	}
 
@@ -171,7 +159,6 @@ inline void emergencyChannelOff(
 	writeEpicsPV( strChanOff.c_str(), 1 );
 
 	// Wait till channel is in emergency off
-<<<<<<< HEAD
 	bool	fChanInEmergencyOff	= false;
 	for ( unsigned int i = 0; i < 2; ++i ) 
 	{
@@ -190,17 +177,11 @@ inline void emergencyChannelOff(
 	//	fprintf( stderr, "ERROR: Unable to put %s in emergency OFF!\n", strChanName.c_str() );
 		fprintf( stderr, "ToDo: Fix interlock status check!\n" );
 	}
-=======
-	while ( !isChanInEmergencyOff( strChanName ) )
-    	(void)epicsThreadSleep(0.1);
 
-	writeEpicsPV( strChanOff.c_str(), 0 );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 }
 
 
-inline long genSubGetLong( epicsEnum16 type, void * ptr )
-<<<<<<< HEAD
+inline long aSubGetLong( epicsEnum16 type, void * ptr )
 {
 	long		value	= -1;
 	switch ( type )
@@ -221,39 +202,12 @@ inline long genSubGetLong( epicsEnum16 type, void * ptr )
 
 extern "C"
 {
-static long InterlockInit( genSubRecord	* pSub )
+static long InterlockInit( aSubRecord	* pSub )
 {
 	switch ( pSub->fta )
 	{
 	default:
 		fprintf( stderr, "InterlockInit %s: Invalid type for INPA!\n", pSub->name );
-=======
-{
-	long		value	= -1;
-	switch ( type )
-	{
-	default:			break;
-	case DBF_CHAR:		value = *static_cast<epicsInt8 *>(		ptr );	break;
-	case DBF_UCHAR:		value = *static_cast<epicsUInt8 *>(		ptr );	break;
-	case DBF_SHORT:		value = *static_cast<epicsInt16 *>(		ptr );	break;
-	case DBF_USHORT:	value = *static_cast<epicsUInt16 *>(	ptr );	break;
-	case DBF_LONG:		value = *static_cast<epicsInt32 *>(		ptr );	break;
-	case DBF_ULONG:		value = *static_cast<epicsUInt32 *>(	ptr );	break;
-	case DBF_ENUM:		value = *static_cast<epicsEnum16 *>(	ptr );	break;
-	case DBF_FLOAT:		value = static_cast<long>( *static_cast<epicsFloat32 *>( ptr ) ); break;
-	case DBF_DOUBLE:	value = static_cast<long>( *static_cast<epicsFloat64 *>( ptr ) ); break;
-	}
-	return value;
-}
-
-extern "C" long
-InterlockInit( genSubRecord	* pSub )
-{
-	switch ( pSub->fta )
-	{
-	default:
-		fprintf( stderr, "InterlockInit: Invalid type for INPA!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return -1;
 	case DBF_CHAR:
 	case DBF_UCHAR:
@@ -269,37 +223,24 @@ InterlockInit( genSubRecord	* pSub )
 
 	if ( pSub->ftb != DBF_STRING )
 	{
-<<<<<<< HEAD
 		fprintf( stderr, "InterlockInit %s: INPB must be type STRING!\n", pSub->name );
-=======
-		fprintf( stderr, "InterlockInit: INPB must be type STRING!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return -1;
 	}
 
 	if ( pSub->ftc != DBF_STRING )
 	{
-<<<<<<< HEAD
 		fprintf( stderr, "InterlockInit %s: INPC must be type STRING!\n", pSub->name );
-=======
-		fprintf( stderr, "InterlockInit: INPC must be type STRING!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return -1;
 	}
 
 	if ( pSub->ftd != DBF_STRING )
 	{
-<<<<<<< HEAD
 		fprintf( stderr, "InterlockInit %s: INPD must be type STRING!\n", pSub->name );
-=======
-		fprintf( stderr, "InterlockInit: INPD must be type STRING!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return -1;
 	}
 
 	if ( pSub->fte != DBF_STRING )
 	{
-<<<<<<< HEAD
 		fprintf( stderr, "InterlockInit %s: INPE must be type STRING!\n", pSub->name );
 		return -1;
 	}
@@ -315,13 +256,6 @@ InterlockInit( genSubRecord	* pSub )
 	pSub->dpvt = static_cast<void *>( pData );
 
 	printf( "\nInterlockInit %s: Ready for use!\n\n", pSub->name );
-=======
-		fprintf( stderr, "InterlockInit: INPE must be type STRING!\n" );
-		return -1;
-	}
-
-	printf( "\nInterlockInit: Ready for use!\n\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 	return 0;
 }
 
@@ -337,8 +271,7 @@ InterlockInit( genSubRecord	* pSub )
 //	INPG:	AutoEnable, Set to "1" to automatically clear kill signals
 //	INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
  
-<<<<<<< HEAD
-static long InterlockProcess( genSubRecord	*	pSub )
+static long InterlockProcess( aSubRecord	*	pSub )
 {
 	if ( dbgVHSx0xInterlock	>= 4 )
 		printf( "InterlockProcess %s: entry\n", pSub->name );
@@ -352,45 +285,19 @@ static long InterlockProcess( genSubRecord	*	pSub )
 	InterlockData	*	pData	= reinterpret_cast<InterlockData *>( pSub->dpvt );
 
 	//	Get interlock and prior interlock values
-    long		fHvEnable		= genSubGetLong( pSub->fta, pSub->a );
+    long		fHvEnable		= aSubGetLong( pSub->fta, pSub->a );
 
 	//	If no change to our interlock, just return
 	if ( fHvEnable == pData->fEnablePrior )
 	{
 		if ( dbgVHSx0xInterlock	>= 4 )
 			printf( "InterlockProcess %s: No change\n", pSub->name );
-=======
-extern "C" long
-InterlockProcess( genSubRecord	*	pSub )
-{
-	if ( dbgVHSx0xInterlock	>= 4 )
-		printf( "InterlockProcess: entry\n" );
-
-    if ( pSub == NULL )
-	{
-		fprintf( stderr, "InterlockProcess: Invalid pSub ptr!\n" );
-		return -1;
-	}
-
-	//	Get interlock and prior interlock values
-    long		fHvEnable		= genSubGetLong( pSub->fta, pSub->a );
-    long		fHvEnablePrior	= genSubGetLong( pSub->fto, pSub->o );
-
-	//	If no change to our interlock, just return
-	if ( fHvEnable == fHvEnablePrior )
-	{
-		if ( dbgVHSx0xInterlock	>= 4 )
-			printf( "InterlockProcess: No change\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		return 0;
 	}
 
 	//	Save prior value for next time
-<<<<<<< HEAD
     pData->fEnablePrior = fHvEnable;
-=======
     *static_cast<long *>( pSub->valo ) = fHvEnable;
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 
 	//	Get arguments
 	string		strDev		= static_cast<char *>( pSub->b );
@@ -398,17 +305,13 @@ InterlockProcess( genSubRecord	*	pSub )
 	string		strChan1	= static_cast<char *>( pSub->d );
 	string		strChan2	= static_cast<char *>( pSub->e );
 	string		strChan3	= static_cast<char *>( pSub->f );
-    bool		fAutoClear	= static_cast<bool>( genSubGetLong( pSub->ftg, pSub->g ) );
-    bool		fAutoOn		= static_cast<bool>( genSubGetLong( pSub->fth, pSub->h ) );
+    bool		fAutoClear	= static_cast<bool>( aSubGetLong( pSub->ftg, pSub->g ) );
+    bool		fAutoOn		= static_cast<bool>( aSubGetLong( pSub->fth, pSub->h ) );
 
 	if ( fHvEnable )
 	{
 		if ( dbgVHSx0xInterlock	>= 1 )
-<<<<<<< HEAD
 			printf( "InterlockProcess %s: HV Enable\n", pSub->name );
-=======
-			printf( "InterlockProcess: HV Enable\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		if ( fAutoClear )
 		{
 			if ( strDev.size() == 0 )
@@ -420,17 +323,12 @@ InterlockProcess( genSubRecord	*	pSub )
 			string	strClearKill	= strDev + ":ModuleControlCLEAR";
 			writeEpicsPV( strClearKill.c_str(), 1 );
 
-<<<<<<< HEAD
 			// Wait till all channels are ready
 			const char	*	pszChanStuck	= NULL;
-=======
-			// Wait till all channels are not in emergency off
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 			for ( unsigned int i = 0; i < 10; i++ )
 			{
 				(void)epicsThreadSleep(0.1);
 				if ( isChanInEmergencyOff( strChan0 ) )
-<<<<<<< HEAD
 				{
 					pszChanStuck	= strChan0.c_str();
 					continue;
@@ -459,18 +357,6 @@ InterlockProcess( genSubRecord	*	pSub )
 				fprintf( stderr, "ToDo: Fix interlock status check!\n" );
 			}
 
-=======
-					continue;
-				if ( isChanInEmergencyOff( strChan1 ) )
-					continue;
-				if ( isChanInEmergencyOff( strChan2 ) )
-					continue;
-				if ( isChanInEmergencyOff( strChan3 ) )
-					continue;
-				break;
-			}
-
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 			//	Clear kill request
 			writeEpicsPV( strClearKill.c_str(), 0 );
 		}
@@ -485,7 +371,6 @@ InterlockProcess( genSubRecord	*	pSub )
 	else
 	{
 		if ( dbgVHSx0xInterlock	>= 1 )
-<<<<<<< HEAD
 			printf( "InterlockProcess %s: HV Inhibit!\n", pSub->name );
 
 		//	Enable kill signals
@@ -493,9 +378,6 @@ InterlockProcess( genSubRecord	*	pSub )
 		strKillEnable += ":ModuleControlKILena";
 		writeEpicsPV( strKillEnable.c_str(), 1 );
 
-=======
-			printf( "InterlockProcess: HV Inhibit!\n" );
->>>>>>> 4380c68... Added new PV for ChannelEventStatus.
 		emergencyChannelOff( strChan0	);
 		emergencyChannelOff( strChan1	);
 		emergencyChannelOff( strChan2	);

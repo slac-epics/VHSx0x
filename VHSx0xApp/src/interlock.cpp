@@ -16,7 +16,7 @@
 #include <epicsExport.h>
 #include <epicsThread.h>
 #include <dbFldTypes.h>
-#include <genSubRecord.h>
+#include <aSubRecord.h>
 #include <dbAddr.h>
 #include <dbAccess.h>
 #include <string>
@@ -177,7 +177,7 @@ inline void emergencyChannelOff(
 }
 
 
-inline long genSubGetLong( epicsEnum16 type, void * ptr )
+inline long aSubGetLong( epicsEnum16 type, void * ptr )
 {
 	long		value	= -1;
 	switch ( type )
@@ -198,7 +198,7 @@ inline long genSubGetLong( epicsEnum16 type, void * ptr )
 
 extern "C"
 {
-static long InterlockInit( genSubRecord	* pSub )
+static long InterlockInit( aSubRecord	* pSub )
 {
 	switch ( pSub->fta )
 	{
@@ -267,7 +267,7 @@ static long InterlockInit( genSubRecord	* pSub )
 //	INPG:	AutoEnable, Set to "1" to automatically clear kill signals
 //	INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
  
-static long InterlockProcess( genSubRecord	*	pSub )
+static long InterlockProcess( aSubRecord	*	pSub )
 {
 	if ( dbgVHSx0xInterlock	>= 4 )
 		printf( "InterlockProcess %s: entry\n", pSub->name );
@@ -281,7 +281,7 @@ static long InterlockProcess( genSubRecord	*	pSub )
 	InterlockData	*	pData	= reinterpret_cast<InterlockData *>( pSub->dpvt );
 
 	//	Get interlock and prior interlock values
-    long		fHvEnable		= genSubGetLong( pSub->fta, pSub->a );
+    long		fHvEnable		= aSubGetLong( pSub->fta, pSub->a );
 
 	//	If no change to our interlock, just return
 	if ( fHvEnable == pData->fEnablePrior )
@@ -300,8 +300,8 @@ static long InterlockProcess( genSubRecord	*	pSub )
 	string		strChan1	= static_cast<char *>( pSub->d );
 	string		strChan2	= static_cast<char *>( pSub->e );
 	string		strChan3	= static_cast<char *>( pSub->f );
-    bool		fAutoClear	= static_cast<bool>( genSubGetLong( pSub->ftg, pSub->g ) );
-    bool		fAutoOn		= static_cast<bool>( genSubGetLong( pSub->fth, pSub->h ) );
+    bool		fAutoClear	= static_cast<bool>( aSubGetLong( pSub->ftg, pSub->g ) );
+    bool		fAutoOn		= static_cast<bool>( aSubGetLong( pSub->fth, pSub->h ) );
 
 	if ( fHvEnable )
 	{

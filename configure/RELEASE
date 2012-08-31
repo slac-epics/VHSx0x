@@ -12,7 +12,6 @@ EPICS_BASE=$(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 # Define the version(s) of any other needed modules 
 # ===============================================================
 # Example: IPAC_MODULE_VERSION=R2.8.4-0.2.0
-GENSUB_MODULE_VERSION=R1.6.1.2-2.4.0
 
 # ============================================================
 # External Support module path definitions
@@ -28,4 +27,3 @@ GENSUB_MODULE_VERSION=R1.6.1.2-2.4.0
 # If your build fails, look for these paths in your build output
 # ============================================================
 # Example: IPAC=$(EPICS_MODULES)/ipac/$(IPAC_MODULE_VERSION)
-GENSUB=$(EPICS_MODULES)/genSub/$(GENSUB_MODULE_VERSION)

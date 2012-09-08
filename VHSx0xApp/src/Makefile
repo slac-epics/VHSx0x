@@ -15,7 +15,7 @@ include $(TOP)/configure/CONFIG
 
 # This is what we will be building from here:
 # create library for OSI type driver
-LIBRARY_RTEMS += VHSx0x
+LIBRARY += VHSx0x
 
 # create munch file for dynamic loading will install in <bin>
 PROD_IOC_RTEMS += VHSx0xLib

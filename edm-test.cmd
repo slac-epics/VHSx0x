@@ -17,13 +17,12 @@ export PATH=$PATH:$EPICS_SITE_TOP/extensions/current/bin/$EPICS_HOST_ARCH
 export EDMDATAFILES=".:.."
 
 edm -x -eolc		\
- -m "SHVIOC=SXR:EXP:SHV"		\
- -m "SHVAPP=SXR EXP"		\
- -m "APP=SXR EXP"		\
- -m "SHVPARENT=EXP/highVoltage.edl"		\
+ -m "TITLE=SXR GMD High Voltage"		\
  -m "PARENT=EXP/highVoltage.edl"		\
- -m "IOC=SXR:EXP:SHV"	\
- -m "iVHS=0"	\
- -m "HOME=SXRHome.edl"	\
- vhsScreens/vhsN.edl	\
+ -m "IOC=SXR:GMD:IOC:VME"				\
+ -m "DEV=SXR:GMD:VHS0"					\
+ -m "iVHS=0"							\
+ -m "HOME=SXRHome.edl"					\
+ vhsScreens/vhsN.edl					\
+ vhsScreens/VHSx0xTest.edl				\
  &

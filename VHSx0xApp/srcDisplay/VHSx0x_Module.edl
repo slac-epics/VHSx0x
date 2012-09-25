@@ -368,7 +368,8 @@ x 56
 y 45
 w 383
 h 30
-controlPv "$(DEV):DeviceInfo" fgColor index 25
+controlPv "$(DEV):DeviceInfo"
+fgColor index 25
 bgColor index 5
 fill
 font "courier-bold-r-14.0"

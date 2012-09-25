@@ -23,39 +23,60 @@ record(mbbiDirect, "$(MODULE):ModuleStatus")
 
 record( fanout, "$(MODULE):ModuleStatusFanout" )
 {
-	field( LNK1,	"$(MODULE):ModuleIsOKCalc" )
-	field( LNK2,	"$(MODULE):ModuleTempOKCalc" )
+	field( LNK1,	"$(MODULE):ModuleIsOKCalc PP MS" )
+	field( LNK2,	"$(MODULE):ModuleTempOKCalc PP MS" )
+	field( LNK3,	"$(MODULE):SafetyLoopOKCalc PP MS" )
 }
 
-record(calc, "$(MODULE):ModuleIsOKCalc" )
+record(calcout, "$(MODULE):ModuleIsOKCalc" )
 {
 	field( DESC, "True when Module is OK" )
-	field( INPA, "$(MODULE):ModuleStatus" )
-	field( CALC, "(A & 0x1120) ? 1 : 0" )
+	field( INPA, "$(MODULE):ModuleStatus NPP MS" )
+	field( CALC, "(A & 0x7500) == 0x7500 ? 1 : 0" )
+	field( OUT,  "$(MODULE):ModuleIsOK PP MS" )
 }
 
 record(bo, "$(MODULE):ModuleIsOK" )
 {
-	field( DESC, "True when Module is On" )
-	field( DOL,  "$(MODULE):ModuleIsOK NPP" )
-	field( ZNAM, "OK" )
-	field( ONAM, "Fault" )
+	field( DESC, "True when Module is OK" )
+	field( ZNAM, "Fault" )
+	field( ZSV,	 "MAJOR" )
+	field( ONAM, "OK" )
+	field( OSV,	 "NO_ALARM" )
 }
 
 record(calcout, "$(MODULE):ModuleTempOKCalc" )
 {
 	field( DESC, "True when Module Temp is OK" )
-	field( INPA, "$(MODULE):ModuleStatus" )
-	field( CALC, "(A & 0x0100) ? 1 : 0" )
-	field( OUT,	 "$(MODULE):ModuleTempOK" )
+	field( INPA, "$(MODULE):ModuleStatus NPP MS" )
+	field( CALC, "(A & 0x4000) ? 1 : 0" )
+	field( OUT,	 "$(MODULE):ModuleTempOK PP MS" )
 }
 
 record(bo, "$(MODULE):ModuleTempOK" )
 {
 	field( DESC, "True when Module Temp is On" )
-	field( DOL,  "$(MODULE):ModuleTempOK NPP" )
-	field( ZNAM, "OK" )
-	field( ONAM, "Hot!" )
+	field( ZNAM, "Hot!" )
+	field( ZSV,	 "MAJOR" )
+	field( ONAM, "OK" )
+	field( OSV,	 "NO_ALARM" )
+}
+
+record(calcout, "$(MODULE):SafetyLoopOKCalc" )
+{
+	field( DESC, "True when Safety Loop is OK" )
+	field( INPA, "$(MODULE):ModuleStatus NPP MS" )
+	field( CALC, "(A & 0x0400) ? 1 : 0" )
+	field( OUT,	 "$(MODULE):SafetyLoopOK PP MS" )
+}
+
+record(bo, "$(MODULE):SafetyLoopOK" )
+{
+	field( DESC, "True when Safety Loop is OK" )
+	field( ZNAM, "Fault!" )
+	field( ZSV,	 "MAJOR" )
+	field( ONAM, "OK" )
+	field( OSV,	 "NO_ALARM" )
 }
 
 record(bo, "$(MODULE):ModuleControlKILena")
@@ -140,8 +161,8 @@ record(ai, "$(MODULE):SupplyP12")
   field(EGU, "V")
   field(HOPR, "18")
   field(LOPR, "0")
-  field(HIHI, "12.4")
-  field(HIGH, "12.1")
+  field(HIHI, "12.7")
+  field(HIGH, "12.4")
   field(LOW, "11.7")
   field(LOLO, "11.4")
   field(HHSV, "MAJOR")
@@ -162,8 +183,8 @@ record(ai, "$(MODULE):SupplyN12")
   field(LOPR, "0")
   field(HIHI, "-11.4")
   field(HIGH, "-11.7")
-  field(LOW, "-12.1")
-  field(LOLO, "-12.4")
+  field(LOW, "-12.5")
+  field(LOLO, "-12.8")
   field(HHSV, "MAJOR")
   field(HSV, "MINOR")
   field(LSV, "MINOR")
@@ -180,7 +201,7 @@ record(ai, "$(MODULE):Temperature")
   field(EGU, "C")
   field(HOPR, "80")
   field(LOPR, "-40")
-  field(HIHI, "60")
+  field(HIHI, "45")
   field(HIGH, "40")
   field(LOW, "0")
   field(LOLO, "-20")

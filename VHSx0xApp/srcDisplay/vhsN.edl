@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 612
-y 75
+x 618
+y 66
 w 637
 h 557
 font "helvetica-medium-r-18.0"
@@ -19,7 +19,10 @@ ctlBgColor1 index 0
 ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
-title "$(APP) iSEG High Voltage Supply VHS$(iVHS)"
+title "$(TITLE)"
+showGrid
+snapToGrid
+gridSize 4
 endScreenProperties
 
 # (Rectangle)
@@ -46,14 +49,14 @@ minor 1
 release 0
 x 11
 y 12
-w 264
+w 162
 h 16
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "$(APP) iSEG High Voltage Supply VHS$(iVHS)"
+  "$(TITLE)"
 }
 autoSize
 endObjectProperties
@@ -104,7 +107,7 @@ x 156
 y 47
 w 446
 h 16
-controlPv "$(IOC):VHS$(iVHS):DeviceInfo"
+controlPv "$(DEV):DeviceInfo"
 font "helvetica-bold-r-14.0"
 fgColor index 19
 bgColor index 0
@@ -144,18 +147,18 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 157
+x 208
 y 72
-w 125
+w 72
 h 16
-controlPv "$(IOC):VHS$(iVHS):ModuleStatus"
+controlPv "$(DEV):ModuleStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -171,8 +174,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 331
-y 146
+x 332
+y 148
 w 87
 h 16
 font "helvetica-bold-r-14.0"
@@ -191,17 +194,17 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 478
-y 146
-w 125
+x 532
+y 148
+w 72
 h 16
-controlPv "$(IOC):VHS$(iVHS):Temperature"
+controlPv "$(DEV):Temperature"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -241,13 +244,13 @@ x 478
 y 122
 w 125
 h 16
-controlPv "$(IOC):VHS$(iVHS):SupplyN12"
+controlPv "$(DEV):SupplyN12"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -287,13 +290,13 @@ x 478
 y 97
 w 125
 h 16
-controlPv "$(IOC):VHS$(iVHS):CurrentMax"
+controlPv "$(DEV):CurrentMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -333,13 +336,13 @@ x 157
 y 146
 w 125
 h 16
-controlPv "$(IOC):VHS$(iVHS):SupplyP5"
+controlPv "$(DEV):SupplyP5"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -379,13 +382,13 @@ x 157
 y 122
 w 125
 h 16
-controlPv "$(IOC):VHS$(iVHS):SupplyP12"
+controlPv "$(DEV):SupplyP12"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -425,13 +428,13 @@ x 157
 y 97
 w 125
 h 16
-controlPv "$(IOC):VHS$(iVHS):VoltageMax"
+controlPv "$(DEV):VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -497,7 +500,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):ModuleControlKILena"
+controlPv "$(DEV):ModuleControlKILena"
 onLabel "Enabled"
 offLabel "Disabled"
 labelType "literal"
@@ -522,7 +525,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):AllChannelEMCY"
+controlPv "$(DEV):AllChannelEMCY"
 onLabel "Off!!!"
 offLabel "Off"
 labelType "literal"
@@ -548,7 +551,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):ModuleControlCLEAR"
+controlPv "$(DEV):ModuleControlCLEAR"
 onLabel "Clearing"
 offLabel "Clear"
 labelType "literal"
@@ -588,7 +591,7 @@ x 487
 y 171
 w 47
 h 20
-controlPv "$(IOC):VHS$(iVHS):VoltageRampSpeed"
+controlPv "$(DEV):VoltageRampSpeed"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -917,7 +920,7 @@ x 169
 y 520
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:ChannelStatus"
+controlPv "$(DEV):CH0:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -944,7 +947,7 @@ x 169
 y 502
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMax"
+controlPv "$(DEV):CH0:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -970,7 +973,7 @@ x 169
 y 483
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:Resistance"
+controlPv "$(DEV):CH0:Resistance"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -997,7 +1000,7 @@ x 169
 y 464
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:CurrentNominal"
+controlPv "$(DEV):CH0:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1024,14 +1027,14 @@ x 169
 y 446
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:CurrentMeasure"
+controlPv "$(DEV):CH0:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1051,13 +1054,13 @@ x 169
 y 427
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:VoltageNominal"
+controlPv "$(DEV):CH0:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1077,13 +1080,13 @@ x 169
 y 346
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:VoltageMeasure"
+controlPv "$(DEV):CH0:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1103,7 +1106,7 @@ x 169
 y 404
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:CurrentBounds"
+controlPv "$(DEV):CH0:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1134,7 +1137,7 @@ x 169
 y 385
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH0:CurrentTrip"
+controlPv "$(DEV):CH0:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1165,7 +1168,7 @@ x 169
 y 366
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH0:VoltageBounds"
+controlPv "$(DEV):CH0:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 29
@@ -1194,7 +1197,7 @@ x 170
 y 322
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH0:VoltageSet0"
+controlPv "$(DEV):CH0:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -1229,7 +1232,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 6
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlEMCY"
+controlPv "$(DEV):CH0:ChannelControlEMCY"
 onLabel "Off!!!"
 offLabel "Normal"
 labelType "literal"
@@ -1269,7 +1272,7 @@ x 280
 y 520
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:ChannelStatus"
+controlPv "$(DEV):CH1:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1296,7 +1299,7 @@ x 280
 y 502
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMax"
+controlPv "$(DEV):CH1:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -1322,7 +1325,7 @@ x 280
 y 483
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:Resistance"
+controlPv "$(DEV):CH1:Resistance"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -1348,7 +1351,7 @@ x 280
 y 464
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:CurrentNominal"
+controlPv "$(DEV):CH1:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1375,14 +1378,14 @@ x 280
 y 446
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:CurrentMeasure"
+controlPv "$(DEV):CH1:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1402,13 +1405,13 @@ x 280
 y 427
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:VoltageNominal"
+controlPv "$(DEV):CH1:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1428,13 +1431,13 @@ x 280
 y 346
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:VoltageMeasure"
+controlPv "$(DEV):CH1:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1454,7 +1457,7 @@ x 280
 y 404
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:CurrentBounds"
+controlPv "$(DEV):CH1:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1485,7 +1488,7 @@ x 280
 y 385
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:CurrentTrip"
+controlPv "$(DEV):CH1:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1516,7 +1519,7 @@ x 280
 y 366
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH1:VoltageBounds"
+controlPv "$(DEV):CH1:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -1545,7 +1548,7 @@ x 281
 y 322
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH1:VoltageSet0"
+controlPv "$(DEV):CH1:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -1580,7 +1583,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlEMCY"
+controlPv "$(DEV):CH1:ChannelControlEMCY"
 onLabel "Off!!!"
 offLabel "Normal"
 labelType "literal"
@@ -1620,7 +1623,7 @@ x 391
 y 520
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:ChannelStatus"
+controlPv "$(DEV):CH2:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1647,7 +1650,7 @@ x 391
 y 502
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMax"
+controlPv "$(DEV):CH2:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -1673,7 +1676,7 @@ x 391
 y 483
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:Resistance"
+controlPv "$(DEV):CH2:Resistance"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -1699,7 +1702,7 @@ x 391
 y 464
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:CurrentNominal"
+controlPv "$(DEV):CH2:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1726,14 +1729,14 @@ x 391
 y 446
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:CurrentMeasure"
+controlPv "$(DEV):CH2:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1753,13 +1756,13 @@ x 391
 y 427
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:VoltageNominal"
+controlPv "$(DEV):CH2:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1779,13 +1782,13 @@ x 391
 y 346
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:VoltageMeasure"
+controlPv "$(DEV):CH2:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1805,7 +1808,7 @@ x 391
 y 404
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:CurrentBounds"
+controlPv "$(DEV):CH2:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1836,7 +1839,7 @@ x 391
 y 385
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:CurrentTrip"
+controlPv "$(DEV):CH2:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1867,7 +1870,7 @@ x 391
 y 366
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH2:VoltageBounds"
+controlPv "$(DEV):CH2:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -1896,7 +1899,7 @@ x 392
 y 322
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH2:VoltageSet0"
+controlPv "$(DEV):CH2:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -1931,7 +1934,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlEMCY"
+controlPv "$(DEV):CH2:ChannelControlEMCY"
 onLabel "Off!!!"
 offLabel "Normal"
 labelType "literal"
@@ -1971,7 +1974,7 @@ x 495
 y 520
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:ChannelStatus"
+controlPv "$(DEV):CH3:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1998,7 +2001,7 @@ x 495
 y 502
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMax"
+controlPv "$(DEV):CH3:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -2024,7 +2027,7 @@ x 495
 y 483
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:Resistance"
+controlPv "$(DEV):CH3:Resistance"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
@@ -2050,7 +2053,7 @@ x 495
 y 464
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:CurrentNominal"
+controlPv "$(DEV):CH3:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2077,14 +2080,14 @@ x 495
 y 446
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:CurrentMeasure"
+controlPv "$(DEV):CH3:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -2104,13 +2107,13 @@ x 495
 y 427
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:VoltageNominal"
+controlPv "$(DEV):CH3:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2130,13 +2133,13 @@ x 495
 y 346
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:VoltageMeasure"
+controlPv "$(DEV):CH3:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 19
+fgAlarm
 bgColor index 0
 useDisplayBg
-autoHeight
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2156,7 +2159,7 @@ x 495
 y 404
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:CurrentBounds"
+controlPv "$(DEV):CH3:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2187,7 +2190,7 @@ x 495
 y 385
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:CurrentTrip"
+controlPv "$(DEV):CH3:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2218,7 +2221,7 @@ x 495
 y 366
 w 82
 h 16
-controlPv "$(IOC):VHS$(iVHS):CH3:VoltageBounds"
+controlPv "$(DEV):CH3:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -2247,7 +2250,7 @@ x 496
 y 322
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH3:VoltageSet0"
+controlPv "$(DEV):CH3:VoltageSet0"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
 fgColor index 29
@@ -2282,7 +2285,7 @@ offColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlEMCY"
+controlPv "$(DEV):CH3:ChannelControlEMCY"
 onLabel "Off!!!"
 offLabel "Normal"
 labelType "literal"
@@ -2318,9 +2321,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 508
-y 5
-w 56
+x 444
+y 4
+w 64
 h 24
 fgColor index 14
 bgColor index 4
@@ -2331,7 +2334,7 @@ buttonLabel "Home"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "AMOHome"
+  0 "$(HOME)"
 }
 setPosition {
   0 "parentWindow"
@@ -2339,6 +2342,7 @@ setPosition {
 replaceSymbols {
   0 1
 }
+icon
 endObjectProperties
 
 # (Exit Button)
@@ -2366,9 +2370,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 445
-y 5
-w 56
+x 372
+y 4
+w 68
 h 24
 fgColor index 14
 bgColor index 4
@@ -2384,6 +2388,7 @@ displayFileName {
 setPosition {
   0 "parentWindow"
 }
+icon
 endObjectProperties
 
 # (Message Button)
@@ -2401,7 +2406,7 @@ onColor index 2
 offColor index 2
 topShadowColor index 2
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
+controlPv "$(DEV):AllChannelOnOff"
 pressValue "0"
 releaseValue "0"
 onLabel "All Off"
@@ -2426,7 +2431,7 @@ onColor index 2
 offColor index 2
 topShadowColor index 2
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):AllChannelOnOff"
+controlPv "$(DEV):AllChannelOnOff"
 pressValue "1"
 releaseValue "1"
 onLabel "All On"
@@ -2485,8 +2490,8 @@ offColor index 3
 inconsistentColor index 36
 topShadowColor index 2
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH0:ChannelControlOnOff"
-indicatorPv "$(IOC):VHS$(iVHS):CH0:ChannelIsOn"
+controlPv "$(DEV):CH0:ChannelControlOnOff"
+indicatorPv "$(DEV):CH0:ChannelIsOn"
 labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
@@ -2503,7 +2508,7 @@ x 171
 y 273
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH0:STATUS"
+controlPv "$(DEV):CH0:STATUS"
 font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
@@ -2531,7 +2536,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(IOC):VHS$(iVHS):CH0:ChannelIsEmergency"
+visPv "$(DEV):CH0:ChannelIsEmergency"
 visMin "1"
 visMax "2"
 value {
@@ -2572,8 +2577,8 @@ offColor index 3
 inconsistentColor index 36
 topShadowColor index 2
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH1:ChannelControlOnOff"
-indicatorPv "$(IOC):VHS$(iVHS):CH1:ChannelIsOn"
+controlPv "$(DEV):CH1:ChannelControlOnOff"
+indicatorPv "$(DEV):CH1:ChannelIsOn"
 labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
@@ -2590,7 +2595,7 @@ x 284
 y 273
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH1:STATUS"
+controlPv "$(DEV):CH1:STATUS"
 font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
@@ -2618,7 +2623,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(IOC):VHS$(iVHS):CH1:ChannelIsEmergency"
+visPv "$(DEV):CH1:ChannelIsEmergency"
 visMin "1"
 visMax "2"
 value {
@@ -2659,8 +2664,8 @@ offColor index 3
 inconsistentColor index 36
 topShadowColor index 2
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH2:ChannelControlOnOff"
-indicatorPv "$(IOC):VHS$(iVHS):CH2:ChannelIsOn"
+controlPv "$(DEV):CH2:ChannelControlOnOff"
+indicatorPv "$(DEV):CH2:ChannelIsOn"
 labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
@@ -2677,7 +2682,7 @@ x 394
 y 273
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH2:STATUS"
+controlPv "$(DEV):CH2:STATUS"
 font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
@@ -2705,7 +2710,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(IOC):VHS$(iVHS):CH2:ChannelIsEmergency"
+visPv "$(DEV):CH2:ChannelIsEmergency"
 visMin "1"
 visMax "2"
 value {
@@ -2746,8 +2751,8 @@ offColor index 3
 inconsistentColor index 36
 topShadowColor index 2
 botShadowColor index 14
-controlPv "$(IOC):VHS$(iVHS):CH3:ChannelControlOnOff"
-indicatorPv "$(IOC):VHS$(iVHS):CH3:ChannelIsOn"
+controlPv "$(DEV):CH3:ChannelControlOnOff"
+indicatorPv "$(DEV):CH3:ChannelIsOn"
 labelType "literal"
 3d
 font "helvetica-bold-r-14.0"
@@ -2764,7 +2769,7 @@ x 499
 y 273
 w 82
 h 20
-controlPv "$(IOC):VHS$(iVHS):CH3:STATUS"
+controlPv "$(DEV):CH3:STATUS"
 font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
@@ -2792,7 +2797,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(IOC):VHS$(iVHS):CH3:ChannelIsEmergency"
+visPv "$(DEV):CH3:ChannelIsEmergency"
 visMin "1"
 visMax "2"
 value {
@@ -2802,5 +2807,129 @@ endObjectProperties
 
 endGroup
 
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 480
+y 148
+w 44
+h 16
+controlPv "$(DEV):ModuleTempOK"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 156
+y 72
+w 48
+h 16
+controlPv "$(DEV):ModuleIsOK"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 512
+y 4
+w 56
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "IOC"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "iocscreens/ioc_soft.edl"
+}
+setPosition {
+  0 "parentWindow"
+}
+symbols {
+  0 "ioc=$(IOC)"
+}
+icon
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 480
+y 228
+w 56
+h 16
+controlPv "$(DEV):SafetyLoopOK"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 332
+y 228
+w 87
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Safety Loop"
+}
 endObjectProperties
 

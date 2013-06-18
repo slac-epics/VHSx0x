@@ -9,6 +9,8 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #  Mod:
+#        18-Jun-2013, G. Brown            (GWBROWN)
+#          release VHSx0x-R2-2-3
 #        20-Mar-2010, S. Hoobler          (SONYA)
 #          release VHSx0x-R2-2-0
 #        29-Apr-2009, K. Luchini          (LUCHINI)
@@ -16,6 +18,8 @@
 #
 #==============================================================
 #
+VHSx0x-R2-2-3:    Fix bug in VHSx0xClearEvent() that used status bits variable instead of mask. (06/18/2013)
+
 VHSx0x-R2-2-2:    Fix bug in VHSx0xClearEvent() that used placedChannels bitmask instead of number to iterate. (05/01/2012)
 
 VHSx0x-R2-2-1:    Use $EPICS_BASE_VER macro in configure/RELEASE

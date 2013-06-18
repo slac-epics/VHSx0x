@@ -1,5 +1,5 @@
 /***************************************************************************\
- *   $Id: drvVHSx0x.c,v 1.2 2007/11/30 23:54:39 pengs Exp $
+ *   $Id: drvVHSx0x.c,v 1.3 2012/05/11 16:41:31 niafong Exp $
  *   File:		drvVHSx0x.c
  *   Author:		Sheng Peng
  *   Email:		pengsh2003@yahoo.com
@@ -322,16 +322,18 @@ int VHSx0xClearEvent(unsigned int cardnum)
         VHSx0xWriteUINT32(cardnum, VHSX0X_MODULE_EVTGRPSTS_OFFSET, status32);
 
 		placedChannels = VHSx0xGetNumOfCHs(cardnum);
+		if(placedChannels != -1)
+		{
+			for(loopchnl=0; loopchnl < placedChannels; loopchnl++)
+			{
+				VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, &status16);
+				VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTMSK_OFFSET, &mask16);
+				status16 &= mask16;
+				VHSx0xWriteUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, status16);
+			}
+		}
 
-        for(loopchnl=0; loopchnl < placedChannels; loopchnl++)
-        {
-            VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, &status16);
-            VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTMSK_OFFSET, &status16);
-            status16 &= mask16;
-            VHSx0xWriteUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, status16);
-        }
-
-        VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, &status16);
+		VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, &status16);
         VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHMSK_OFFSET, &mask16);
         status16 &= mask16;
         VHSx0xWriteUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, status16);

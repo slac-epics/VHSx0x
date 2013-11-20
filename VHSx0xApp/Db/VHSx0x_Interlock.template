@@ -1,0 +1,62 @@
+# EPICS Template for iSeg VHSx0x Software Interlock
+#
+# This template is optional, and can be used if a software interlock is needed
+# to turn off HV and to clear the kill signals when the interlock clears.
+#
+# To use, you can either use a substitutions file to supply the needed macro definitions,
+# or just make a copy of this file and customize it to fill in the macro names.
+#
+# Required Macro Definitions
+# Interlock		- Name of this interlock record
+# Desc			- Description of the purpose of this interlock record
+# MODULE		- Module name,	for example AMO:R13:IOC:14:VHS3
+# InterlockPV	- Name of binary PV that triggers interlock (high = OK, low = Inhibit)
+# tyInterlockPV	- Type for InterlockPV (ENUM, LONG, CHAR, ... )
+#	Optional macros:
+# AutoEnable	- True to auto-clear kill signals when interlock is OK
+# AutoOn		- True to auto turn on channels when interlock is OK
+# Chan0			- Channel 0 name, set to "" if channel not controlled by this interlock
+# Chan1			- Channel 1 name, set to "" if channel not controlled by this interlock
+# Chan2			- Channel 2 name, set to "" if channel not controlled by this interlock
+# Chan3			- Channel 3 name, set to "" if channel not controlled by this interlock
+# FwdLink		- Name of forward link, if any.  Set to "" if unused.
+#
+substitute "Chan0=$(MODULE):CH0, Chan1=$(MODULE):CH1, Chan2=$(MODULE):CH2, Chan1=$(MODULE):CH3"
+
+# These PV's are used to hold the PV names of the VHS Module and channels.
+# This trick allows the gensub to read PV names as strings so it can build
+# other PV's names from them.
+record( stringin, "$(MODULE):NAME"	) { field( VAL, "$(MODULE)"	) }
+record( stringin, "$(Chan0):NAME"	) { field( VAL, "$(Chan0)"	) }
+record( stringin, "$(Chan1):NAME"	) { field( VAL, "$(Chan1)"	) }
+record( stringin, "$(Chan2):NAME"	) { field( VAL, "$(Chan2)"	) }
+record( stringin, "$(Chan3):NAME"	) { field( VAL, "$(Chan3)"	) }
+
+
+# Subroutine Inputs
+# INPA:	Interlock PV, high = OK, low = Inhibit
+# INPB:	Name of VHS Module
+# INPC:	Name of VHS Channel 0, "" if not inhibited by this interlock
+# INPD:	Name of VHS Channel 1, "" if not inhibited by this interlock
+# INPE:	Name of VHS Channel 2, "" if not inhibited by this interlock
+# INPF:	Name of VHS Channel 3, "" if not inhibited by this interlock
+# INPG:	AutoClear, Set to "1" to automatically clear kill signals
+# INPH:	AutoOn, Set to "1" to automatically turn HV ON when interlock clears
+record( genSub, "$(Interlock)" )
+{
+	field( DESC, "$(Desc)" )
+	field( SCAN, "$(tyScan)" )
+	field( PINI, "YES" )
+	field( INAM, "InterlockInit" )
+	field( SNAM, "InterlockProcess" )
+	field( FTA,  "$(tyInterlockPV)" )	field( INPA, "$(InterlockPV)" )
+	field( FTB,  "STRING" )				field( INPB, "$(MODULE):NAME" )
+	field( FTC,  "STRING" )				field( INPC, "$(Chan0):NAME" )
+	field( FTD,  "STRING" )				field( INPD, "$(Chan1):NAME" )
+	field( FTE,  "STRING" )				field( INPE, "$(Chan2):NAME" )
+	field( FTF,  "STRING" )				field( INPF, "$(Chan3):NAME" )
+	field( FTG,  "LONG" )				field( INPG, "$(AutoClear=1)" )
+	field( FTH,  "LONG" )				field( INPH, "$(AutoOn=0)" )
+	field( FLNK, "$(FwdLink=)" )
+}
+

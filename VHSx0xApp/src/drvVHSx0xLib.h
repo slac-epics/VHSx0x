@@ -148,6 +148,7 @@ extern "C" {
 
 int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr);
 int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr);
+int GetNumOfChan( UINT16 placedChannels );
 int VHSx0xGetNumOfCHs(unsigned int cardnum);
 char * VHSx0xGetDeviceInfo(unsigned int cardnum);
 #ifdef VHSX0X_INTERRUPT_SUPPORT

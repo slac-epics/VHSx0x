@@ -1,0 +1,114 @@
+#==============================================================================
+#
+# Abs:  Substitution file for ISEG VHSx0x High Voltage Modules
+#
+# Name: VHSx0x.substitutions
+#
+# For full access to overriding default values for macros, copy this
+# substitutions file to your IOC and customize it to meet your needs.
+#
+#  Auth: 25-SEP-2010, B. Hill         (bhill)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name (USERNAME)
+#
+#==============================================================================
+
+# Required macros:
+#	MODULE			# Module base PV name
+#	CARD			# VHS slot number
+#	V_MAX			# Nominal rated voltage (abs value)
+#	POLARITY		# 1 for pos, -1 for neg
+# Optional macros:
+#	RAMP_SPEED_HI	# defaults to 20% per sec
+#	RAMP_SPEED_LO	# defaults to  1%/sec
+file VHSx0x_Module.template
+{
+	{
+		MODULE			= $(MODULE),
+		CARD			= $(CARD),
+		V_MAX			= $(V_MAX),
+# 		RAMP_SPEED_LO	= 0.1,
+		POLARITY		= $(POLARITY)
+	}
+}
+
+#
+# Substitutions for iSeg VHSx0x Channel
+#
+# Required Macro Definitions
+# MODULE	# Module name,	for example AMO:R13:IOC:14:VHS3
+# CHAN		# Channel name,	for example AMO:R13:IOC:14:VHS3:CH0
+# CARD		# VHSx0x Card Number (0, 1, 2, ...)
+# SIGNAL	# VHSx0x Channel Number on Card (0..3)
+# V_MAX		# Nominal rated voltage (abs value)
+#
+# Optional macros:
+#
+# HC.* macros are for current limits:
+#
+# HC.HOPR	# High operating range
+# HC.LOPR	# Low  operating range
+#		EPICS constrains operator display values to:
+#			DRVL <= LOPR <= ... <= HOPR <= DRVH
+#	Alarm limits
+# HC.HIHI	# High High Limit
+# HC.HIGH	# High Limit
+# HC.LOW	# Low Limit
+# HC.LOLO	# Low Low Limit
+#
+# HC.ADEL	# Archive Deadband
+# HC.MDEL	# Monitor Deadband
+#
+# HV.* macros are for voltage limits:
+#
+# HV.DRVH	# Drive High Limit
+# HV.DRVL	# Drive Low  Limit
+#		EPICS constrains VAL to:	DRVL <= VAL <= DRVH
+# HV.HOPR	# High operating range
+# HV.LOPR	# Low  operating range
+#		EPICS constrains operator display values to:
+#			DRVL <= LOPR <= ... <= HOPR <= DRVH
+#	Alarm limits
+# HV.HIHI	# High High Limit
+# HV.HIGH	# High Limit
+# HV.LOW	# Low Limit
+# HV.LOLO	# Low Low Limit
+#
+# HV.ADEL	# Archive Deadband
+# HV.MDEL	# Monitor Deadband
+# HV.HYST	# Alarm Deadband
+# HV.SMOO	# Analog input smoothing factor
+
+file VHSx0x_Channel.template
+{
+	{
+		MODULE		= $(MODULE),
+		CHAN		= $(MODULE):CH$(SIGNAL),
+		CARD		= $(CARD),
+		SIGNAL		= 0,
+#		HV.HYST		= 10,
+		V_MAX		= $(V_MAX)
+	}
+	{
+		MODULE		= $(MODULE),
+		CHAN		= $(MODULE):CH$(SIGNAL),
+		CARD		= $(CARD),
+		SIGNAL		= 1,
+		V_MAX		= $(V_MAX)
+	}
+	{
+		MODULE		= $(MODULE),
+		CHAN		= $(MODULE):CH$(SIGNAL),
+		CARD		= $(CARD),
+		SIGNAL		= 2,
+		V_MAX		= $(V_MAX)
+	}
+	{
+		MODULE		= $(MODULE),
+		CHAN		= $(MODULE):CH$(SIGNAL),
+		CARD		= $(CARD),
+#		HC.MDEL		= 0.5,
+		SIGNAL		= 3,
+		V_MAX		= $(V_MAX)
+	}
+}
+

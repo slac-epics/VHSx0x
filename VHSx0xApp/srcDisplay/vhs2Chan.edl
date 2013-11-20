@@ -1,0 +1,2000 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 2647
+y 21
+w 637
+h 557
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+title "$(TITLE)"
+showGrid
+snapToGrid
+gridSize 4
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 11
+y 12
+w 89
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "$(TITLE)"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 12
+y 36
+w 615
+h 516
+lineColor index 14
+fill
+fillColor index 5
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 47
+w 77
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Device Info"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 156
+y 47
+w 446
+h 16
+controlPv "$(DEV):DeviceInfo"
+font "helvetica-bold-r-14.0"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 72
+w 101
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Module Status"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 208
+y 72
+w 72
+h 16
+controlPv "$(DEV):ModuleStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 332
+y 148
+w 87
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Temperature"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 532
+y 148
+w 72
+h 16
+controlPv "$(DEV):Temperature"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 122
+w 84
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "-12V Supply"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 478
+y 122
+w 125
+h 16
+controlPv "$(DEV):SupplyN12"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 97
+w 86
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max Current"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 478
+y 97
+w 125
+h 16
+controlPv "$(DEV):CurrentMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 146
+w 80
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "+5V Supply"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 146
+w 125
+h 16
+controlPv "$(DEV):SupplyP5"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 122
+w 88
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "+12V Supply"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 122
+w 125
+h 16
+controlPv "$(DEV):SupplyP12"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 97
+w 85
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max Voltage"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 157
+y 97
+w 125
+h 16
+controlPv "$(DEV):VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 169
+w 88
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "All Channels"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 198
+w 142
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable Current Limit"
+}
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 519
+y 195
+w 80
+h 21
+fgColor index 29
+onColor index 2
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(DEV):ModuleControlKILena"
+onLabel "Enabled"
+offLabel "Disabled"
+labelType "literal"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 220
+y 194
+w 62
+h 22
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(DEV):AllChannelEMCY"
+onLabel "Off!!!"
+offLabel "Off"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 202
+y 224
+w 80
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(DEV):ModuleControlCLEAR"
+onLabel "Clearing"
+offLabel "Clear"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 331
+y 171
+w 145
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Voltage Ramp Speed"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 487
+y 171
+w 47
+h 20
+controlPv "$(DEV):VoltageRampSpeed"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+precision 2
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 197
+w 147
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "All Ch Emergency Off"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 23
+y 226
+w 63
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Clear Kill"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 502
+w 85
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max Voltage"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 520
+w 76
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Status Bits"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 385
+w 81
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "CurrentTrip"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 274
+w 107
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel On/Off"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 298
+w 125
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Emergency Ch Off"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 22
+y 322
+w 76
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "VoltageSet"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 366
+w 107
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "VoltageBounds"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 404
+w 108
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "CurrentBounds"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 346
+w 126
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Measured Voltage"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 427
+w 114
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Nominal Voltage"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 446
+w 127
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Measured Current"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 464
+w 91
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Current Limit"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 21
+y 483
+w 77
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Resistance"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 520
+w 152
+h 16
+controlPv "$(DEV):CH0:ChannelStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 504
+w 152
+h 16
+controlPv "$(DEV):CH0:VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 484
+w 152
+h 16
+controlPv "$(DEV):CH0:Resistance"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+precision 3
+fieldLen "6"
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 464
+w 152
+h 16
+controlPv "$(DEV):CH0:CurrentNominal"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 448
+w 152
+h 16
+controlPv "$(DEV):CH0:CurrentMeasure"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 428
+w 152
+h 16
+controlPv "$(DEV):CH0:VoltageNominal"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 348
+w 152
+h 16
+controlPv "$(DEV):CH0:VoltageMeasure"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 404
+w 152
+h 16
+controlPv "$(DEV):CH0:CurrentBounds"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 384
+w 152
+h 16
+controlPv "$(DEV):CH0:CurrentTrip"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 368
+w 152
+h 20
+controlPv "$(DEV):CH0:VoltageBounds"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+limitsFromDb
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 324
+w 152
+h 20
+controlPv "$(DEV):CH0:VoltageSet0"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+limitsFromDb
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 300
+w 152
+h 20
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 6
+botShadowColor index 14
+controlPv "$(DEV):CH0:ChannelControlEMCY"
+onLabel "Off!!!"
+offLabel "Normal"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 168
+y 252
+w 152
+h 21
+font "helvetica-medium-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 0"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 520
+w 152
+h 16
+controlPv "$(DEV):CH1:ChannelStatus"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 504
+w 152
+h 16
+controlPv "$(DEV):CH1:VoltageMax"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 484
+w 152
+h 16
+controlPv "$(DEV):CH1:Resistance"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+limitsFromDb
+precision 3
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 464
+w 152
+h 16
+controlPv "$(DEV):CH1:CurrentNominal"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 448
+w 152
+h 16
+controlPv "$(DEV):CH1:CurrentMeasure"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 428
+w 152
+h 16
+controlPv "$(DEV):CH1:VoltageNominal"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 348
+w 152
+h 16
+controlPv "$(DEV):CH1:VoltageMeasure"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 404
+w 152
+h 16
+controlPv "$(DEV):CH1:CurrentBounds"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 384
+w 152
+h 16
+controlPv "$(DEV):CH1:CurrentTrip"
+format "exponential"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+precision 3
+fieldLen "8"
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 368
+w 152
+h 16
+controlPv "$(DEV):CH1:VoltageBounds"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+limitsFromDb
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 324
+w 152
+h 20
+controlPv "$(DEV):CH1:VoltageSet0"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 29
+bgColor index 0
+useDisplayBg
+editable
+motifWidget
+limitsFromDb
+nullColor index 0
+smartRefresh
+useKp
+autoSelect
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 332
+y 300
+w 152
+h 20
+fgColor index 29
+onColor index 20
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(DEV):CH1:ChannelControlEMCY"
+onLabel "Off!!!"
+offLabel "Normal"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 332
+y 252
+w 152
+h 21
+font "helvetica-medium-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 1"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 444
+y 4
+w 64
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Home"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(HOME)"
+}
+setPosition {
+  0 "parentWindow"
+}
+replaceSymbols {
+  0 1
+}
+icon
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 572
+y 4
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "helvetica-medium-r-10.0"
+3d
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 372
+y 4
+w 68
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Parent"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(PARENT)"
+}
+setPosition {
+  0 "parentWindow"
+}
+icon
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 156
+y 170
+w 60
+h 19
+fgColor index 29
+onColor index 2
+offColor index 2
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):AllChannelOnOff"
+pressValue "0"
+releaseValue "0"
+onLabel "All Off"
+offLabel "All Off"
+3d
+useEnumNumeric
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 221
+y 170
+w 60
+h 19
+fgColor index 29
+onColor index 2
+offColor index 2
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):AllChannelOnOff"
+pressValue "1"
+releaseValue "1"
+onLabel "All On"
+offLabel "All On"
+3d
+useEnumNumeric
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 548
+y 171
+w 51
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "(%/sec)"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 272
+w 152
+h 20
+
+beginGroup
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 170
+y 273
+w 149
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 36
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):CH0:ChannelControlOnOff"
+indicatorPv "$(DEV):CH0:ChannelIsOn"
+labelType "literal"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 170
+y 273
+w 149
+h 20
+controlPv "$(DEV):CH0:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 170
+y 273
+w 149
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH0:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 332
+y 272
+w 152
+h 20
+
+beginGroup
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 332
+y 273
+w 152
+h 20
+fgColor index 29
+onColor index 15
+offColor index 3
+inconsistentColor index 36
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):CH1:ChannelControlOnOff"
+indicatorPv "$(DEV):CH1:ChannelIsOn"
+labelType "literal"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 332
+y 273
+w 152
+h 20
+controlPv "$(DEV):CH1:STATUS"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 332
+y 273
+w 152
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH1:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 480
+y 148
+w 44
+h 16
+controlPv "$(DEV):ModuleTempOK"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 156
+y 72
+w 48
+h 16
+controlPv "$(DEV):ModuleIsOK"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 512
+y 4
+w 56
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "IOC"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "iocscreens/ioc_soft.edl"
+}
+setPosition {
+  0 "parentWindow"
+}
+symbols {
+  0 "ioc=$(IOC)"
+}
+icon
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 480
+y 228
+w 56
+h 16
+controlPv "$(DEV):SafetyLoopOK"
+font "helvetica-bold-r-14.0"
+fontAlign "right"
+fgColor index 19
+fgAlarm
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 332
+y 228
+w 87
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Safety Loop"
+}
+endObjectProperties
+

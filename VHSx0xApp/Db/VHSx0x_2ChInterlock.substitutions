@@ -1,0 +1,39 @@
+#==============================================================================
+#
+# EPICS Substitutions file for iSeg VHSx0x Software Interlock
+#
+# This sample substitutions file can be used if a software interlock is needed
+# to turn off HV and to clear the kill signals when the interlock clears.
+#
+# To use, you can either use this substitutions file to supply the needed macro definitions,
+# or just make a copy of the template file and customize it to fill in the macro names.
+#
+# Required Macro Definitions
+# Interlock		- Name of this interlock record
+# Desc			- Description of the purpose of this interlock record
+# MODULE		- Device name,	for example AMO:R13:IOC:14:VHS3
+# InterlockPV	- Name of binary PV that triggers interlock (high = OK, low = Inhibit)
+# AutoEnable	- True to auto-clear kill signals when interlock is OK
+# AutoOn		- True to auto turn on channels when interlock is OK
+# Chan0			- Channel 0 name, set to "" if channel not controlled by this interlock
+# Chan1			- Channel 1 name, set to "" if channel not controlled by this interlock
+# FwdLink		- Name of forward link, if any.  Set to "" if unused.
+#
+
+file VHSx0x_2ChInterlock.template
+{
+	pattern
+	{	Interlock,
+		Desc,
+		MODULE,		InterlockPV,
+		Chan0,		Chan1,
+		AutoClear,	AutoOn,	FwdLink
+	}
+	{
+		$(MODULE):Interlock,	$(Desc),
+		$(MODULE),				$(InterlockPV),
+		$(MODULE):CH0,			$(MODULE):CH1,
+		1,						0,					""
+	}
+}
+

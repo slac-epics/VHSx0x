@@ -1,0 +1,33 @@
+#==============================================================================
+#
+# Abs:  Archive Substitution file for ISEG VHSx0x High Voltage Modules
+#
+# Name: archive_VHSx0x.substitutions
+#
+#  Auth: 25-SEP-2010, B. Hill         (bhill)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name (USERNAME)
+#
+#==============================================================================
+
+# Required macros:
+#	MODULE			# Module base PV name
+file archive_VHSx0x_Detail.archive
+{
+	pattern
+	{	MODULE				}
+	{	$(MODULE)			}
+}
+
+
+file archive_VHSx0x_Interlock.archive
+{
+	pattern
+	{
+		MODULE,			Interlock,	
+		Chan0,			Chan1,			Chan2,			Chan3	
+	}
+	{
+		$(MODULE),		$(MODULE):Interlock,
+		$(MODULE):CH0,	$(MODULE):CH1,	$(MODULE):CH2,	$(MODULE):CH3
+	}
+}

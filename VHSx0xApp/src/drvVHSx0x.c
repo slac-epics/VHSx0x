@@ -110,12 +110,12 @@ int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr)
     }
 
     /* Read some information */
-    if( VHSx0xSafeReadUINT16(oldLocalBaseAddr, VHSX0X_MODULE_CONTROL_OFFSET, &moduleControl) ||
-        VHSx0xSafeReadFloat(oldLocalBaseAddr, VHSX0X_MODULE_TEMP_OFFSET, &boardTemperature) ||
-        VHSx0xSafeReadUINT32(oldLocalBaseAddr, VHSX0X_MODULE_SNUM_OFFSET, &serialNumber) ||
-        VHSx0xSafeReadUINT32(oldLocalBaseAddr, VHSX0X_MODULE_FWRLS_OFFSET, &firmwareRelease) ||
-        VHSx0xSafeReadUINT16(oldLocalBaseAddr, VHSX0X_MODULE_CHNLS_OFFSET, &placedChannels) ||
-        VHSx0xSafeReadUINT16(oldLocalBaseAddr, VHSX0X_MODULE_DEVCLS_OFFSET, &deviceClass) )
+    if( VHSx0xSafeReadUINT16(	oldLocalBaseAddr, VHSX0X_MODULE_CONTROL_OFFSET, &moduleControl		) ||
+        VHSx0xSafeReadFloat(	oldLocalBaseAddr, VHSX0X_MODULE_TEMP_OFFSET,    &boardTemperature	) ||
+        VHSx0xSafeReadUINT32(	oldLocalBaseAddr, VHSX0X_MODULE_SNUM_OFFSET,    &serialNumber		) ||
+        VHSx0xSafeReadUINT32(	oldLocalBaseAddr, VHSX0X_MODULE_FWRLS_OFFSET,   &firmwareRelease	) ||
+        VHSx0xSafeReadUINT16(	oldLocalBaseAddr, VHSX0X_MODULE_CHNLS_OFFSET,   &placedChannels		) ||
+        VHSx0xSafeReadUINT16(	oldLocalBaseAddr, VHSX0X_MODULE_DEVCLS_OFFSET,  &deviceClass		) )
     {
     	printf("Fail to access iseg VHSx0x at VME A16 0x%0X\n", oldVMEBaseAddr);
     	return -1;
@@ -126,11 +126,11 @@ int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr)
     /* if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) ) */
     if(1)
     {/* system byte order matches VHS board byte order */
-        printf("Serial Number = %d\n", serialNumber);
-        printf("Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);
-        printf("Number of Channels = %d\n", (placedChannels == 0x000F)?4:((placedChannels == 0x0FFF)?12:0));
-        printf("Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
-        printf("Board Temperature = %f C\n", boardTemperature);
+        printf( "Serial Number = %d\n", serialNumber);
+        printf( "Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);
+		printf( "Number of Channels = %d\n", GetNumOfChan(placedChannels) );
+        printf( "Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
+        printf( "Board Temperature = %f C\n", boardTemperature);
     }
     else
     {
@@ -240,11 +240,11 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
     /* if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) ) */
     if(1)
     {/* system byte order matches VHS board byte order */
-        printf("Serial Number = %d\n", serialNumber);
-        printf("Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF);
-        printf("Number of Channels = %d\n", (placedChannels == 0x000F)?4:((placedChannels == 0x0FFF)?12:0));
-        printf("Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
-        printf("Board Temperature = %f C\n", boardTemperature);
+        printf( "Serial Number = %d\n", serialNumber );
+        printf( "Firmware Release = %d.%d.%d\n", firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF );
+		printf( "Number of Channels = %d\n", GetNumOfChan(placedChannels) );
+        printf( "Device Class = %s\n",  (deviceClass == 0x14)?"iseg VHS x0x":"Unknown" );
+        printf( "Board Temperature = %f C\n", boardTemperature );
     }
     else
     {
@@ -269,17 +269,32 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
                                                (deviceClass == 0x14)?"isegVHS":"Unknown",
                                                serialNumber,
                                                firmwareRelease>>16, (firmwareRelease&0xFF00)>>8, firmwareRelease&0xFF,
-                                               (placedChannels == 0x000F)?4:((placedChannels == 0x0FFF)?12:0));
+											   VHSx0xGetNumOfCHs( cardnum ) );
 
     return 0;
 }
 
+int GetNumOfChan( UINT16	placedChannels )
+{
+	int	numChannels	= 0;
+
+	switch ( placedChannels )
+	{
+	default:
+		fprintf( stderr, "GetNumOfChan: Invalid channel mask 0x%X\n", placedChannels );
+		break;
+	case 0x0003:	numChannels = 2;	break;
+	case 0x000F:	numChannels = 4;	break;
+	case 0x0FFF:	numChannels = 12;	break;
+	}
+	return numChannels;
+}
+
 int VHSx0xGetNumOfCHs(unsigned int cardnum)
 {
-    if(cardnum < VHSX0X_MAX_CARD_NUM && VHSx0x_cards[cardnum].pCpuBaseAddr)
-        return  (VHSx0x_cards[cardnum].placedChannels == 0x000F)?4:((VHSx0x_cards[cardnum].placedChannels == 0x0FFF)?12:0);
-    else
+    if ( cardnum >= VHSX0X_MAX_CARD_NUM || VHSx0x_cards[cardnum].pCpuBaseAddr ==NULL )
         return -1;
+	return GetNumOfChan( VHSx0x_cards[cardnum].placedChannels );
 }
 
 char * VHSx0xGetDeviceInfo(unsigned int cardnum)
@@ -322,12 +337,18 @@ int VHSx0xClearEvent(unsigned int cardnum)
         status32 &= mask32;
         VHSx0xWriteUINT32(cardnum, VHSX0X_MODULE_EVTGRPSTS_OFFSET, status32);
 
-        for(loopchnl=0; loopchnl < VHSx0x_cards[cardnum].placedChannels; loopchnl++)
+        for ( loopchnl=0; loopchnl < VHSx0xGetNumOfCHs(cardnum); loopchnl++ )
         {
-            VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, &status16);
-            VHSx0xReadUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTMSK_OFFSET, &mask16 );
+            VHSx0xReadUINT16(  cardnum,	(	VHSX0X_CHNL_DATABLK_BASE
+										+	VHSX0X_CHNL_DATABLK_SIZE * loopchnl
+										+	VHSX0X_CHNL_EVTSTS_OFFSET	), &status16 );
+            VHSx0xReadUINT16(  cardnum, (	VHSX0X_CHNL_DATABLK_BASE
+										+	VHSX0X_CHNL_DATABLK_SIZE * loopchnl
+										+	VHSX0X_CHNL_EVTMSK_OFFSET	), &mask16 );
             status16 &= mask16;
-            VHSx0xWriteUINT16(cardnum, VHSX0X_CHNL_DATABLK_BASE + VHSX0X_CHNL_DATABLK_SIZE * loopchnl + VHSX0X_CHNL_EVTSTS_OFFSET, status16);
+            VHSx0xWriteUINT16( cardnum, (	VHSX0X_CHNL_DATABLK_BASE
+										+	VHSX0X_CHNL_DATABLK_SIZE * loopchnl
+										+	VHSX0X_CHNL_EVTSTS_OFFSET	), status16);
         }
 
         VHSx0xReadUINT16(cardnum, VHSX0X_MODULE_EVTCHSTS_OFFSET, &status16);
@@ -700,7 +721,7 @@ static long VHSx0x_EPICS_Report(int level)
                     printf("\tSerial Number = %d\n", VHSx0x_cards[index].serialNumber);
                     printf("\tFirmware Release = %d.%d.%d\n", VHSx0x_cards[index].firmwareRelease>>16,
                               (VHSx0x_cards[index].firmwareRelease&0xFF00)>>8, VHSx0x_cards[index].firmwareRelease&0xFF);
-                    printf("\tNumber of Channels = %d\n", (VHSx0x_cards[index].placedChannels == 0x000F)?4:((VHSx0x_cards[index].placedChannels == 0x0FFF)?12:0));
+					printf( "\tNumber of Channels = %d\n", VHSx0xGetNumOfCHs(index) );
                     printf("\tDevice Class = %s\n\n",  (VHSx0x_cards[index].deviceClass == 0x14)?"iseg VHS x0x":"Unknown");
                 }
             }

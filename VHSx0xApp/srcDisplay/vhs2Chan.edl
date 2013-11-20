@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1936
-y 84
+x 2647
+y 21
 w 637
 h 557
 font "helvetica-medium-r-18.0"
@@ -24,22 +24,6 @@ showGrid
 snapToGrid
 gridSize 4
 endScreenProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 0
-y 0
-w 640
-h 32
-lineColor index 56
-fill
-fillColor index 56
-lineWidth 0
-endObjectProperties
 
 # (Static Text)
 object activeXTextClass
@@ -887,9 +871,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
+x 168
 y 520
-w 82
+w 152
 h 16
 controlPv "$(DEV):CH0:ChannelStatus"
 format "hex"
@@ -913,9 +897,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 502
-w 82
+x 168
+y 504
+w 152
 h 16
 controlPv "$(DEV):CH0:VoltageMax"
 font "helvetica-bold-r-14.0"
@@ -938,9 +922,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 483
-w 82
+x 168
+y 484
+w 152
 h 16
 controlPv "$(DEV):CH0:Resistance"
 format "exponential"
@@ -965,9 +949,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
+x 168
 y 464
-w 82
+w 152
 h 16
 controlPv "$(DEV):CH0:CurrentNominal"
 format "exponential"
@@ -991,9 +975,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 446
-w 82
+x 168
+y 448
+w 152
 h 16
 controlPv "$(DEV):CH0:CurrentMeasure"
 format "exponential"
@@ -1018,9 +1002,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 427
-w 82
+x 168
+y 428
+w 152
 h 16
 controlPv "$(DEV):CH0:VoltageNominal"
 font "helvetica-bold-r-14.0"
@@ -1044,9 +1028,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 346
-w 82
+x 168
+y 348
+w 152
 h 16
 controlPv "$(DEV):CH0:VoltageMeasure"
 font "helvetica-bold-r-14.0"
@@ -1070,9 +1054,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
+x 168
 y 404
-w 82
+w 152
 h 16
 controlPv "$(DEV):CH0:CurrentBounds"
 format "exponential"
@@ -1100,9 +1084,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 385
-w 82
+x 168
+y 384
+w 152
 h 16
 controlPv "$(DEV):CH0:CurrentTrip"
 format "exponential"
@@ -1130,9 +1114,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 169
-y 366
-w 82
+x 168
+y 368
+w 152
 h 20
 controlPv "$(DEV):CH0:VoltageBounds"
 font "helvetica-bold-r-14.0"
@@ -1158,9 +1142,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 170
-y 322
-w 82
+x 168
+y 324
+w 152
 h 20
 controlPv "$(DEV):CH0:VoltageSet0"
 font "helvetica-bold-r-14.0"
@@ -1186,9 +1170,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 171
-y 298
-w 82
+x 168
+y 300
+w 152
 h 20
 fgColor index 29
 onColor index 20
@@ -1212,11 +1196,12 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 171
+x 168
 y 252
-w 82
+w 152
 h 21
 font "helvetica-medium-r-18.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1231,9 +1216,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
+x 332
 y 520
-w 82
+w 152
 h 16
 controlPv "$(DEV):CH1:ChannelStatus"
 format "hex"
@@ -1257,9 +1242,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 502
-w 82
+x 332
+y 504
+w 152
 h 16
 controlPv "$(DEV):CH1:VoltageMax"
 font "helvetica-bold-r-14.0"
@@ -1282,9 +1267,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 483
-w 82
+x 332
+y 484
+w 152
 h 16
 controlPv "$(DEV):CH1:Resistance"
 format "exponential"
@@ -1309,9 +1294,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
+x 332
 y 464
-w 82
+w 152
 h 16
 controlPv "$(DEV):CH1:CurrentNominal"
 format "exponential"
@@ -1335,9 +1320,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 446
-w 82
+x 332
+y 448
+w 152
 h 16
 controlPv "$(DEV):CH1:CurrentMeasure"
 format "exponential"
@@ -1362,9 +1347,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 427
-w 82
+x 332
+y 428
+w 152
 h 16
 controlPv "$(DEV):CH1:VoltageNominal"
 font "helvetica-bold-r-14.0"
@@ -1388,9 +1373,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 346
-w 82
+x 332
+y 348
+w 152
 h 16
 controlPv "$(DEV):CH1:VoltageMeasure"
 font "helvetica-bold-r-14.0"
@@ -1414,9 +1399,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
+x 332
 y 404
-w 82
+w 152
 h 16
 controlPv "$(DEV):CH1:CurrentBounds"
 format "exponential"
@@ -1444,9 +1429,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 385
-w 82
+x 332
+y 384
+w 152
 h 16
 controlPv "$(DEV):CH1:CurrentTrip"
 format "exponential"
@@ -1474,9 +1459,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 280
-y 366
-w 82
+x 332
+y 368
+w 152
 h 16
 controlPv "$(DEV):CH1:VoltageBounds"
 font "helvetica-bold-r-14.0"
@@ -1502,9 +1487,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 281
-y 322
-w 82
+x 332
+y 324
+w 152
 h 20
 controlPv "$(DEV):CH1:VoltageSet0"
 font "helvetica-bold-r-14.0"
@@ -1530,9 +1515,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 282
-y 298
-w 82
+x 332
+y 300
+w 152
 h 20
 fgColor index 29
 onColor index 20
@@ -1556,704 +1541,17 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 282
+x 332
 y 252
-w 82
+w 152
 h 21
 font "helvetica-medium-r-18.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
   "Channel 1"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 520
-w 82
-h 16
-controlPv "$(DEV):CH2:ChannelStatus"
-format "hex"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 502
-w 82
-h 16
-controlPv "$(DEV):CH2:VoltageMax"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 483
-w 82
-h 16
-controlPv "$(DEV):CH2:Resistance"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-precision 3
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 464
-w 82
-h 16
-controlPv "$(DEV):CH2:CurrentNominal"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 446
-w 82
-h 16
-controlPv "$(DEV):CH2:CurrentMeasure"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-fgAlarm
-bgColor index 0
-useDisplayBg
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 427
-w 82
-h 16
-controlPv "$(DEV):CH2:VoltageNominal"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-fgAlarm
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 346
-w 82
-h 16
-controlPv "$(DEV):CH2:VoltageMeasure"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-fgAlarm
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 404
-w 82
-h 16
-controlPv "$(DEV):CH2:CurrentBounds"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 385
-w 82
-h 16
-controlPv "$(DEV):CH2:CurrentTrip"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 391
-y 366
-w 82
-h 16
-controlPv "$(DEV):CH2:VoltageBounds"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-limitsFromDb
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 392
-y 322
-w 82
-h 20
-controlPv "$(DEV):CH2:VoltageSet0"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-limitsFromDb
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 393
-y 298
-w 82
-h 20
-fgColor index 29
-onColor index 20
-offColor index 3
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 14
-controlPv "$(DEV):CH2:ChannelControlEMCY"
-onLabel "Off!!!"
-offLabel "Normal"
-labelType "literal"
-buttonType "push"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 393
-y 252
-w 82
-h 21
-font "helvetica-medium-r-18.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Channel 2"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 520
-w 82
-h 16
-controlPv "$(DEV):CH3:ChannelStatus"
-format "hex"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 502
-w 82
-h 16
-controlPv "$(DEV):CH3:VoltageMax"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 483
-w 82
-h 16
-controlPv "$(DEV):CH3:Resistance"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-precision 3
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 464
-w 82
-h 16
-controlPv "$(DEV):CH3:CurrentNominal"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 446
-w 82
-h 16
-controlPv "$(DEV):CH3:CurrentMeasure"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-fgAlarm
-bgColor index 0
-useDisplayBg
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 427
-w 82
-h 16
-controlPv "$(DEV):CH3:VoltageNominal"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-fgAlarm
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 346
-w 82
-h 16
-controlPv "$(DEV):CH3:VoltageMeasure"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 19
-fgAlarm
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 404
-w 82
-h 16
-controlPv "$(DEV):CH3:CurrentBounds"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 385
-w 82
-h 16
-controlPv "$(DEV):CH3:CurrentTrip"
-format "exponential"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-precision 3
-fieldLen "8"
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 495
-y 366
-w 82
-h 16
-controlPv "$(DEV):CH3:VoltageBounds"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-limitsFromDb
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 496
-y 322
-w 82
-h 20
-controlPv "$(DEV):CH3:VoltageSet0"
-font "helvetica-bold-r-14.0"
-fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
-editable
-motifWidget
-limitsFromDb
-nullColor index 0
-smartRefresh
-useKp
-autoSelect
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 497
-y 298
-w 82
-h 20
-fgColor index 29
-onColor index 20
-offColor index 3
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 14
-controlPv "$(DEV):CH3:ChannelControlEMCY"
-onLabel "Off!!!"
-offLabel "Normal"
-labelType "literal"
-buttonType "push"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 497
-y 252
-w 82
-h 21
-font "helvetica-medium-r-18.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Channel 3"
 }
 endObjectProperties
 
@@ -2408,9 +1706,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 171
-y 273
-w 82
+x 168
+y 272
+w 152
 h 20
 
 beginGroup
@@ -2421,9 +1719,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 171
+x 170
 y 273
-w 82
+w 149
 h 20
 fgColor index 29
 onColor index 15
@@ -2445,9 +1743,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 171
+x 170
 y 273
-w 82
+w 149
 h 20
 controlPv "$(DEV):CH0:STATUS"
 font "helvetica-bold-r-14.0"
@@ -2469,9 +1767,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 171
+x 170
 y 273
-w 82
+w 149
 h 20
 font "helvetica-bold-r-14.0"
 fontAlign "center"
@@ -2495,9 +1793,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 284
-y 273
-w 82
+x 332
+y 272
+w 152
 h 20
 
 beginGroup
@@ -2508,9 +1806,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 284
+x 332
 y 273
-w 82
+w 152
 h 20
 fgColor index 29
 onColor index 15
@@ -2532,9 +1830,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 284
+x 332
 y 273
-w 82
+w 152
 h 20
 controlPv "$(DEV):CH1:STATUS"
 font "helvetica-bold-r-14.0"
@@ -2556,189 +1854,15 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 284
+x 332
 y 273
-w 82
+w 152
 h 20
 font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
 visPv "$(DEV):CH1:ChannelIsEmergency"
-visMin "1"
-visMax "2"
-value {
-  "Killed!"
-}
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 394
-y 273
-w 82
-h 20
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 394
-y 273
-w 82
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(DEV):CH2:ChannelControlOnOff"
-indicatorPv "$(DEV):CH2:ChannelIsOn"
-labelType "literal"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 394
-y 273
-w 82
-h 20
-controlPv "$(DEV):CH2:STATUS"
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 394
-y 273
-w 82
-h 20
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 20
-visPv "$(DEV):CH2:ChannelIsEmergency"
-visMin "1"
-visMax "2"
-value {
-  "Killed!"
-}
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 499
-y 273
-w 82
-h 20
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 499
-y 273
-w 82
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(DEV):CH3:ChannelControlOnOff"
-indicatorPv "$(DEV):CH3:ChannelIsOn"
-labelType "literal"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 499
-y 273
-w 82
-h 20
-controlPv "$(DEV):CH3:STATUS"
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 499
-y 273
-w 82
-h 20
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 20
-visPv "$(DEV):CH3:ChannelIsEmergency"
 visMin "1"
 visMax "2"
 value {

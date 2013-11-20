@@ -72,7 +72,6 @@ useDisplayBg
 value {
   "isTMPgd"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -92,7 +91,6 @@ useDisplayBg
 value {
   "isSPLYgd"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -112,7 +110,6 @@ useDisplayBg
 value {
   "isMODgd"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -132,7 +129,6 @@ useDisplayBg
 value {
   "isEVNTact"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -152,7 +148,6 @@ useDisplayBg
 value {
   "isSFLPgd"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -172,7 +167,6 @@ useDisplayBg
 value {
   "isnoRAMP"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -192,7 +186,6 @@ useDisplayBg
 value {
   "isnoSERR"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -212,7 +205,6 @@ useDisplayBg
 value {
   "isCCPL"
 }
-autoSize
 endObjectProperties
 
 endGroup
@@ -394,7 +386,6 @@ useDisplayBg
 value {
   "$(DEV)"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -415,7 +406,6 @@ useDisplayBg
 value {
   "Module Status"
 }
-autoSize
 endObjectProperties
 
 # (Lines)
@@ -509,7 +499,6 @@ useDisplayBg
 value {
   "+5V"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -530,7 +519,6 @@ useDisplayBg
 value {
   "+12V"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -551,7 +539,6 @@ useDisplayBg
 value {
   "-12V"
 }
-autoSize
 endObjectProperties
 
 # (Group)
@@ -633,7 +620,6 @@ useDisplayBg
 value {
   "KILL"
 }
-autoSize
 endObjectProperties
 
 endGroup
@@ -671,7 +657,6 @@ useDisplayBg
 value {
   "All Channel On/Off"
 }
-autoSize
 endObjectProperties
 
 # (Button)
@@ -746,7 +731,6 @@ useDisplayBg
 value {
   "V Max"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -767,6 +751,5 @@ useDisplayBg
 value {
   "I Max"
 }
-autoSize
 endObjectProperties
 

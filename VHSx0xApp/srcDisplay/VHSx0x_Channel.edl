@@ -42,7 +42,6 @@ useDisplayBg
 value {
   "$(CHAN)"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -63,7 +62,6 @@ useDisplayBg
 value {
   "Channel Status"
 }
-autoSize
 endObjectProperties
 
 # (Byte)
@@ -101,7 +99,6 @@ useDisplayBg
 value {
   "isVLIM"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -121,7 +118,6 @@ useDisplayBg
 value {
   "isCLIM"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -141,7 +137,6 @@ useDisplayBg
 value {
   "isTRIP"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -161,7 +156,6 @@ useDisplayBg
 value {
   "isEINH"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -181,7 +175,6 @@ useDisplayBg
 value {
   "isVBNDs"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -201,7 +194,6 @@ useDisplayBg
 value {
   "isCBNDs"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -221,7 +213,6 @@ useDisplayBg
 value {
   "res"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -241,7 +232,6 @@ useDisplayBg
 value {
   "res"
 }
-autoSize
 endObjectProperties
 
 # (Group)
@@ -325,7 +315,6 @@ useDisplayBg
 value {
   "Channel On/Off"
 }
-autoSize
 endObjectProperties
 
 endGroup
@@ -349,7 +338,6 @@ useDisplayBg
 value {
   "isCV"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -369,7 +357,6 @@ useDisplayBg
 value {
   "isCC"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -389,7 +376,6 @@ useDisplayBg
 value {
   "isEMCY"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -409,7 +395,6 @@ useDisplayBg
 value {
   "isRAMP"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -429,7 +414,6 @@ useDisplayBg
 value {
   "isON"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -449,7 +433,6 @@ useDisplayBg
 value {
   "IERR"
 }
-autoSize
 endObjectProperties
 
 # (Group)
@@ -580,7 +563,6 @@ useDisplayBg
 value {
   "V Set"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -601,7 +583,6 @@ useDisplayBg
 value {
   "V Measure"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -622,7 +603,6 @@ useDisplayBg
 value {
   "V Bound"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -643,7 +623,6 @@ useDisplayBg
 value {
   "V Nominal"
 }
-autoSize
 endObjectProperties
 
 endGroup
@@ -774,7 +753,6 @@ useDisplayBg
 value {
   "I Trip"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -795,7 +773,6 @@ useDisplayBg
 value {
   "I Measure"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -816,7 +793,6 @@ useDisplayBg
 value {
   "I Bound"
 }
-autoSize
 endObjectProperties
 
 # (Static Text)
@@ -837,7 +813,6 @@ useDisplayBg
 value {
   "I Nominal"
 }
-autoSize
 endObjectProperties
 
 endGroup

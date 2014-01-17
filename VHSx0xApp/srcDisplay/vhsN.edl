@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1936
-y 84
+x 59
+y 65
 w 637
-h 557
+h 571
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-medium-r-18.0"
 btnFont "helvetica-bold-r-14.0"
@@ -47,10 +47,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 11
-y 12
-w 89
-h 16
+x 8
+y 4
+w 88
+h 24
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -58,22 +58,6 @@ useDisplayBg
 value {
   "$(TITLE)"
 }
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 12
-y 36
-w 615
-h 516
-lineColor index 14
-fill
-fillColor index 5
-lineWidth 0
 endObjectProperties
 
 # (Static Text)
@@ -99,7 +83,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 156
 y 47
@@ -116,6 +100,7 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -141,7 +126,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 208
 y 72
@@ -162,6 +147,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -187,7 +173,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 532
 y 148
@@ -207,6 +193,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -232,7 +219,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 478
 y 122
@@ -252,6 +239,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -277,7 +265,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 478
 y 97
@@ -297,6 +285,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -322,7 +311,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 157
 y 146
@@ -342,6 +331,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -367,7 +357,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 157
 y 122
@@ -387,6 +377,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -412,7 +403,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 157
 y 97
@@ -432,6 +423,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -572,7 +564,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 487
 y 171
@@ -594,6 +586,7 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -641,9 +634,9 @@ major 4
 minor 1
 release 0
 x 21
-y 502
+y 521
 w 85
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -659,10 +652,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 520
+x 20
+y 544
 w 76
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -679,9 +672,9 @@ major 4
 minor 1
 release 0
 x 21
-y 385
+y 388
 w 81
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -738,7 +731,7 @@ release 0
 x 22
 y 322
 w 76
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -757,7 +750,7 @@ release 0
 x 21
 y 366
 w 107
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -774,9 +767,9 @@ major 4
 minor 1
 release 0
 x 21
-y 404
+y 410
 w 108
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -793,9 +786,9 @@ major 4
 minor 1
 release 0
 x 21
-y 346
+y 344
 w 126
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -812,9 +805,9 @@ major 4
 minor 1
 release 0
 x 21
-y 427
+y 432
 w 114
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -831,9 +824,9 @@ major 4
 minor 1
 release 0
 x 21
-y 446
+y 455
 w 127
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -850,9 +843,9 @@ major 4
 minor 1
 release 0
 x 21
-y 464
+y 477
 w 91
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -869,9 +862,9 @@ major 4
 minor 1
 release 0
 x 21
-y 483
+y 499
 w 77
-h 16
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -885,12 +878,12 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 169
-y 520
-w 82
-h 16
+x 168
+y 544
+w 84
+h 20
 controlPv "$(DEV):CH0:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
@@ -905,18 +898,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 502
+y 521
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -930,18 +924,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 483
+y 499
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:Resistance"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -957,18 +952,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 464
+y 477
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -983,18 +979,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 446
+y 455
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1010,18 +1007,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 427
+y 432
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1036,18 +1034,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 346
+y 344
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1062,18 +1061,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 404
+y 410
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1087,23 +1087,23 @@ precision 3
 fieldLen "8"
 nullColor index 0
 smartRefresh
-useKp
 autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
-y 385
+y 388
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH0:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1122,13 +1122,14 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 169
 y 366
@@ -1150,13 +1151,14 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 170
 y 322
@@ -1178,6 +1180,7 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Button)
@@ -1229,12 +1232,12 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 520
-w 82
-h 16
+x 284
+y 544
+w 84
+h 20
 controlPv "$(DEV):CH1:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
@@ -1249,18 +1252,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 502
+x 284
+y 520
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1274,18 +1278,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 483
+x 284
+y 500
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:Resistance"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1301,18 +1306,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 464
+x 284
+y 476
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1327,18 +1333,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 446
+x 284
+y 456
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1354,18 +1361,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 427
+x 284
+y 432
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1380,18 +1388,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 346
+x 284
+y 344
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1406,18 +1415,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 404
+x 284
+y 412
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1436,18 +1446,19 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 385
+x 284
+y 388
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1466,18 +1477,19 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 280
-y 366
+x 284
+y 368
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH1:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1494,16 +1506,17 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 281
-y 322
+x 284
+y 324
 w 82
 h 20
 controlPv "$(DEV):CH1:VoltageSet0"
@@ -1522,6 +1535,7 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Button)
@@ -1573,12 +1587,12 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 520
+x 392
+y 544
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
@@ -1593,18 +1607,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 502
+x 392
+y 521
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1618,18 +1633,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 483
+x 392
+y 499
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:Resistance"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1645,18 +1661,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 464
+x 392
+y 477
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1671,18 +1688,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 446
+x 392
+y 455
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1698,18 +1716,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 427
+x 392
+y 432
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1724,18 +1743,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 346
+x 392
+y 344
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1750,18 +1770,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 404
+x 392
+y 410
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1780,18 +1801,19 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
-y 385
+x 392
+y 388
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1810,18 +1832,19 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 391
+x 392
 y 366
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH2:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1838,13 +1861,14 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 392
 y 322
@@ -1866,6 +1890,7 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Button)
@@ -1917,12 +1942,12 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 520
-w 82
-h 16
+x 496
+y 544
+w 84
+h 20
 controlPv "$(DEV):CH3:ChannelStatus"
 format "hex"
 font "helvetica-bold-r-14.0"
@@ -1937,18 +1962,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 502
+x 498
+y 521
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:VoltageMax"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -1962,18 +1988,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 483
+x 498
+y 499
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:Resistance"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -1989,18 +2016,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 464
+x 498
+y 477
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:CurrentNominal"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -2015,18 +2043,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 446
+x 498
+y 455
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:CurrentMeasure"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -2042,18 +2071,19 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 427
+x 498
+y 432
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:VoltageNominal"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2068,18 +2098,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 346
+x 498
+y 344
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:VoltageMeasure"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2094,18 +2125,19 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 404
+x 498
+y 410
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:CurrentBounds"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -2124,18 +2156,19 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
-y 385
+x 498
+y 388
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:CurrentTrip"
 format "exponential"
 font "helvetica-bold-r-14.0"
@@ -2154,18 +2187,19 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 495
+x 498
 y 366
 w 82
-h 16
+h 20
 controlPv "$(DEV):CH3:VoltageBounds"
 font "helvetica-bold-r-14.0"
 fontAlign "right"
@@ -2182,15 +2216,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
-x 496
+x 498
 y 322
 w 82
 h 20
@@ -2210,6 +2245,7 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Button)
@@ -2261,7 +2297,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 3
 release 0
 x 444
 y 4
@@ -2310,7 +2346,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 3
 release 0
 x 372
 y 4
@@ -2337,7 +2373,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 156
 y 170
@@ -2362,7 +2398,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 221
 y 170
@@ -2443,7 +2479,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 171
 y 273
@@ -2461,6 +2497,7 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -2530,7 +2567,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 284
 y 273
@@ -2548,6 +2585,7 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -2617,7 +2655,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 394
 y 273
@@ -2635,6 +2673,7 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -2704,7 +2743,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 499
 y 273
@@ -2722,6 +2761,7 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -2754,7 +2794,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 480
 y 148
@@ -2773,13 +2813,14 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 156
 y 72
@@ -2798,13 +2839,14 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 3
 release 0
 x 512
 y 4
@@ -2834,7 +2876,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 2
+minor 5
 release 0
 x 480
 y 228
@@ -2853,6 +2895,7 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -2871,6 +2914,26 @@ bgColor index 0
 useDisplayBg
 value {
   "Safety Loop"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 168
+y 4
+w 172
+h 24
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "$(DEV)"
 }
 endObjectProperties
 

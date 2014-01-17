@@ -448,23 +448,30 @@ h 160
 
 beginGroup
 
-# (Text Update)
-object TextupdateClass
+# (Text Monitor)
+object activeXTextDspClass:noedit
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 294
 y 142
 w 168
 h 30
 controlPv "$(CHAN):VoltageMeasure"
-fgColor index 25
-bgColor index 5
-fill
+fgColor index 16
+bgColor index 12
+objType "monitors"
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 lineWidth 2
-lineAlarm
+fgAlarm
 endObjectProperties
 
 # (Lines)
@@ -490,11 +497,11 @@ yPoints {
 }
 endObjectProperties
 
-# (Text Entry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 294
 y 96
@@ -503,18 +510,26 @@ h 38
 controlPv "$(CHAN):VoltageSet"
 fgColor index 25
 bgColor index 5
-fill
+editable
+motifWidget
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 fontAlign "right"
 lineWidth 2
 lineAlarm
 endObjectProperties
 
-# (Text Entry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 294
 y 180
@@ -523,25 +538,40 @@ h 38
 controlPv "$(CHAN):VoltageBounds"
 fgColor index 25
 bgColor index 5
-fill
+editable
+motifWidget
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 fontAlign "right"
 endObjectProperties
 
-# (Text Update)
-object TextupdateClass
+# (Text Monitor)
+object activeXTextDspClass:noedit
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 294
 y 226
 w 168
 h 30
 controlPv "$(CHAN):VoltageNominal"
-fgColor index 25
-bgColor index 5
-fill
+fgColor index 16
+bgColor index 12
+objType "monitors"
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 endObjectProperties
 
@@ -642,28 +672,35 @@ h 160
 
 beginGroup
 
-# (Text Update)
-object TextupdateClass
+# (Text Monitor)
+object activeXTextDspClass:noedit
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 293
 y 369
 w 168
 h 30
 controlPv "$(CHAN):CurrentMeasure"
-fgColor index 25
-bgColor index 5
-fill
+fgColor index 16
+bgColor index 12
+objType "monitors"
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 endObjectProperties
 
-# (Text Entry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 293
 y 323
@@ -672,16 +709,24 @@ h 38
 controlPv "$(CHAN):CurrentTrip"
 fgColor index 25
 bgColor index 5
-fill
+editable
+motifWidget
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 fontAlign "right"
 endObjectProperties
 
-# (Text Entry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 293
 y 407
@@ -690,25 +735,40 @@ h 38
 controlPv "$(CHAN):CurrentBounds"
 fgColor index 25
 bgColor index 5
-fill
+editable
+motifWidget
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 fontAlign "right"
 endObjectProperties
 
-# (Text Update)
-object TextupdateClass
+# (Text Monitor)
+object activeXTextDspClass:noedit
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 5
 release 0
 x 293
 y 453
 w 168
 h 30
 controlPv "$(CHAN):CurrentNominal"
-fgColor index 25
-bgColor index 5
-fill
+fgColor index 16
+bgColor index 12
+objType "monitors"
+fgAlarm
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+fontAlign "center"
 font "courier-bold-r-14.0"
 endObjectProperties
 

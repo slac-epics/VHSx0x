@@ -90,10 +90,9 @@ y 47
 w 446
 h 16
 controlPv "$(DEV):DeviceInfo"
-font "helvetica-bold-r-14.0"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+font "helvetica-medium-r-14.0"
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -133,12 +132,11 @@ w 72
 h 16
 controlPv "$(DEV):ModuleStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -178,12 +176,11 @@ y 148
 w 72
 h 16
 controlPv "$(DEV):Temperature"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -223,12 +220,11 @@ y 122
 w 125
 h 16
 controlPv "$(DEV):SupplyN12"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -268,12 +264,11 @@ y 97
 w 125
 h 16
 controlPv "$(DEV):CurrentMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -313,12 +308,11 @@ y 146
 w 125
 h 16
 controlPv "$(DEV):SupplyP5"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -358,12 +352,11 @@ y 122
 w 125
 h 16
 controlPv "$(DEV):SupplyP12"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -403,12 +396,11 @@ y 97
 w 125
 h 16
 controlPv "$(DEV):VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -563,11 +555,10 @@ y 171
 w 47
 h 20
 controlPv "$(DEV):VoltageRampSpeed"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 2
@@ -877,11 +868,10 @@ w 152
 h 16
 controlPv "$(DEV):CH0:ChannelStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -902,11 +892,10 @@ y 504
 w 152
 h 16
 controlPv "$(DEV):CH0:VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -928,11 +917,10 @@ w 152
 h 16
 controlPv "$(DEV):CH0:Resistance"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "6"
 nullColor index 0
@@ -955,11 +943,10 @@ w 152
 h 16
 controlPv "$(DEV):CH0:CurrentNominal"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -981,12 +968,11 @@ w 152
 h 16
 controlPv "$(DEV):CH0:CurrentMeasure"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1007,12 +993,11 @@ y 428
 w 152
 h 16
 controlPv "$(DEV):CH0:VoltageNominal"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1033,12 +1018,11 @@ y 348
 w 152
 h 16
 controlPv "$(DEV):CH0:VoltageMeasure"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1060,11 +1044,10 @@ w 152
 h 16
 controlPv "$(DEV):CH0:CurrentBounds"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1090,11 +1073,10 @@ w 152
 h 16
 controlPv "$(DEV):CH0:CurrentTrip"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1119,11 +1101,10 @@ y 368
 w 152
 h 20
 controlPv "$(DEV):CH0:VoltageBounds"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1147,11 +1128,10 @@ y 324
 w 152
 h 20
 controlPv "$(DEV):CH0:VoltageSet0"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1222,11 +1202,10 @@ w 152
 h 16
 controlPv "$(DEV):CH1:ChannelStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1247,11 +1226,10 @@ y 504
 w 152
 h 16
 controlPv "$(DEV):CH1:VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1273,11 +1251,10 @@ w 152
 h 16
 controlPv "$(DEV):CH1:Resistance"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 precision 3
 nullColor index 0
@@ -1300,11 +1277,10 @@ w 152
 h 16
 controlPv "$(DEV):CH1:CurrentNominal"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1326,12 +1302,11 @@ w 152
 h 16
 controlPv "$(DEV):CH1:CurrentMeasure"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1352,12 +1327,11 @@ y 428
 w 152
 h 16
 controlPv "$(DEV):CH1:VoltageNominal"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1378,12 +1352,11 @@ y 348
 w 152
 h 16
 controlPv "$(DEV):CH1:VoltageMeasure"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1405,11 +1378,10 @@ w 152
 h 16
 controlPv "$(DEV):CH1:CurrentBounds"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1435,11 +1407,10 @@ w 152
 h 16
 controlPv "$(DEV):CH1:CurrentTrip"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1464,11 +1435,10 @@ y 368
 w 152
 h 16
 controlPv "$(DEV):CH1:VoltageBounds"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1492,11 +1462,10 @@ y 324
 w 152
 h 20
 controlPv "$(DEV):CH1:VoltageSet0"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1748,11 +1717,10 @@ y 273
 w 149
 h 20
 controlPv "$(DEV):CH0:STATUS"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1835,11 +1803,10 @@ y 273
 w 152
 h 20
 controlPv "$(DEV):CH1:STATUS"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1885,12 +1852,11 @@ y 148
 w 44
 h 16
 controlPv "$(DEV):ModuleTempOK"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1910,12 +1876,11 @@ y 72
 w 48
 h 16
 controlPv "$(DEV):ModuleIsOK"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1965,12 +1930,11 @@ y 228
 w 56
 h 16
 controlPv "$(DEV):SafetyLoopOK"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh

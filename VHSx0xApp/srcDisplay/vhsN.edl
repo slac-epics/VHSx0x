@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 59
-y 65
+x 696
+y 45
 w 637
-h 571
+h 590
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-medium-r-18.0"
 btnFont "helvetica-bold-r-14.0"
@@ -90,10 +90,9 @@ y 47
 w 446
 h 16
 controlPv "$(DEV):DeviceInfo"
-font "helvetica-bold-r-14.0"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+font "helvetica-medium-r-14.0"
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -134,12 +133,11 @@ w 72
 h 16
 controlPv "$(DEV):ModuleStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -180,12 +178,11 @@ y 148
 w 72
 h 16
 controlPv "$(DEV):Temperature"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -226,12 +223,11 @@ y 122
 w 125
 h 16
 controlPv "$(DEV):SupplyN12"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -272,12 +268,11 @@ y 97
 w 125
 h 16
 controlPv "$(DEV):CurrentMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -318,12 +313,11 @@ y 146
 w 125
 h 16
 controlPv "$(DEV):SupplyP5"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -364,12 +358,11 @@ y 122
 w 125
 h 16
 controlPv "$(DEV):SupplyP12"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -410,12 +403,11 @@ y 97
 w 125
 h 16
 controlPv "$(DEV):VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -571,11 +563,10 @@ y 171
 w 47
 h 20
 controlPv "$(DEV):VoltageRampSpeed"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 2
@@ -634,7 +625,7 @@ major 4
 minor 1
 release 0
 x 21
-y 521
+y 535
 w 85
 h 20
 font "helvetica-bold-r-14.0"
@@ -653,7 +644,7 @@ major 4
 minor 1
 release 0
 x 20
-y 544
+y 560
 w 76
 h 20
 font "helvetica-bold-r-14.0"
@@ -710,7 +701,7 @@ major 4
 minor 1
 release 0
 x 22
-y 298
+y 294
 w 125
 h 16
 font "helvetica-bold-r-14.0"
@@ -729,7 +720,7 @@ major 4
 minor 1
 release 0
 x 22
-y 322
+y 314
 w 76
 h 20
 font "helvetica-bold-r-14.0"
@@ -748,7 +739,7 @@ major 4
 minor 1
 release 0
 x 21
-y 366
+y 364
 w 107
 h 20
 font "helvetica-bold-r-14.0"
@@ -767,7 +758,7 @@ major 4
 minor 1
 release 0
 x 21
-y 410
+y 412
 w 108
 h 20
 font "helvetica-bold-r-14.0"
@@ -786,7 +777,7 @@ major 4
 minor 1
 release 0
 x 21
-y 344
+y 339
 w 126
 h 20
 font "helvetica-bold-r-14.0"
@@ -805,7 +796,7 @@ major 4
 minor 1
 release 0
 x 21
-y 432
+y 437
 w 114
 h 20
 font "helvetica-bold-r-14.0"
@@ -824,7 +815,7 @@ major 4
 minor 1
 release 0
 x 21
-y 455
+y 462
 w 127
 h 20
 font "helvetica-bold-r-14.0"
@@ -843,7 +834,7 @@ major 4
 minor 1
 release 0
 x 21
-y 477
+y 486
 w 91
 h 20
 font "helvetica-bold-r-14.0"
@@ -862,7 +853,7 @@ major 4
 minor 1
 release 0
 x 21
-y 499
+y 510
 w 77
 h 20
 font "helvetica-bold-r-14.0"
@@ -880,17 +871,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 168
-y 544
-w 84
+x 156
+y 560
+w 92
 h 20
 controlPv "$(DEV):CH0:ChannelStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -907,16 +897,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 521
-w 82
+x 156
+y 537
+w 92
 h 20
 controlPv "$(DEV):CH0:VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -933,19 +922,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 499
-w 82
+x 156
+y 513
+w 92
 h 20
 controlPv "$(DEV):CH0:Resistance"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-precision 3
-fieldLen "6"
+fgColor index 15
+bgColor index 12
+precision 1
 nullColor index 0
 smartRefresh
 useHexPrefix
@@ -961,17 +948,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 477
-w 82
+x 156
+y 489
+w 92
 h 20
 controlPv "$(DEV):CH0:CurrentNominal"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -988,18 +974,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 455
-w 82
+x 156
+y 466
+w 92
 h 20
 controlPv "$(DEV):CH0:CurrentMeasure"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1016,17 +1001,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 432
-w 82
+x 156
+y 442
+w 92
 h 20
 controlPv "$(DEV):CH0:VoltageNominal"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1043,17 +1027,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 344
-w 82
+x 156
+y 347
+w 92
 h 20
 controlPv "$(DEV):CH0:VoltageMeasure"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1070,17 +1053,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 410
-w 82
+x 156
+y 418
+w 92
 h 20
 controlPv "$(DEV):CH0:CurrentBounds"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1100,17 +1082,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 388
-w 82
+x 156
+y 395
+w 92
 h 20
 controlPv "$(DEV):CH0:CurrentTrip"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1131,16 +1112,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 169
-y 366
-w 82
+x 156
+y 371
+w 92
 h 20
 controlPv "$(DEV):CH0:VoltageBounds"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1160,16 +1140,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 170
-y 322
-w 82
+x 156
+y 324
+w 92
 h 20
 controlPv "$(DEV):CH0:VoltageSet0"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1189,9 +1168,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 171
-y 298
-w 82
+x 156
+y 300
+w 92
 h 20
 fgColor index 29
 onColor index 20
@@ -1215,10 +1194,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 171
+x 156
 y 252
-w 82
-h 21
+w 92
+h 20
 font "helvetica-medium-r-18.0"
 fgColor index 14
 bgColor index 0
@@ -1234,17 +1213,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 544
-w 84
+x 280
+y 560
+w 92
 h 20
 controlPv "$(DEV):CH1:ChannelStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1261,16 +1239,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 520
-w 82
+x 280
+y 537
+w 92
 h 20
 controlPv "$(DEV):CH1:VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1287,19 +1264,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 500
-w 82
+x 280
+y 513
+w 92
 h 20
 controlPv "$(DEV):CH1:Resistance"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-precision 3
+fgColor index 15
+bgColor index 12
+precision 1
 nullColor index 0
 smartRefresh
 useHexPrefix
@@ -1315,17 +1290,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 476
-w 82
+x 280
+y 489
+w 92
 h 20
 controlPv "$(DEV):CH1:CurrentNominal"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1342,18 +1316,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 456
-w 82
+x 280
+y 466
+w 92
 h 20
 controlPv "$(DEV):CH1:CurrentMeasure"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1370,17 +1343,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 432
-w 82
+x 280
+y 442
+w 92
 h 20
 controlPv "$(DEV):CH1:VoltageNominal"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1397,17 +1369,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 344
-w 82
+x 280
+y 347
+w 92
 h 20
 controlPv "$(DEV):CH1:VoltageMeasure"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1424,17 +1395,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 412
-w 82
+x 280
+y 418
+w 92
 h 20
 controlPv "$(DEV):CH1:CurrentBounds"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1455,17 +1425,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 388
-w 82
+x 280
+y 395
+w 92
 h 20
 controlPv "$(DEV):CH1:CurrentTrip"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1486,16 +1455,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 368
-w 82
+x 280
+y 371
+w 92
 h 20
 controlPv "$(DEV):CH1:VoltageBounds"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1515,16 +1483,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
+x 280
 y 324
-w 82
+w 92
 h 20
 controlPv "$(DEV):CH1:VoltageSet0"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1544,9 +1511,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 282
-y 298
-w 82
+x 280
+y 300
+w 92
 h 20
 fgColor index 29
 onColor index 20
@@ -1570,10 +1537,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 282
+x 280
 y 252
-w 82
-h 21
+w 92
+h 20
 font "helvetica-medium-r-18.0"
 fgColor index 14
 bgColor index 0
@@ -1589,17 +1556,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 544
-w 82
+x 404
+y 560
+w 92
 h 20
 controlPv "$(DEV):CH2:ChannelStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1616,16 +1582,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 521
-w 82
+x 404
+y 537
+w 92
 h 20
 controlPv "$(DEV):CH2:VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1642,19 +1607,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 499
-w 82
+x 404
+y 513
+w 92
 h 20
 controlPv "$(DEV):CH2:Resistance"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-precision 3
+fgColor index 15
+bgColor index 12
+precision 1
 nullColor index 0
 smartRefresh
 useHexPrefix
@@ -1670,17 +1633,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 477
-w 82
+x 404
+y 489
+w 92
 h 20
 controlPv "$(DEV):CH2:CurrentNominal"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1697,18 +1659,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 455
-w 82
+x 404
+y 466
+w 92
 h 20
 controlPv "$(DEV):CH2:CurrentMeasure"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -1725,17 +1686,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 432
-w 82
+x 404
+y 442
+w 92
 h 20
 controlPv "$(DEV):CH2:VoltageNominal"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1752,17 +1712,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 344
-w 82
+x 404
+y 347
+w 92
 h 20
 controlPv "$(DEV):CH2:VoltageMeasure"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1779,17 +1738,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 410
-w 82
+x 404
+y 418
+w 92
 h 20
 controlPv "$(DEV):CH2:CurrentBounds"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1810,17 +1768,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 388
-w 82
+x 404
+y 395
+w 92
 h 20
 controlPv "$(DEV):CH2:CurrentTrip"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -1841,16 +1798,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 366
-w 82
+x 404
+y 371
+w 92
 h 20
 controlPv "$(DEV):CH2:VoltageBounds"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1870,16 +1826,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 392
-y 322
-w 82
+x 404
+y 324
+w 92
 h 20
 controlPv "$(DEV):CH2:VoltageSet0"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -1899,9 +1854,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 393
-y 298
-w 82
+x 404
+y 300
+w 92
 h 20
 fgColor index 29
 onColor index 20
@@ -1925,10 +1880,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 393
+x 404
 y 252
-w 82
-h 21
+w 92
+h 20
 font "helvetica-medium-r-18.0"
 fgColor index 14
 bgColor index 0
@@ -1944,17 +1899,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 496
-y 544
-w 84
+x 520
+y 560
+w 92
 h 20
 controlPv "$(DEV):CH3:ChannelStatus"
 format "hex"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1971,16 +1925,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 521
-w 82
+x 520
+y 537
+w 92
 h 20
 controlPv "$(DEV):CH3:VoltageMax"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -1997,19 +1950,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 499
-w 82
+x 520
+y 513
+w 92
 h 20
 controlPv "$(DEV):CH3:Resistance"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
-limitsFromDb
-precision 3
+fgColor index 15
+bgColor index 12
+precision 1
 nullColor index 0
 smartRefresh
 useHexPrefix
@@ -2025,17 +1976,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 477
-w 82
+x 520
+y 489
+w 92
 h 20
 controlPv "$(DEV):CH3:CurrentNominal"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -2052,18 +2002,17 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 455
-w 82
+x 520
+y 466
+w 92
 h 20
 controlPv "$(DEV):CH3:CurrentMeasure"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 precision 3
 fieldLen "8"
 nullColor index 0
@@ -2080,17 +2029,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 432
-w 82
+x 520
+y 442
+w 92
 h 20
 controlPv "$(DEV):CH3:VoltageNominal"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2107,17 +2055,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 344
-w 82
+x 520
+y 347
+w 92
 h 20
 controlPv "$(DEV):CH3:VoltageMeasure"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2134,17 +2081,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 410
-w 82
+x 520
+y 418
+w 92
 h 20
 controlPv "$(DEV):CH3:CurrentBounds"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -2165,17 +2111,16 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 388
-w 82
+x 520
+y 395
+w 92
 h 20
 controlPv "$(DEV):CH3:CurrentTrip"
 format "exponential"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 precision 3
@@ -2196,16 +2141,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 366
-w 82
+x 520
+y 371
+w 92
 h 20
 controlPv "$(DEV):CH3:VoltageBounds"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -2225,16 +2169,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 498
-y 322
-w 82
+x 520
+y 324
+w 92
 h 20
 controlPv "$(DEV):CH3:VoltageSet0"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 29
-bgColor index 0
-useDisplayBg
+fgColor index 25
+bgColor index 5
 editable
 motifWidget
 limitsFromDb
@@ -2254,9 +2197,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 497
-y 298
-w 82
+x 520
+y 300
+w 92
 h 20
 fgColor index 29
 onColor index 20
@@ -2280,10 +2223,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 497
+x 520
 y 252
-w 82
-h 21
+w 92
+h 20
 font "helvetica-medium-r-18.0"
 fgColor index 14
 bgColor index 0
@@ -2444,9 +2387,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 171
-y 273
-w 82
+x 156
+y 276
+w 92
 h 20
 
 beginGroup
@@ -2457,9 +2400,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 171
-y 273
-w 82
+x 155
+y 277
+w 90
 h 20
 fgColor index 29
 onColor index 15
@@ -2481,16 +2424,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 171
-y 273
-w 82
+x 155
+y 277
+w 90
 h 20
 controlPv "$(DEV):CH0:STATUS"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2506,9 +2448,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 171
-y 273
-w 82
+x 155
+y 277
+w 90
 h 20
 font "helvetica-bold-r-14.0"
 fontAlign "center"
@@ -2532,9 +2474,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 284
-y 273
-w 82
+x 280
+y 276
+w 92
 h 20
 
 beginGroup
@@ -2545,9 +2487,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 284
-y 273
-w 82
+x 279
+y 277
+w 90
 h 20
 fgColor index 29
 onColor index 15
@@ -2569,16 +2511,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 284
-y 273
-w 82
+x 279
+y 277
+w 90
 h 20
 controlPv "$(DEV):CH1:STATUS"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2594,9 +2535,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 284
-y 273
-w 82
+x 279
+y 277
+w 90
 h 20
 font "helvetica-bold-r-14.0"
 fontAlign "center"
@@ -2620,9 +2561,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 394
-y 273
-w 82
+x 404
+y 276
+w 92
 h 20
 
 beginGroup
@@ -2633,9 +2574,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 394
-y 273
-w 82
+x 404
+y 277
+w 90
 h 20
 fgColor index 29
 onColor index 15
@@ -2657,16 +2598,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 394
-y 273
-w 82
+x 404
+y 277
+w 90
 h 20
 controlPv "$(DEV):CH2:STATUS"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2682,9 +2622,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 394
-y 273
-w 82
+x 404
+y 277
+w 90
 h 20
 font "helvetica-bold-r-14.0"
 fontAlign "center"
@@ -2708,9 +2648,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 499
-y 273
-w 82
+x 520
+y 276
+w 92
 h 20
 
 beginGroup
@@ -2721,9 +2661,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 499
-y 273
-w 82
+x 519
+y 277
+w 90
 h 20
 fgColor index 29
 onColor index 15
@@ -2745,16 +2685,15 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 499
-y 273
-w 82
+x 519
+y 277
+w 90
 h 20
 controlPv "$(DEV):CH3:STATUS"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
+fgColor index 15
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2770,9 +2709,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 499
-y 273
-w 82
+x 519
+y 277
+w 90
 h 20
 font "helvetica-bold-r-14.0"
 fontAlign "center"
@@ -2801,12 +2740,11 @@ y 148
 w 44
 h 16
 controlPv "$(DEV):ModuleTempOK"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2827,12 +2765,11 @@ y 72
 w 48
 h 16
 controlPv "$(DEV):ModuleIsOK"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh
@@ -2883,12 +2820,11 @@ y 228
 w 56
 h 16
 controlPv "$(DEV):SafetyLoopOK"
-font "helvetica-bold-r-14.0"
+font "helvetica-medium-r-14.0"
 fontAlign "right"
-fgColor index 19
+fgColor index 15
 fgAlarm
-bgColor index 0
-useDisplayBg
+bgColor index 12
 limitsFromDb
 nullColor index 0
 smartRefresh

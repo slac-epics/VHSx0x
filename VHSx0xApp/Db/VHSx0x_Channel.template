@@ -50,64 +50,289 @@
 # HV.HYST	# Alarm Deadband
 # HV.SMOO	# Analog input smoothing factor
 
+# ChannelStatus bits
+#define VHSX0X_CHNL_STATUS_BIT_VLIM_EXCEEDED    0x8000
+#define VHSX0X_CHNL_STATUS_BIT_CLIM_EXCEEDED    0x4000
+#define VHSX0X_CHNL_STATUS_BIT_TRIP_SET         0x2000
+#define VHSX0X_CHNL_STATUS_BIT_EXT_INHIBIT      0x1000
+#define VHSX0X_CHNL_STATUS_BIT_VBOUND_EXCEEDED  0x0800
+#define VHSX0X_CHNL_STATUS_BIT_CBOUND_EXCEEDED  0x0400
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0200    0x0200
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0100    0x0100
+#define VHSX0X_CHNL_STATUS_BIT_VCTRL_ACTIVE     0x0080
+#define VHSX0X_CHNL_STATUS_BIT_CCTRL_ACTIVE     0x0040
+#define VHSX0X_CHNL_STATUS_BIT_EMERGENCY_OFF    0x0020
+#define VHSX0X_CHNL_STATUS_BIT_RAMPING          0x0010
+#define VHSX0X_CHNL_STATUS_BIT_CHANNEL_ON       0x0008
+#define VHSX0X_CHNL_STATUS_BIT_INPUT_ERROR      0x0004
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0002    0x0002
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0001    0x0001
 record(mbbiDirect, "$(CHAN):ChannelStatus")
 {
   field(DESC, "Channel Status")
   field(SCAN, ".1 second")
   field(DTYP, "VHSx0x")
   field(INP, "#C$(CARD) S$(SIGNAL) @ChannelStatus")
-  field(FLNK, "$(CHAN):ChannelIsOnCalc" )
+  field(FLNK, "$(CHAN):ChannelHWVoltageLimit" )
 }
 
-record(mbbiDirect, "$(CHAN):ChannelEventStatus")
+record(bo, "$(CHAN):ChannelHWVoltageLimit" )
 {
-  field(DESC, "Channel Event Status")
-  field(SCAN, ".1 second")
-  field(DTYP, "VHSx0x")
-  field(INP, "#C$(CARD) S$(SIGNAL) @ChannelEventStatus")
-  field(FLNK, "$(CHAN):ChannelIsEmergencyCalc" )
+	field( DESC, "Channel over HW V lim" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BF NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over V!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelHWCurrentLimit" )
 }
 
-record(calcout, "$(CHAN):ChannelIsOnCalc" )
+record(bo, "$(CHAN):ChannelHWCurrentLimit" )
 {
-	field( DESC, "True when Channel is On" )
-	field( INPA, "$(CHAN):ChannelStatus" )
-	field( CALC, "(A & 0x0008) ? 1 : 0" )
-	field( OUT,  "$(CHAN):ChannelIsOn PP" )
+	field( DESC, "Over HW C Limit" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BE NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over C!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelIsTripped" )
+}
+
+record(bo, "$(CHAN):ChannelIsTripped" )
+{
+	field( DESC, "Ch tripped due to C limit" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BD NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Tripped" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelIsExtInhibit" )
+}
+
+record(bo, "$(CHAN):ChannelIsExtInhibit" )
+{
+	field( DESC, "Ext inhibit set" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BC NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Ext Off" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelVoltageBoundsExceeded" )
+}
+
+record(bo, "$(CHAN):ChannelVoltageBoundsExceeded" )
+{
+	field( DESC, "Ch over V bounds" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BB NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over V!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelCurrentBoundsExceeded" )
+}
+
+record(bo, "$(CHAN):ChannelCurrentBoundsExceeded" )
+{
+	field( DESC, "Ch over C bounds" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BA NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over C!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelIsVoltageControlled" )
+}
+
+record(bo, "$(CHAN):ChannelIsVoltageControlled" )
+{
+	field( DESC, "Ch in V Ctrl mode" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B7 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "V Ctrl" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "NO_ALARM")
+    field(FLNK, "$(CHAN):ChannelIsCurrentControlled" )
+}
+
+record(bo, "$(CHAN):ChannelIsCurrentControlled" )
+{
+	field( DESC, "Ch in C Ctrl mode" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B6 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "C Ctrl" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelEmergency" )
+}
+
+record(bo, "$(CHAN):ChannelEmergency" )
+{
+	field( DESC, "Ch in emergency off" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B5 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Killed!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+    field(FLNK, "$(CHAN):ChannelRamping" )
+}
+
+record(bo, "$(CHAN):ChannelRamping" )
+{
+	field( DESC, "Ch is ramping" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B4 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "Stable" )
+	field( ONAM, "Ramping" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "NO_ALARM")
+	field( FLNK, "$(CHAN):ChannelIsOn" )
 }
 
 record(bo, "$(CHAN):ChannelIsOn" )
 {
 	field( DESC, "True when Channel is On" )
-	field( DOL,  "$(CHAN):ChannelIsOnCalc NPP" )
+	field( DOL,  "$(CHAN):ChannelStatus.B3 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "NO_ALARM")
 	field( ZNAM, "Off" )
 	field( ONAM, "On" )
 }
 
-record(calcout, "$(CHAN):ChannelIsEmergencyCalc" )
+record(mbbiDirect, "$(CHAN):ChannelEventStatus")
 {
-	field( DESC, "True when Channel is On" )
-	field( INPA, "$(CHAN):ChannelEventStatus" )
-	field( CALC, "(A & 0x0020) ? 1 : 0" )
-	field( OUT,  "$(CHAN):ChannelIsEmergency PP" )
+	field(DESC, "Channel Event Status")
+	field(SCAN, ".1 second")
+	field(DTYP, "VHSx0x")
+	field(INP, "#C$(CARD) S$(SIGNAL) @ChannelEventStatus")
+	field(FLNK, "$(CHAN):ChannelWasVoltageLimitExceeded" )
+}
+
+record(bo, "$(CHAN):ChannelWasVoltageLimitExceeded" )
+{
+	field( DESC, "Set when over HW V lim" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BF NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over V!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):ChannelWasCurrentLimitExceeded" )
+}
+
+record(bo, "$(CHAN):ChannelWasCurrentLimitExceeded" )
+{
+	field( DESC, "Set when over HW C lim" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BE NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over C!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):ChannelWasTripped" )
+}
+
+record(bo, "$(CHAN):ChannelWasTripped" )
+{
+	field( DESC, "True if Channel was tripped" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BD NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Tripped!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):ChannelWasExtInhibit" )
+}
+
+record(bo, "$(CHAN):ChannelWasExtInhibit" )
+{
+	field( DESC, "True if ext inhibit was set" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BC NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Ext Off!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):ChannelWasVoltageBoundsExceeded" )
+}
+
+record(bo, "$(CHAN):ChannelWasVoltageBoundsExceeded" )
+{
+	field( DESC, "Set when over V bounds" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BB NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over V!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):ChannelWasCurrentBoundsExceeded" )
+}
+
+record(bo, "$(CHAN):ChannelWasCurrentBoundsExceeded" )
+{
+	field( DESC, "Set when over V bounds" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.BA NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "Over C!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):ChannelWasVoltageControlled" )
+}
+
+record(bo, "$(CHAN):ChannelWasVoltageControlled" )
+{
+	field( DESC, "Set when Channel in V Ctrl" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B7 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "V Ctrl" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "NO_ALARM")
+	field(FLNK, "$(CHAN):ChannelWasCurrentControlled" )
+}
+
+record(bo, "$(CHAN):ChannelWasCurrentControlled" )
+{
+	field( DESC, "Set when Channel in C Ctrl" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B6 NPP" )
+	field( OMSL, "closed_loop" )
+	field( ZNAM, "OK" )
+	field( ONAM, "C Ctrl" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MINOR")
+	field(FLNK, "$(CHAN):ChannelIsEmergency" )
 }
 
 record(bo, "$(CHAN):ChannelIsEmergency" )
 {
-	field( DESC, "True when Channel is On" )
-	field( DOL,  "$(CHAN):ChannelIsEmergencyCalc NPP" )
+	field( DESC, "Set On Emergency Off" )
+	field( DOL,  "$(CHAN):ChannelEventStatus.B5 NPP" )
+	field( OMSL, "closed_loop" )
 	field( ZNAM, "OK" )
 	field( ONAM, "Killed!" )
+	field( ZSV,  "NO_ALARM")
+	field( OSV,  "MAJOR")
 }
 
 record(bo, "$(CHAN):ChannelControlEMCY")
 {
-  field(DESC, "Channel Off")
-  field(DTYP, "VHSx0x")
-  field(OUT, "#C$(CARD) S$(SIGNAL) @ChannelControlEMCY")
-  field(ZNAM, "Off")
-  field(ONAM, "Off")
-  field(FLNK, "$(CHAN):VoltageSet0")
+	field(DESC, "Channel Off")
+	field(DTYP, "VHSx0x")
+	field(OUT, "#C$(CARD) S$(SIGNAL) @ChannelControlEMCY")
+	field(ZNAM, "Kill")
+	field(ONAM, "Killing!")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+	field(FLNK, "$(CHAN):VoltageSet0")
 }
 
 record(ao, "$(CHAN):VoltageSet0")
@@ -166,7 +391,7 @@ record(ai, "$(CHAN):VoltageMeasure")
   field(HIHI, "$(HV.HIHI=$(V_MAX))")
   field(HIGH, "$(HV.HIGH=$(V_MAX))")
   field(LOW,  "$(HV.LOW=0)")
-  field(LOLO, "$(HV.LOLO=0)")
+  field(LOLO, "$(HV.LOLO=-1)")
   field(ADEL, "$(HV.ADEL=10)")
   field(MDEL, "$(HV.MDEL=0)")
   field(SMOO, "$(HV.SMOO=0)")
@@ -190,7 +415,7 @@ record(ai, "$(CHAN):CurrentMeasure")
   field(HIHI, "$(HC.HIHI=$(V_MAX))")
   field(HIGH, "$(HC.HIGH=$(V_MAX))")
   field(LOW,  "$(HC.LOW=0)")
-  field(LOLO, "$(HC.LOLO=0)")
+  field(LOLO, "$(HC.LOLO=-1)")
   field(ADEL, "$(HC.ADEL=10)")
   field(MDEL, "$(HC.MDEL=0)")
   field(HHSV, "MAJOR")
@@ -270,10 +495,10 @@ record(calc, "$(CHAN):CurrentMax")
 record(calc, "$(CHAN):Resistance")
 {
   field(DESC, "Resistance")
-  field(CALC, "K&8?(I>0?E/I/1000000:100):3")
+  field(CALC, "K?(I>0?E/I/1000000:100):3")
   field(INPE, "$(CHAN):VoltageMeasure CPP MS")
   field(INPI, "$(CHAN):CurrentMeasure CPP MS")
-  field(INPK, "$(CHAN):ChannelStatus CPP MS")
+  field(INPK, "$(CHAN):ChannelIsOn CPP MS")
   field(EGU, "MO")
   field(PREC, "2")
   field(HOPR, "10")
@@ -288,36 +513,40 @@ record(calc, "$(CHAN):Resistance")
   field(LSV, "MINOR")
 }
 
-
+#define VHSX0X_CHNL_STATUS_BIT_VLIM_EXCEEDED    0x8000
+#define VHSX0X_CHNL_STATUS_BIT_CLIM_EXCEEDED    0x4000
+#define VHSX0X_CHNL_STATUS_BIT_TRIP_SET         0x2000
+#define VHSX0X_CHNL_STATUS_BIT_EXT_INHIBIT      0x1000
+#define VHSX0X_CHNL_STATUS_BIT_VBOUND_EXCEEDED  0x0800
+#define VHSX0X_CHNL_STATUS_BIT_CBOUND_EXCEEDED  0x0400
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0200    0x0200
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0100    0x0100
+#define VHSX0X_CHNL_STATUS_BIT_VCTRL_ACTIVE     0x0080
+#define VHSX0X_CHNL_STATUS_BIT_CCTRL_ACTIVE     0x0040
+#define VHSX0X_CHNL_STATUS_BIT_EMERGENCY_OFF    0x0020
+#define VHSX0X_CHNL_STATUS_BIT_RAMPING          0x0010
+#define VHSX0X_CHNL_STATUS_BIT_CHANNEL_ON       0x0008
+#define VHSX0X_CHNL_STATUS_BIT_INPUT_ERROR      0x0004
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0002    0x0002
+#define VHSX0X_CHNL_STATUS_BIT_RESERVED_0001    0x0001
 record(mbbi, "$(CHAN):STATUS")
 {
   field(DESC, "Summary Status")
   field(DTYP, "Raw Soft Channel")
   field(INP, "$(CHAN):ChannelStatus CPP MS")
+  field(MASK, "0x18")
   field(ZRVL, "0")
-  field(ONVL, "8")
-  field(TWVL, "16")
-  field(THVL, "24")
-  field(FRVL, "144")
-  field(FVVL, "152")
-  field(SXVL, "136")
-  field(SVVL, "72")
+  field(ONVL, "0x08")
+  field(TWVL, "0x10")
+  field(THVL, "0x18")
   field(ZRST, "OFF")
-  field(ONST, "ON-")
-  field(TWST, "RAMP")
+  field(ONST, "ON")
+  field(TWST, "RAMP-")
   field(THST, "RAMP+")
-  field(FRST, "RAMP+")
-  field(FVST, "RAMP+")
-  field(SXST, "ON")
-  field(SVST, "ON-")
-  field(ZRSV, "MAJOR")
-  field(ONSV, "MINOR")
-  field(TWSV, "MINOR")
-  field(THSV, "MINOR")
-  field(FRSV, "MINOR")
-  field(FVSV, "MINOR")
-  field(SXSV, "NO_ALARM")
-  field(SVSV, "MINOR")
+  field(ZRSV, "NO_ALARM")
+  field(ONSV, "NO_ALARM")
+  field(TWSV, "NO_ALARM")
+  field(THSV, "NO_ALARM")
   field(UNSV, "INVALID")
 }
 

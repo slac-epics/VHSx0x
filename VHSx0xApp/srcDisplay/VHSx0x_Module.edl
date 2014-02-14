@@ -3,15 +3,15 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 709
-y 334
+x 713
+y 358
 w 500
 h 600
 font "helvetica-bold-i-18.0"
 fontAlign "center"
 ctlFont "courier-bold-r-14.0"
 ctlFontAlign "right"
-btnFont "EOD"
+btnFont "helvetica-medium-r-8.0"
 fgColor index 10
 bgColor index 3
 textColor index 10
@@ -21,6 +21,9 @@ ctlBgColor1 index 5
 ctlBgColor2 index 10
 topShadowColor index 5
 botShadowColor index 10
+showGrid
+snapToGrid
+gridSize 4
 pvType "EPICS"
 endScreenProperties
 
@@ -240,181 +243,168 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 122
 y 450
 w 180
 h 30
 controlPv "$(DEV):VoltageMax"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
+objType "monitors"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 122
 y 499
 w 180
 h 30
 controlPv "$(DEV):CurrentMax"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
+objType "monitors"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 261
 y 185
 w 180
 h 30
 controlPv "$(DEV):SupplyP5"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
-fontAlign "center"
-lineWidth 2
-fgAlarm
+objType "monitors"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 261
 y 219
 w 180
 h 30
 controlPv "$(DEV):SupplyP12"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
-fontAlign "center"
-lineWidth 2
-fgAlarm
+objType "monitors"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 261
 y 253
 w 180
 h 30
 controlPv "$(DEV):SupplyN12"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
-fontAlign "center"
-lineWidth 2
-fgAlarm
+objType "monitors"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 260
 y 134
 w 180
 h 30
 controlPv "$(DEV):Temperature"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
-fontAlign "center"
-lineWidth 2
-fgAlarm
+objType "monitors"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 2
 release 0
 x 56
 y 45
 w 383
 h 30
 controlPv "$(DEV):DeviceInfo"
+font "courier-bold-r-14.0"
+fontAlign "center"
 fgColor index 16
-bgColor index 12
-objType "monitors"
 fgAlarm
+bgColor index 12
 limitsFromDb
 nullColor index 40
 smartRefresh
 useHexPrefix
 newPos
-fontAlign "center"
-font "courier-bold-r-14.0"
-fontAlign "center"
+objType "monitors"
 endObjectProperties
 
 # (Static Text)
@@ -590,18 +580,45 @@ value {
 }
 endObjectProperties
 
-# (Group)
-object activeGroupClass
+# (Static Text)
+object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
-x 343
-y 316
-w 100
-h 94
+x 25
+y 459
+w 53
+h 21
+font "helvetica-bold-r-18.0"
+fontAlign "center"
+fgColor index 9
+bgColor index 5
+useDisplayBg
+value {
+  "V Max"
+}
+endObjectProperties
 
-beginGroup
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 29
+y 503
+w 45
+h 21
+font "helvetica-bold-r-18.0"
+fontAlign "center"
+fgColor index 9
+bgColor index 5
+useDisplayBg
+value {
+  "I Max"
+}
+endObjectProperties
 
 # (Button)
 object activeButtonClass
@@ -671,23 +688,6 @@ value {
 }
 endObjectProperties
 
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 308
-y 437
-w 168
-h 94
-
-beginGroup
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -725,8 +725,8 @@ inconsistentColor index 10
 topShadowColor index 5
 botShadowColor index 10
 controlPv "$(DEV):AllChannelEMCY"
-onLabel "Emergency Off"
-offLabel "Emergency Off"
+onLabel "Killing!"
+offLabel "Kill"
 labelType "literal"
 buttonType "push"
 3d
@@ -756,49 +756,5 @@ offLabel "OFF"
 3d
 font "courier-medium-r-8.0"
 objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 25
-y 459
-w 53
-h 21
-font "helvetica-bold-r-18.0"
-fontAlign "center"
-fgColor index 9
-bgColor index 5
-useDisplayBg
-value {
-  "V Max"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 29
-y 503
-w 45
-h 21
-font "helvetica-bold-r-18.0"
-fontAlign "center"
-fgColor index 9
-bgColor index 5
-useDisplayBg
-value {
-  "I Max"
-}
 endObjectProperties
 

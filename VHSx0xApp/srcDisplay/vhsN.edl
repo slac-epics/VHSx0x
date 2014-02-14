@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 696
-y 45
+x 639
+y 49
 w 637
-h 590
+h 615
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-medium-r-18.0"
 btnFont "helvetica-bold-r-14.0"
@@ -49,7 +49,7 @@ minor 1
 release 0
 x 8
 y 4
-w 88
+w 132
 h 24
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -88,7 +88,7 @@ release 0
 x 156
 y 47
 w 446
-h 16
+h 20
 controlPv "$(DEV):DeviceInfo"
 font "helvetica-medium-r-14.0"
 fgColor index 15
@@ -498,8 +498,8 @@ inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
 controlPv "$(DEV):AllChannelEMCY"
-onLabel "Off!!!"
-offLabel "Off"
+onLabel "Killing!"
+offLabel "Kill"
 labelType "literal"
 buttonType "push"
 3d
@@ -624,9 +624,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 535
-w 85
+x 12
+y 564
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -643,9 +643,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 20
-y 560
-w 76
+x 12
+y 588
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -662,9 +662,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 388
-w 81
+x 12
+y 420
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -681,10 +681,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 274
-w 107
-h 16
+x 12
+y 300
+w 140
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -700,10 +700,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 294
-w 125
-h 16
+x 12
+y 324
+w 140
+h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -719,9 +719,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 22
-y 314
-w 76
+x 12
+y 348
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -738,9 +738,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 364
-w 107
+x 12
+y 396
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -757,9 +757,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 412
-w 108
+x 12
+y 444
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -776,9 +776,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 339
-w 126
+x 12
+y 372
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -795,9 +795,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 437
-w 114
+x 12
+y 468
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -814,9 +814,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 462
-w 127
+x 12
+y 492
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -833,9 +833,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 486
-w 91
+x 12
+y 516
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -852,9 +852,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 21
-y 510
-w 77
+x 12
+y 540
+w 140
 h 20
 font "helvetica-bold-r-14.0"
 fgColor index 14
@@ -872,7 +872,7 @@ major 4
 minor 5
 release 0
 x 156
-y 560
+y 588
 w 92
 h 20
 controlPv "$(DEV):CH0:ChannelStatus"
@@ -898,7 +898,7 @@ major 4
 minor 5
 release 0
 x 156
-y 537
+y 564
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageMax"
@@ -923,7 +923,7 @@ major 4
 minor 5
 release 0
 x 156
-y 513
+y 540
 w 92
 h 20
 controlPv "$(DEV):CH0:Resistance"
@@ -949,7 +949,7 @@ major 4
 minor 5
 release 0
 x 156
-y 489
+y 516
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentNominal"
@@ -975,7 +975,7 @@ major 4
 minor 5
 release 0
 x 156
-y 466
+y 492
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentMeasure"
@@ -1002,7 +1002,7 @@ major 4
 minor 5
 release 0
 x 156
-y 442
+y 468
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageNominal"
@@ -1028,7 +1028,7 @@ major 4
 minor 5
 release 0
 x 156
-y 347
+y 372
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageMeasure"
@@ -1054,7 +1054,7 @@ major 4
 minor 5
 release 0
 x 156
-y 418
+y 444
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentBounds"
@@ -1083,7 +1083,7 @@ major 4
 minor 5
 release 0
 x 156
-y 395
+y 420
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentTrip"
@@ -1113,7 +1113,7 @@ major 4
 minor 5
 release 0
 x 156
-y 371
+y 396
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageBounds"
@@ -1141,7 +1141,7 @@ major 4
 minor 5
 release 0
 x 156
-y 324
+y 348
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageSet0"
@@ -1169,7 +1169,7 @@ major 4
 minor 0
 release 0
 x 156
-y 300
+y 324
 w 92
 h 20
 fgColor index 29
@@ -1179,8 +1179,8 @@ inconsistentColor index 14
 topShadowColor index 6
 botShadowColor index 14
 controlPv "$(DEV):CH0:ChannelControlEMCY"
-onLabel "Off!!!"
-offLabel "Normal"
+onLabel "Killing!"
+offLabel "Kill"
 labelType "literal"
 buttonType "push"
 3d
@@ -1214,7 +1214,7 @@ major 4
 minor 5
 release 0
 x 280
-y 560
+y 588
 w 92
 h 20
 controlPv "$(DEV):CH1:ChannelStatus"
@@ -1240,7 +1240,7 @@ major 4
 minor 5
 release 0
 x 280
-y 537
+y 564
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageMax"
@@ -1265,7 +1265,7 @@ major 4
 minor 5
 release 0
 x 280
-y 513
+y 540
 w 92
 h 20
 controlPv "$(DEV):CH1:Resistance"
@@ -1291,7 +1291,7 @@ major 4
 minor 5
 release 0
 x 280
-y 489
+y 516
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentNominal"
@@ -1317,7 +1317,7 @@ major 4
 minor 5
 release 0
 x 280
-y 466
+y 492
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentMeasure"
@@ -1344,7 +1344,7 @@ major 4
 minor 5
 release 0
 x 280
-y 442
+y 468
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageNominal"
@@ -1370,7 +1370,7 @@ major 4
 minor 5
 release 0
 x 280
-y 347
+y 372
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageMeasure"
@@ -1396,7 +1396,7 @@ major 4
 minor 5
 release 0
 x 280
-y 418
+y 444
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentBounds"
@@ -1426,7 +1426,7 @@ major 4
 minor 5
 release 0
 x 280
-y 395
+y 420
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentTrip"
@@ -1456,7 +1456,7 @@ major 4
 minor 5
 release 0
 x 280
-y 371
+y 396
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageBounds"
@@ -1484,7 +1484,7 @@ major 4
 minor 5
 release 0
 x 280
-y 324
+y 348
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageSet0"
@@ -1512,7 +1512,7 @@ major 4
 minor 0
 release 0
 x 280
-y 300
+y 324
 w 92
 h 20
 fgColor index 29
@@ -1522,8 +1522,8 @@ inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
 controlPv "$(DEV):CH1:ChannelControlEMCY"
-onLabel "Off!!!"
-offLabel "Normal"
+onLabel "Killing!"
+offLabel "Kill"
 labelType "literal"
 buttonType "push"
 3d
@@ -1557,7 +1557,7 @@ major 4
 minor 5
 release 0
 x 404
-y 560
+y 588
 w 92
 h 20
 controlPv "$(DEV):CH2:ChannelStatus"
@@ -1583,7 +1583,7 @@ major 4
 minor 5
 release 0
 x 404
-y 537
+y 564
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageMax"
@@ -1608,7 +1608,7 @@ major 4
 minor 5
 release 0
 x 404
-y 513
+y 540
 w 92
 h 20
 controlPv "$(DEV):CH2:Resistance"
@@ -1634,7 +1634,7 @@ major 4
 minor 5
 release 0
 x 404
-y 489
+y 516
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentNominal"
@@ -1660,7 +1660,7 @@ major 4
 minor 5
 release 0
 x 404
-y 466
+y 492
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentMeasure"
@@ -1687,7 +1687,7 @@ major 4
 minor 5
 release 0
 x 404
-y 442
+y 468
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageNominal"
@@ -1713,7 +1713,7 @@ major 4
 minor 5
 release 0
 x 404
-y 347
+y 372
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageMeasure"
@@ -1739,7 +1739,7 @@ major 4
 minor 5
 release 0
 x 404
-y 418
+y 444
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentBounds"
@@ -1769,7 +1769,7 @@ major 4
 minor 5
 release 0
 x 404
-y 395
+y 420
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentTrip"
@@ -1799,7 +1799,7 @@ major 4
 minor 5
 release 0
 x 404
-y 371
+y 396
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageBounds"
@@ -1827,7 +1827,7 @@ major 4
 minor 5
 release 0
 x 404
-y 324
+y 348
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageSet0"
@@ -1855,7 +1855,7 @@ major 4
 minor 0
 release 0
 x 404
-y 300
+y 324
 w 92
 h 20
 fgColor index 29
@@ -1865,8 +1865,8 @@ inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
 controlPv "$(DEV):CH2:ChannelControlEMCY"
-onLabel "Off!!!"
-offLabel "Normal"
+onLabel "Killing!"
+offLabel "Kill"
 labelType "literal"
 buttonType "push"
 3d
@@ -1900,7 +1900,7 @@ major 4
 minor 5
 release 0
 x 520
-y 560
+y 588
 w 92
 h 20
 controlPv "$(DEV):CH3:ChannelStatus"
@@ -1926,7 +1926,7 @@ major 4
 minor 5
 release 0
 x 520
-y 537
+y 560
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageMax"
@@ -1951,7 +1951,7 @@ major 4
 minor 5
 release 0
 x 520
-y 513
+y 536
 w 92
 h 20
 controlPv "$(DEV):CH3:Resistance"
@@ -1977,7 +1977,7 @@ major 4
 minor 5
 release 0
 x 520
-y 489
+y 512
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentNominal"
@@ -2003,7 +2003,7 @@ major 4
 minor 5
 release 0
 x 520
-y 466
+y 492
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentMeasure"
@@ -2030,7 +2030,7 @@ major 4
 minor 5
 release 0
 x 520
-y 442
+y 468
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageNominal"
@@ -2056,7 +2056,7 @@ major 4
 minor 5
 release 0
 x 520
-y 347
+y 372
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageMeasure"
@@ -2082,7 +2082,7 @@ major 4
 minor 5
 release 0
 x 520
-y 418
+y 444
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentBounds"
@@ -2112,7 +2112,7 @@ major 4
 minor 5
 release 0
 x 520
-y 395
+y 420
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentTrip"
@@ -2142,7 +2142,7 @@ major 4
 minor 5
 release 0
 x 520
-y 371
+y 396
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageBounds"
@@ -2170,7 +2170,7 @@ major 4
 minor 5
 release 0
 x 520
-y 324
+y 348
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageSet0"
@@ -2198,7 +2198,7 @@ major 4
 minor 0
 release 0
 x 520
-y 300
+y 324
 w 92
 h 20
 fgColor index 29
@@ -2208,8 +2208,8 @@ inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
 controlPv "$(DEV):CH3:ChannelControlEMCY"
-onLabel "Off!!!"
-offLabel "Normal"
+onLabel "Killing!"
+offLabel "Kill"
 labelType "literal"
 buttonType "push"
 3d
@@ -2381,354 +2381,6 @@ value {
 }
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 156
-y 276
-w 92
-h 20
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 155
-y 277
-w 90
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(DEV):CH0:ChannelControlOnOff"
-indicatorPv "$(DEV):CH0:ChannelIsOn"
-labelType "literal"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 5
-release 0
-x 155
-y 277
-w 90
-h 20
-controlPv "$(DEV):CH0:STATUS"
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor index 15
-bgColor index 12
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 155
-y 277
-w 90
-h 20
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 20
-visPv "$(DEV):CH0:ChannelIsEmergency"
-visMin "1"
-visMax "2"
-value {
-  "Killed!"
-}
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 280
-y 276
-w 92
-h 20
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 279
-y 277
-w 90
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(DEV):CH1:ChannelControlOnOff"
-indicatorPv "$(DEV):CH1:ChannelIsOn"
-labelType "literal"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 5
-release 0
-x 279
-y 277
-w 90
-h 20
-controlPv "$(DEV):CH1:STATUS"
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor index 15
-bgColor index 12
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 279
-y 277
-w 90
-h 20
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 20
-visPv "$(DEV):CH1:ChannelIsEmergency"
-visMin "1"
-visMax "2"
-value {
-  "Killed!"
-}
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 404
-y 276
-w 92
-h 20
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 404
-y 277
-w 90
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(DEV):CH2:ChannelControlOnOff"
-indicatorPv "$(DEV):CH2:ChannelIsOn"
-labelType "literal"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 5
-release 0
-x 404
-y 277
-w 90
-h 20
-controlPv "$(DEV):CH2:STATUS"
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor index 15
-bgColor index 12
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 404
-y 277
-w 90
-h 20
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 20
-visPv "$(DEV):CH2:ChannelIsEmergency"
-visMin "1"
-visMax "2"
-value {
-  "Killed!"
-}
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 520
-y 276
-w 92
-h 20
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 519
-y 277
-w 90
-h 20
-fgColor index 29
-onColor index 15
-offColor index 3
-inconsistentColor index 36
-topShadowColor index 2
-botShadowColor index 14
-controlPv "$(DEV):CH3:ChannelControlOnOff"
-indicatorPv "$(DEV):CH3:ChannelIsOn"
-labelType "literal"
-3d
-font "helvetica-bold-r-14.0"
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 5
-release 0
-x 519
-y 277
-w 90
-h 20
-controlPv "$(DEV):CH3:STATUS"
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor index 15
-bgColor index 12
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-newPos
-objType "monitors"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 519
-y 277
-w 90
-h 20
-font "helvetica-bold-r-14.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 20
-visPv "$(DEV):CH3:ChannelIsEmergency"
-visMin "1"
-visMax "2"
-value {
-  "Killed!"
-}
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -2859,9 +2511,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 168
+x 152
 y 4
-w 172
+w 212
 h 24
 font "helvetica-bold-r-14.0"
 fontAlign "center"
@@ -2871,5 +2523,646 @@ useDisplayBg
 value {
   "$(DEV)"
 }
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 276
+w 90
+h 20
+controlPv "$(DEV):CH1:STATUS"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 15
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 280
+y 276
+w 90
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 280
+y 276
+w 90
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH1:ChannelWasVoltageLimitExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Limit!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 280
+y 276
+w 90
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH1:ChannelWasVoltageBoundsExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Bounds!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 280
+y 276
+w 90
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH1:ChannelWasTripped"
+visMin "1"
+visMax "2"
+value {
+  "Tripped!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 280
+y 276
+w 90
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH1:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 156
+y 276
+w 92
+h 20
+controlPv "$(DEV):CH0:STATUS"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 15
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 156
+y 276
+w 92
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 156
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH0:ChannelWasVoltageLimitExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Limit!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 156
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH0:ChannelWasVoltageBoundsExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Bounds!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 156
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH0:ChannelWasTripped"
+visMin "1"
+visMax "2"
+value {
+  "Tripped!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 156
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH0:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 12
+y 276
+w 140
+h 20
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel Status"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 404
+y 276
+w 90
+h 20
+controlPv "$(DEV):CH2:STATUS"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 520
+y 276
+w 90
+h 20
+controlPv "$(DEV):CH3:STATUS"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+limitsFromDb
+nullColor index 0
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 276
+w 92
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 404
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH2:ChannelWasVoltageLimitExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Limit!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 404
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH2:ChannelWasVoltageBoundsExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Bounds!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 404
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH2:ChannelWasTripped"
+visMin "1"
+visMax "2"
+value {
+  "Tripped!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 404
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH2:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 520
+y 276
+w 92
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 520
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH3:ChannelWasVoltageLimitExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Limit!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 520
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH3:ChannelWasVoltageBoundsExceeded"
+visMin "1"
+visMax "2"
+value {
+  "V Bounds!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 520
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH3:ChannelWasTripped"
+visMin "1"
+visMax "2"
+value {
+  "Tripped!"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 520
+y 276
+w 92
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 20
+visPv "$(DEV):CH3:ChannelIsEmergency"
+visMin "1"
+visMax "2"
+value {
+  "Killed!"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 280
+y 300
+w 92
+h 20
+fgColor index 25
+fgAlarm
+onColor index 6
+offColor index 3
+inconsistentColor index 40
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):CH1:ChannelControlOnOff"
+indicatorPv "$(DEV):CH1:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 156
+y 300
+w 92
+h 20
+fgColor index 25
+fgAlarm
+onColor index 6
+offColor index 3
+inconsistentColor index 40
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):CH0:ChannelControlOnOff"
+indicatorPv "$(DEV):CH0:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 300
+w 92
+h 20
+fgColor index 25
+fgAlarm
+onColor index 6
+offColor index 3
+inconsistentColor index 40
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):CH2:ChannelControlOnOff"
+indicatorPv "$(DEV):CH2:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 520
+y 300
+w 92
+h 20
+fgColor index 25
+fgAlarm
+onColor index 6
+offColor index 3
+inconsistentColor index 40
+topShadowColor index 2
+botShadowColor index 14
+controlPv "$(DEV):CH3:ChannelControlOnOff"
+indicatorPv "$(DEV):CH3:ChannelIsOn"
+onLabel "On"
+offLabel "Off"
+3d
+font "helvetica-bold-r-14.0"
+objType "controls"
 endObjectProperties
 

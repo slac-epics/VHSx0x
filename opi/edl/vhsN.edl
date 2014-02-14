@@ -2542,7 +2542,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH1:ChannelIsVoltageBoundsExceeded"
+visPv "$(DEV):CH1:ChannelWasVoltageBoundsExceeded"
 visMin "1"
 visMax "2"
 value {
@@ -2564,7 +2564,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH1:ChannelIsTripped"
+visPv "$(DEV):CH1:ChannelWasTripped"
 visMin "1"
 visMax "2"
 value {
@@ -2671,7 +2671,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH0:ChannelIsVoltageBoundsExceeded"
+visPv "$(DEV):CH0:ChannelWasVoltageBoundsExceeded"
 visMin "1"
 visMax "2"
 value {
@@ -2693,7 +2693,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH0:ChannelIsTripped"
+visPv "$(DEV):CH0:ChannelWasTripped"
 visMin "1"
 visMax "2"
 value {
@@ -2841,7 +2841,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH2:ChannelIsVoltageBoundsExceeded"
+visPv "$(DEV):CH2:ChannelWasVoltageBoundsExceeded"
 visMin "1"
 visMax "2"
 value {
@@ -2863,7 +2863,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH2:ChannelIsTripped"
+visPv "$(DEV):CH2:ChannelWasTripped"
 visMin "1"
 visMax "2"
 value {
@@ -2946,7 +2946,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH3:ChannelIsVoltageBoundsExceeded"
+visPv "$(DEV):CH3:ChannelWasVoltageBoundsExceeded"
 visMin "1"
 visMax "2"
 value {
@@ -2968,7 +2968,7 @@ font "helvetica-bold-r-14.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 20
-visPv "$(DEV):CH3:ChannelIsTripped"
+visPv "$(DEV):CH3:ChannelWasTripped"
 visMin "1"
 visMax "2"
 value {

@@ -5,11 +5,11 @@ $(CHAN):ChannelCurrentBoundsExceeded 10 monitor
 $(CHAN):ChannelEmergency 10 monitor
 $(CHAN):ChannelHWCurrentLimit 10 monitor
 $(CHAN):ChannelHWVoltageLimit 10 monitor
-$(CHAN):ChannelIsCurrentControlled
 $(CHAN):ChannelIsEmergency 10 monitor
 $(CHAN):ChannelIsExtInhibit 10 monitor
 $(CHAN):ChannelIsOn 1 monitor
 $(CHAN):ChannelIsTripped 10 monitor
+$(CHAN):ChannelIsCurrentControlled 1
 $(CHAN):ChannelIsVoltageControlled 1
 $(CHAN):ChannelRamping 1
 $(CHAN):ChannelStatus 1

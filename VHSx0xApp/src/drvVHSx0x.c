@@ -157,9 +157,18 @@ int VHSx0xSetup(unsigned int oldVMEBaseAddr, unsigned int newVMEBaseAddr)
     	return -1;
     }
 
+	if ( GetNumOfChan(placedChannels) == 0 || deviceClass != 0x14 )
+	{
+		errlogPrintf( "\nERROR: iSeg VHSx0x card at VME A16 0x%0X is not working!\n",
+						newBaseAddress );
+		errlogPrintf( "Raw number of channels = 0x%X\n", placedChannels );
+		errlogPrintf( "Raw device class = 0x%X\n\n",  deviceClass );
+    	return -1;
+	}
+
     if(oldBaseAddress == oldVMEBaseAddr && newBaseAddressAccepted == newBaseAddress)
     {
-        printf("\nSuccessfully setup iseg VHSx0x board!\n");
+		printf("\nSuccessfully setup iseg VHSx0x board!\n");
         printf("If the new base address is not 0x4000,\n");
         printf("you have to make sure the jumper ADR is NOT set!\n");
         printf("\nYou have to cycle power to make the new base address to take effect!\n");
@@ -200,26 +209,36 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
     /* Check parameters */
     if( cardnum >= VHSX0X_MAX_CARD_NUM )
     {
-        errlogPrintf("cardnum %d is out of range!\n", cardnum);
+        errlogPrintf( "\nERROR: VHSx0x card %d is invalid, max is %d!\n\n",
+						cardnum, VHSX0X_MAX_CARD_NUM );
         return -1;
     }
 
     if( VHSx0x_cards[cardnum].pCpuBaseAddr )
     {
-        errlogPrintf("cardnum %d is already registered!\n", cardnum);
+        errlogPrintf( "\nERROR: VHSx0x card %d is already registered!\n\n", cardnum);
         return -1;
     }
 
-    if( (VMEBaseAddr % VHSX0X_VME_MEM_SIZE!=0) || (VMEBaseAddr > 0xFC00) )
-    {/**  VME base address is misalignment or out of range  **/
-        errlogPrintf("VMEBaseAddr is incorrect!\n");
+    if( VMEBaseAddr % VHSX0X_VME_MEM_SIZE != 0 )
+    {	/**  VME base address is misalignment or out of range  **/
+        errlogPrintf( "\nERROR: VHSx0x card %d addr 0x%0X is not a multiple of 0x%X!\n\n",
+						cardnum, VMEBaseAddr, VHSX0X_VME_MEM_SIZE );
+        return -1;
+    }
+
+	if( VMEBaseAddr > 0xFC00 )
+    {	/**  VME base address is out of range  **/
+        errlogPrintf( "\nERROR: VHSx0x card %d addr 0x%0X is larger than 0x%X!\n\n",
+						cardnum, VMEBaseAddr, 0xFC00 );
         return -1;
     }
 
     /* Map the base address, this function also makes sure no same base address registered twice */
     if( 0 != devRegisterAddress("iseqVHSx0x", atVMEA16, VMEBaseAddr, VHSX0X_VME_MEM_SIZE, (void *)(&localBaseAddr)) ) /**  base address mapping error  **/
     {
-        errlogPrintf("\nBus Mem Map failed!\n");
+        errlogPrintf( "\nERROR: VHSx0x card %d unable to map VME base addr 0x%0X!\n\n",
+						cardnum, VMEBaseAddr );
         return -1;
     }
 
@@ -231,11 +250,11 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
         VHSx0xSafeReadUINT16(localBaseAddr, VHSX0X_MODULE_CHNLS_OFFSET, &placedChannels) ||
         VHSx0xSafeReadUINT16(localBaseAddr, VHSX0X_MODULE_DEVCLS_OFFSET, &deviceClass) )
     {
-    	errlogPrintf("Fail to access iseg VHSx0x at VME A16 0x%0X\n", VMEBaseAddr);
+        errlogPrintf( "\nERROR: VHSx0x card %d unable to read registers from addr 0x%0X!\n\n",
+						cardnum, VMEBaseAddr );
     	return -1;
     }
-    
-    printf("We found iseg VHSx0x at VME A16 0x%0X\n", VMEBaseAddr);
+	printf("We found iseg VHSx0x at VME A16 0x%0X\n", VMEBaseAddr);
 
     /* if( (SYSTEM_IS_BIG_ENDIAN && (moduleControl & 0x800)) || ((!SYSTEM_IS_BIG_ENDIAN) && (!(moduleControl & 0x800))) ) */
     if(1)
@@ -251,6 +270,15 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
     	errlogPrintf("The byte order of iseg VHSx0x does NOT match system's!\n");
     	return -1;
     }
+
+	if ( GetNumOfChan(placedChannels) == 0 || deviceClass != 0x14 )
+	{
+    	errlogPrintf( "\nERROR: iSeg VHSx0x card %d at VME A16 0x%0X is not working!\n",
+						cardnum, VMEBaseAddr );
+		errlogPrintf( "Raw number of channels = 0x%X\n", placedChannels );
+        errlogPrintf( "Raw device class = 0x%X\n\n",  deviceClass );
+    	return -1;
+	}
 
     /* register card */
     VHSx0x_cards[cardnum].lock = epicsMutexMustCreate();
@@ -274,9 +302,17 @@ int VHSx0xRegister(unsigned int cardnum, unsigned int VMEBaseAddr)
     return 0;
 }
 
+unsigned int	debugVHSx0x		= 0;
+
 int GetNumOfChan( UINT16	placedChannels )
 {
 	int	numChannels	= 0;
+	if ( placedChannels & 0x8000 )
+	{
+		if ( debugVHSx0x >= 1 )
+			fprintf( stderr, "GetNumOfChan: Invalid channel mask 0x%X\n", placedChannels );\
+		return 0;
+	}
 
 	switch ( placedChannels )
 	{

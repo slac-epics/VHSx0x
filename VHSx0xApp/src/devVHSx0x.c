@@ -257,6 +257,13 @@ static long init_ai(struct aiRecord * pai)
         return (S_db_badField);
     }
 
+	if ( VHSx0xGetNumOfCHs(cardnum) == 0 )
+	{
+		recGblRecordError(S_db_badField, (void *)pai, "devAiVHSx0x Init_record, card not working!");
+		pai->pact=TRUE;
+		return (S_db_badField);
+	}
+
     /* we don't check pai->inp.value.vmeio.signal here because it could be chnlnum or grpnum */
 
     if(0 != VHSx0x_Signal_Init((dbCommon *) pai, EPICS_RECTYPE_AI, pai->inp.value.vmeio.parm))

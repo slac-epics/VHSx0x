@@ -226,11 +226,11 @@ record(mbbiDirect, "$(CHAN):ChannelEventStatus")
 	field(SCAN, ".1 second")
 	field(DTYP, "VHSx0x")
 	field(INP, "#C$(CARD) S$(SIGNAL) @ChannelEventStatus")
-	field( FLNK, "$(CHAN):ChannelWasVoltageLimitExceeded" )
+	field( FLNK, "$(CHAN):ChannelsVoltageLimitExceeded" )
 }
 
 
-record(bo, "$(CHAN):ChannelWasVoltageLimitExceeded" )
+record(bo, "$(CHAN):ChannelIsVoltageLimitExceeded" )
 {
 	field( DESC, "Set when over HW V lim" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.BF NPP" )
@@ -239,10 +239,10 @@ record(bo, "$(CHAN):ChannelWasVoltageLimitExceeded" )
 	field( ONAM, "Over V!" )
 	field( ZSV,  "NO_ALARM")
 	field( OSV,  "MAJOR" )
-	field( FLNK, "$(CHAN):ChannelWasCurrentLimitExceeded" )
+	field( FLNK, "$(CHAN):ChannelIsCurrentLimitExceeded" )
 }
 
-record(bo, "$(CHAN):ChannelWasCurrentLimitExceeded" )
+record(bo, "$(CHAN):ChannelIsCurrentLimitExceeded" )
 {
 	field( DESC, "Set when over HW C lim" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.BE NPP" )
@@ -275,10 +275,10 @@ record(bo, "$(CHAN):ChannelWasExtInhibit" )
 	field( ONAM, "Ext Off!" )
 	field( ZSV,  "NO_ALARM")
 	field( OSV,  "MAJOR")
-	field( FLNK, "$(CHAN):ChannelWasVoltageBoundsExceeded" )
+	field( FLNK, "$(CHAN):ChannelIsVoltageBoundsExceeded" )
 }
 
-record(bo, "$(CHAN):ChannelWasVoltageBoundsExceeded" )
+record(bo, "$(CHAN):ChannelIsVoltageBoundsExceeded" )
 {
 	field( DESC, "Set when over V bounds" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.BB NPP" )
@@ -287,10 +287,10 @@ record(bo, "$(CHAN):ChannelWasVoltageBoundsExceeded" )
 	field( ONAM, "Over V!" )
 	field( ZSV,  "NO_ALARM")
 	field( OSV,  "MAJOR")
-	field(FLNK, "$(CHAN):ChannelWasCurrentBoundsExceeded" )
+	field(FLNK, "$(CHAN):ChannelIsCurrentBoundsExceeded" )
 }
 
-record(bo, "$(CHAN):ChannelWasCurrentBoundsExceeded" )
+record(bo, "$(CHAN):ChannelIsCurrentBoundsExceeded" )
 {
 	field( DESC, "Set when over V bounds" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.BA NPP" )
@@ -299,10 +299,10 @@ record(bo, "$(CHAN):ChannelWasCurrentBoundsExceeded" )
 	field( ONAM, "Over C!" )
 	field( ZSV,  "NO_ALARM")
 	field( OSV,  "MAJOR")
-	field(FLNK, "$(CHAN):ChannelWasVoltageControlled" )
+	field(FLNK, "$(CHAN):ChannelIsVoltageControlled" )
 }
 
-record(bo, "$(CHAN):ChannelWasVoltageControlled" )
+record(bo, "$(CHAN):ChannelIsVoltageControlled" )
 {
 	field( DESC, "Set when Channel in V Ctrl" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.B7 NPP" )
@@ -311,10 +311,10 @@ record(bo, "$(CHAN):ChannelWasVoltageControlled" )
 	field( ONAM, "V Ctrl" )
 	field( ZSV,  "NO_ALARM")
 	field( OSV,  "NO_ALARM")
-	field(FLNK, "$(CHAN):ChannelWasCurrentControlled" )
+	field(FLNK, "$(CHAN):ChannelIsCurrentControlled" )
 }
 
-record(bo, "$(CHAN):ChannelWasCurrentControlled" )
+record(bo, "$(CHAN):ChannelIsCurrentControlled" )
 {
 	field( DESC, "Set when Channel in C Ctrl" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.B6 NPP" )

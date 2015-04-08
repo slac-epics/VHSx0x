@@ -12,6 +12,24 @@
 #	RAMP_SPEED_HI	# Maximum ramp speed ( % range per sec, default = 20% )
 #	RAMP_SPEED_LO	# Minimum ramp speed ( % range per sec, default = 1%, >= 1mV/sec )
 
+# ModuleStatus bits
+#define VHSX0X_MODULE_STATUS_BIT_KILL_ENABLE      0x8000
+#define VHSX0X_MODULE_STATUS_BIT_TEMP_GOOD        0x4000
+#define VHSX0X_MODULE_STATUS_BIT_SUPPLY_GOOD      0x2000
+#define VHSX0X_MODULE_STATUS_BIT_MODULE_GOOD      0x1000
+#define VHSX0X_MODULE_STATUS_BIT_EVENT_ACTIVE     0x0800
+#define VHSX0X_MODULE_STATUS_BIT_SAFETY_LOOP_GOOD 0x0400
+#define VHSX0X_MODULE_STATUS_BIT_NO_RAMP          0x0200
+#define VHSX0X_MODULE_STATUS_BIT_NO_SUM_ERROR     0x0100
+#define VHSX0X_MODULE_STATUS_BIT_COMMAND_COMPLETE 0x0080
+#define VHSX0X_MODULE_STATUS_BIT_SPECIAL_MODE     0x0040
+#define VHSX0X_MODULE_STATUS_BIT_INPUT_ERROR      0x0020
+#define VHSX0X_MODULE_STATUS_BIT_SERVICE_NEEDED   0x0010
+#define VHSX0X_MODULE_STATUS_BIT_RESERVED         0x0008
+#define VHSX0X_MODULE_STATUS_BIT_IN_STOP_STATE    0x0004
+#define VHSX0X_MODULE_STATUS_BIT_INTERLOCK_OUTPUT 0x0002
+#define VHSX0X_MODULE_STATUS_BIT_FINE_ADJUSTMENT  0x0001
+
 record(mbbiDirect, "$(MODULE):ModuleStatus")
 {
   field(DESC, "Module Status")
@@ -21,11 +39,23 @@ record(mbbiDirect, "$(MODULE):ModuleStatus")
   field(FLNK, "$(MODULE):ModuleStatusFanout" )
 }
 
+record(bo, "$(MODULE):ModuleIsKilled" )
+{
+        field( DESC, "Module in Kill Status" )
+        field( DOL,  "$(CHAN):ChannelStatus.BE NPP" )
+        field( OMSL, "closed_loop" )
+        field( ZNAM, "OK" )
+        field( ONAM, "Killed" )
+        field( ZSV,  "NO_ALARM")
+        field( OSV,  "MAJOR")
+}
+
 record( fanout, "$(MODULE):ModuleStatusFanout" )
 {
 	field( LNK1,	"$(MODULE):ModuleIsOKCalc PP MS" )
 	field( LNK2,	"$(MODULE):ModuleTempOKCalc PP MS" )
 	field( LNK3,	"$(MODULE):SafetyLoopOKCalc PP MS" )
+	field( LNK4,	"$(MODULE):ModuleIsKilled PP MS" )
 }
 
 record(calcout, "$(MODULE):ModuleIsOKCalc" )

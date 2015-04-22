@@ -39,13 +39,13 @@ record(mbbiDirect, "$(MODULE):ModuleStatus")
   field(FLNK, "$(MODULE):ModuleStatusFanout" )
 }
 
-record(bo, "$(MODULE):ModuleIsKilled" )
+record(bo, "$(MODULE):ModuleKillEnable" )
 {
-        field( DESC, "Module in Kill Status" )
+        field( DESC, "Module Kill Enable Status" )
         field( DOL,  "$(CHAN):ChannelStatus.BE NPP" )
         field( OMSL, "closed_loop" )
-        field( ZNAM, "OK" )
-        field( ONAM, "Killed" )
+        field( ZNAM, "No Kill Enabled" )
+        field( ONAM, "Kill Enabled" )
         field( ZSV,  "NO_ALARM")
         field( OSV,  "MAJOR")
 }
@@ -55,7 +55,7 @@ record( fanout, "$(MODULE):ModuleStatusFanout" )
 	field( LNK1,	"$(MODULE):ModuleIsOKCalc PP MS" )
 	field( LNK2,	"$(MODULE):ModuleTempOKCalc PP MS" )
 	field( LNK3,	"$(MODULE):SafetyLoopOKCalc PP MS" )
-	field( LNK4,	"$(MODULE):ModuleIsKilled PP MS" )
+	field( LNK4,	"$(MODULE):ModuleKillEnable PP MS" )
 }
 
 record(calcout, "$(MODULE):ModuleIsOKCalc" )

@@ -42,7 +42,7 @@ record(mbbiDirect, "$(MODULE):ModuleStatus")
 record(bo, "$(MODULE):ModuleKillEnable" )
 {
         field( DESC, "Module Kill Enable Status" )
-        field( DOL,  "$(CHAN):ChannelStatus.BE NPP" )
+        field( DOL,  "$(MODULE):ModuleStatus.BE NPP" )
         field( OMSL, "closed_loop" )
         field( ZNAM, "No Kill Enabled" )
         field( ONAM, "Kill Enabled" )

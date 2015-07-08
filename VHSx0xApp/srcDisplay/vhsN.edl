@@ -3139,7 +3139,7 @@ w 92
 h 20
 controlPv "$(DEV):CH3:DESC"
 font "helvetica-medium-r-12.0"
-fontAlign "right"
+fontAlign "left"
 fgColor index 25
 bgColor index 0
 useDisplayBg
@@ -3161,7 +3161,7 @@ w 92
 h 20
 controlPv "$(DEV):CH2:DESC"
 font "helvetica-medium-r-12.0"
-fontAlign "right"
+fontAlign "left"
 fgColor index 25
 bgColor index 0
 useDisplayBg
@@ -3183,7 +3183,7 @@ w 92
 h 20
 controlPv "$(DEV):CH1:DESC"
 font "helvetica-medium-r-12.0"
-fontAlign "right"
+fontAlign "left"
 fgColor index 25
 bgColor index 0
 useDisplayBg
@@ -3205,7 +3205,7 @@ w 92
 h 20
 controlPv "$(DEV):CH0:DESC"
 font "helvetica-medium-r-12.0"
-fontAlign "right"
+fontAlign "left"
 fgColor index 25
 bgColor index 0
 useDisplayBg

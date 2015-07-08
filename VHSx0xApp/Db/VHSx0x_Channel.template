@@ -572,3 +572,7 @@ record( mbbi, "$(CHAN):STATUS" )
   field(UNSV, "INVALID")
 }
 
+record(stringin, "$(CHAN):DESC")
+{
+  field(VAL, "")
+}

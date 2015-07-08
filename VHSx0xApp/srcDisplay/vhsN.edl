@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 641
-y 75
-w 637
-h 615
+x 999
+y 174
+w 642
+h 658
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-medium-r-18.0"
 btnFont "helvetica-bold-r-14.0"
@@ -46,7 +46,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 8
 y 4
 w 132
@@ -65,7 +65,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 47
 w 77
@@ -83,7 +83,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 156
 y 47
@@ -99,7 +99,6 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -107,7 +106,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 72
 w 101
@@ -125,7 +124,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 208
 y 72
@@ -145,7 +144,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -153,7 +151,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 332
 y 124
 w 87
@@ -171,7 +169,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 532
 y 124
@@ -190,7 +188,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -198,7 +195,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 332
 y 100
 w 84
@@ -216,7 +213,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 480
 y 100
@@ -235,7 +232,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -243,7 +239,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 332
 y 72
 w 86
@@ -261,7 +257,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 480
 y 72
@@ -280,7 +276,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -288,7 +283,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 146
 w 80
@@ -306,7 +301,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 157
 y 146
@@ -325,7 +320,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -333,7 +327,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 122
 w 88
@@ -351,7 +345,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 157
 y 122
@@ -370,7 +364,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -378,7 +371,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 97
 w 85
@@ -396,7 +389,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 157
 y 97
@@ -415,7 +408,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -423,7 +415,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 169
 w 88
@@ -442,7 +434,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 332
 y 176
 w 142
@@ -460,7 +452,7 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 520
 y 180
@@ -485,7 +477,7 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 220
 y 194
@@ -511,7 +503,7 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 202
 y 224
@@ -538,7 +530,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 332
 y 148
 w 145
@@ -556,7 +548,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 488
 y 148
@@ -577,7 +569,6 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -585,7 +576,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 22
 y 197
 w 147
@@ -604,7 +595,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 23
 y 226
 w 63
@@ -623,9 +614,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 564
+y 592
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -642,9 +633,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 588
+y 616
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -661,9 +652,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 420
+y 448
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -680,9 +671,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 300
+y 328
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -699,9 +690,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 324
+y 352
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -718,9 +709,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 348
+y 376
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -737,9 +728,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 396
+y 424
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -756,9 +747,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 444
+y 472
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -775,9 +766,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 372
+y 400
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -794,9 +785,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 468
+y 496
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -813,9 +804,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 492
+y 520
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -832,9 +823,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 516
+y 544
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -851,9 +842,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 540
+y 568
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -869,10 +860,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 588
+x 168
+y 616
 w 92
 h 20
 controlPv "$(DEV):CH0:ChannelStatus"
@@ -888,17 +879,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 564
+x 168
+y 592
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageMax"
@@ -913,17 +903,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 540
+x 168
+y 568
 w 92
 h 20
 controlPv "$(DEV):CH0:Resistance"
@@ -939,17 +928,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 516
+x 168
+y 544
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentNominal"
@@ -965,17 +953,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 492
+x 168
+y 520
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentMeasure"
@@ -992,17 +979,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 468
+x 168
+y 496
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageNominal"
@@ -1018,17 +1004,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 372
+x 168
+y 400
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageMeasure"
@@ -1044,17 +1029,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 444
+x 168
+y 472
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentBounds"
@@ -1073,17 +1057,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 420
+x 168
+y 448
 w 92
 h 20
 controlPv "$(DEV):CH0:CurrentTrip"
@@ -1103,17 +1086,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 396
+x 168
+y 424
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageBounds"
@@ -1131,17 +1113,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 348
+x 168
+y 376
 w 92
 h 20
 controlPv "$(DEV):CH0:VoltageSet0"
@@ -1159,17 +1140,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
-x 156
-y 324
+x 168
+y 352
 w 92
 h 20
 fgColor index 29
@@ -1193,8 +1173,8 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 156
+release 0
+x 168
 y 252
 w 92
 h 20
@@ -1211,10 +1191,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 588
+x 288
+y 616
 w 92
 h 20
 controlPv "$(DEV):CH1:ChannelStatus"
@@ -1230,17 +1210,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 564
+x 288
+y 592
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageMax"
@@ -1255,17 +1234,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 540
+x 288
+y 568
 w 92
 h 20
 controlPv "$(DEV):CH1:Resistance"
@@ -1281,17 +1259,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 516
+x 288
+y 544
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentNominal"
@@ -1307,17 +1284,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 492
+x 288
+y 520
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentMeasure"
@@ -1334,17 +1310,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 468
+x 288
+y 496
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageNominal"
@@ -1360,17 +1335,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 372
+x 288
+y 400
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageMeasure"
@@ -1386,17 +1360,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 444
+x 288
+y 472
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentBounds"
@@ -1416,17 +1389,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 420
+x 288
+y 448
 w 92
 h 20
 controlPv "$(DEV):CH1:CurrentTrip"
@@ -1446,17 +1418,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 396
+x 288
+y 424
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageBounds"
@@ -1474,17 +1445,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 348
+x 288
+y 376
 w 92
 h 20
 controlPv "$(DEV):CH1:VoltageSet0"
@@ -1502,17 +1472,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
-x 280
-y 324
+x 288
+y 352
 w 92
 h 20
 fgColor index 29
@@ -1536,8 +1505,8 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 280
+release 0
+x 288
 y 252
 w 92
 h 20
@@ -1554,10 +1523,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 588
+y 616
 w 92
 h 20
 controlPv "$(DEV):CH2:ChannelStatus"
@@ -1573,17 +1542,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 564
+y 592
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageMax"
@@ -1598,17 +1566,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 540
+y 568
 w 92
 h 20
 controlPv "$(DEV):CH2:Resistance"
@@ -1624,17 +1591,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 516
+y 544
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentNominal"
@@ -1650,17 +1616,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 492
+y 520
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentMeasure"
@@ -1677,17 +1642,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 468
+y 496
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageNominal"
@@ -1703,17 +1667,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 372
+y 400
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageMeasure"
@@ -1729,17 +1692,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 444
+y 472
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentBounds"
@@ -1759,17 +1721,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 420
+y 448
 w 92
 h 20
 controlPv "$(DEV):CH2:CurrentTrip"
@@ -1789,17 +1750,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 396
+y 424
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageBounds"
@@ -1817,17 +1777,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 348
+y 376
 w 92
 h 20
 controlPv "$(DEV):CH2:VoltageSet0"
@@ -1845,17 +1804,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 404
-y 324
+y 352
 w 92
 h 20
 fgColor index 29
@@ -1879,7 +1837,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 404
 y 252
 w 92
@@ -1897,10 +1855,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 588
+y 616
 w 92
 h 20
 controlPv "$(DEV):CH3:ChannelStatus"
@@ -1916,17 +1874,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 560
+y 592
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageMax"
@@ -1941,17 +1898,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 536
+y 568
 w 92
 h 20
 controlPv "$(DEV):CH3:Resistance"
@@ -1967,17 +1923,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 512
+y 544
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentNominal"
@@ -1993,17 +1948,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 492
+y 520
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentMeasure"
@@ -2020,17 +1974,16 @@ smartRefresh
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 468
+y 496
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageNominal"
@@ -2046,17 +1999,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 372
+y 400
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageMeasure"
@@ -2072,17 +2024,16 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 444
+y 472
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentBounds"
@@ -2102,17 +2053,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 420
+y 448
 w 92
 h 20
 controlPv "$(DEV):CH3:CurrentTrip"
@@ -2132,17 +2082,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 396
+y 424
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageBounds"
@@ -2160,17 +2109,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 348
+y 376
 w 92
 h 20
 controlPv "$(DEV):CH3:VoltageSet0"
@@ -2188,17 +2136,16 @@ autoSelect
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 520
-y 324
+y 352
 w 92
 h 20
 fgColor index 29
@@ -2222,7 +2169,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 520
 y 252
 w 92
@@ -2240,7 +2187,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 4
+minor 2
 release 0
 x 444
 y 4
@@ -2289,7 +2236,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 4
+minor 2
 release 0
 x 372
 y 4
@@ -2316,7 +2263,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 156
 y 170
@@ -2341,7 +2288,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 221
 y 170
@@ -2367,7 +2314,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 548
 y 148
 w 51
@@ -2385,7 +2332,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 480
 y 124
@@ -2403,14 +2350,13 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 156
 y 72
@@ -2428,14 +2374,13 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 4
+minor 2
 release 0
 x 512
 y 4
@@ -2465,7 +2410,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 480
 y 228
@@ -2483,7 +2428,6 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -2491,7 +2435,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 332
 y 228
 w 87
@@ -2510,7 +2454,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 152
 y 4
 w 212
@@ -2529,10 +2473,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 280
-y 276
+x 288
+y 300
 w 90
 h 20
 controlPv "$(DEV):CH1:STATUS"
@@ -2547,7 +2491,6 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Group)
@@ -2556,8 +2499,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 280
-y 276
+x 288
+y 304
 w 90
 h 20
 
@@ -2568,9 +2511,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 280
-y 276
+release 0
+x 287
+y 301
 w 90
 h 20
 font "helvetica-bold-r-14.0"
@@ -2590,9 +2533,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 280
-y 276
+release 0
+x 287
+y 301
 w 90
 h 20
 font "helvetica-bold-r-14.0"
@@ -2612,9 +2555,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 280
-y 276
+release 0
+x 287
+y 301
 w 90
 h 20
 font "helvetica-bold-r-14.0"
@@ -2634,9 +2577,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 280
-y 276
+release 0
+x 287
+y 301
 w 90
 h 20
 font "helvetica-bold-r-14.0"
@@ -2659,10 +2602,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
-x 156
-y 276
+x 168
+y 300
 w 92
 h 20
 controlPv "$(DEV):CH0:STATUS"
@@ -2677,7 +2620,6 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Group)
@@ -2686,8 +2628,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 156
-y 276
+x 168
+y 300
 w 92
 h 20
 
@@ -2698,9 +2640,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 156
-y 276
+release 0
+x 167
+y 300
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2720,9 +2662,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 156
-y 276
+release 0
+x 167
+y 300
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2742,9 +2684,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 156
-y 276
+release 0
+x 167
+y 300
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2764,9 +2706,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 156
-y 276
+release 0
+x 167
+y 300
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2790,9 +2732,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 12
-y 276
+y 300
 w 140
 h 20
 font "helvetica-bold-r-14.0"
@@ -2808,10 +2750,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 404
-y 276
+y 300
 w 90
 h 20
 controlPv "$(DEV):CH2:STATUS"
@@ -2825,17 +2767,16 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 7
+minor 2
 release 0
 x 520
-y 276
+y 300
 w 90
 h 20
 controlPv "$(DEV):CH3:STATUS"
@@ -2849,7 +2790,6 @@ smartRefresh
 useHexPrefix
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Group)
@@ -2859,7 +2799,7 @@ major 4
 minor 0
 release 0
 x 404
-y 276
+y 304
 w 92
 h 20
 
@@ -2870,9 +2810,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 404
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2892,9 +2832,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 404
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2914,9 +2854,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 404
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2936,9 +2876,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 404
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2964,7 +2904,7 @@ major 4
 minor 0
 release 0
 x 520
-y 276
+y 304
 w 92
 h 20
 
@@ -2975,9 +2915,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 520
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -2997,9 +2937,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 520
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -3019,9 +2959,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 520
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -3041,9 +2981,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 520
-y 276
+y 302
 w 92
 h 20
 font "helvetica-bold-r-14.0"
@@ -3066,10 +3006,10 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
-x 280
-y 300
+x 288
+y 328
 w 92
 h 20
 fgColor index 25
@@ -3092,10 +3032,10 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
-x 156
-y 300
+x 168
+y 328
 w 92
 h 20
 fgColor index 25
@@ -3118,10 +3058,10 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 404
-y 300
+y 328
 w 92
 h 20
 fgColor index 25
@@ -3144,10 +3084,10 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 1
+minor 0
 release 0
 x 520
-y 300
+y 328
 w 92
 h 20
 fgColor index 25
@@ -3171,7 +3111,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 1
+release 0
 x 328
 y 192
 w 187
@@ -3185,5 +3125,112 @@ value {
   "module if there is a current trip condition."
 }
 autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 520
+y 276
+w 92
+h 20
+controlPv "$(DEV):CH3:DESC"
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+editable
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 404
+y 276
+w 92
+h 20
+controlPv "$(DEV):CH2:DESC"
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+editable
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 288
+y 276
+w 92
+h 20
+controlPv "$(DEV):CH1:DESC"
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+editable
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 168
+y 276
+w 92
+h 20
+controlPv "$(DEV):CH0:DESC"
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+editable
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 12
+y 276
+w 145
+h 20
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel Description"
+}
 endObjectProperties
 

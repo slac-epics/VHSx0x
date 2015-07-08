@@ -3,3 +3,4 @@ $(CHAN):CurrentBounds
 $(CHAN):CurrentTrip
 $(CHAN):VoltageBounds
 $(CHAN):VoltageSet0
+$(CHAN):DESC

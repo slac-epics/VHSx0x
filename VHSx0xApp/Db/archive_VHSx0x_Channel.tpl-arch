@@ -24,7 +24,7 @@ $(CHAN):ChannelIsVoltageControlled 10 monitor
 $(CHAN):ChannelIsVoltageLimitExceeded 10 monitor
 $(CHAN):CurrentBounds 10 monitor
 $(CHAN):CurrentMax 10 monitor
-$(CHAN):CurrentMeasure 0.2 monitor
+$(CHAN):CurrentMeasure 0.2
 $(CHAN):CurrentNominal 10 monitor
 $(CHAN):CurrentTrip 10 monitor
 $(CHAN):Resistance 10

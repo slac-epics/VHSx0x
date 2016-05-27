@@ -226,7 +226,7 @@ record(mbbiDirect, "$(CHAN):ChannelEventStatus")
 	field(SCAN, ".1 second")
 	field(DTYP, "VHSx0x")
 	field(INP, "#C$(CARD) S$(SIGNAL) @ChannelEventStatus")
-	field( FLNK, "$(CHAN):ChannelsVoltageLimitExceeded" )
+	field( FLNK, "$(CHAN):ChannelIsVoltageLimitExceeded" )
 }
 
 

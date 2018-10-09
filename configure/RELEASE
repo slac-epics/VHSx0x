@@ -1,32 +1,42 @@
-#RELEASE Location of external products
-# Run "gnumake clean uninstall install" in the application
-# top directory each time this file is changed.
-include $(TOP)/RELEASE_SITE
-TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+# RELEASE
+#
+# Read definitions of:
+#	EPICS_SITE_TOP
+#	BASE_MODULE_VERSION
+#	EPICS_MODULES 
+# from one of the following options
+-include $(TOP)/../../RELEASE_SITE
+-include $(TOP)/RELEASE_SITE
 
-# =============================================================
-# If you don't want to install into $(TOP) then
-# define INSTALL_LOCATION_APP here
-# =============================================================
-#INSTALL_LOCATION_APP=<fullpathname>
+# Check that EPICS_MODULES was defined in a RELEASE_SITE file
+-include $(TOP)/../../RELEASE_SITE.check
 
-# =============================================================
-# Define the top of the EPICS tree for your site.
-# We will build some tools/scripts that allow us to
-# change this easily when relocating software.
-# ==============================================================
-#EPICS_SITE_TOP=/nfs/slac/g/lcls/build/epics
+# ==========================================================
+# Define the version strings for all needed modules
+# Use naming pattern:
+#   FOO_MODULE_VERSION = R1.2
+# so scripts can extract version strings
+# Don't set your version to anything such as "test" that
+# could match a directory name.
+# ==========================================================
 
+# ==========================================================
+# External Support module path definitions
+#
+# If any of these macros expand to a path which
+# contains an "include" directory, that directory will be
+# included in the compiler include path.
+#
+# If any of these macros expand to a path which
+# contains a "lib/<arch>" directory, that directory will be
+# included in the compiler link path for that architecture.
+#
+# If your build fails, look for these paths in your build output
+# ==========================================================
 
-# ==============================================================
-# Define the cvs module version of EPICS BASE that you will use
-# =============================================================
-#BASE_MODULE_VERSION=base-R3-14-8-2-lcls6
+# Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
+EPICS_BASE = $(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 
-# =================================================================
-# Define EPICS_BASE
-# EPICS_BASE usually appears last so other apps can override stuff:
-# =================================================================
-EPICS_BASE=$(EPICS_SITE_TOP)/base/$(EPICS_BASE_VER)
+# Check for invalid or undefined EPICS_BASE
+-include $(TOP)/../../EPICS_BASE.check
 
-# End of script

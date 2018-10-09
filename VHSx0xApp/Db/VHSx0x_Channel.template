@@ -302,7 +302,7 @@ record(bo, "$(CHAN):ChannelIsCurrentBoundsExceeded" )
 	field(FLNK, "$(CHAN):ChannelIsVoltageControlled" )
 }
 
-record(bo, "$(CHAN):ChannelIsVoltageControlled" )
+record(bo, "$(CHAN):ChannelWasVoltageControlled" )
 {
 	field( DESC, "Set when Channel in V Ctrl" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.B7 NPP" )
@@ -311,10 +311,10 @@ record(bo, "$(CHAN):ChannelIsVoltageControlled" )
 	field( ONAM, "V Ctrl" )
 	field( ZSV,  "NO_ALARM")
 	field( OSV,  "NO_ALARM")
-	field(FLNK, "$(CHAN):ChannelIsCurrentControlled" )
+	field(FLNK, "$(CHAN):ChannelWasCurrentControlled" )
 }
 
-record(bo, "$(CHAN):ChannelIsCurrentControlled" )
+record(bo, "$(CHAN):ChannelWasCurrentControlled" )
 {
 	field( DESC, "Set when Channel in C Ctrl" )
 	field( DOL,  "$(CHAN):ChannelEventStatus.B6 NPP" )

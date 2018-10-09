@@ -18,6 +18,9 @@
 #
 #==============================================================
 #
+R2.2.4:		2018-10-03
+	Update to git workflow
+
 VHSx0x-R2-2-3:    Fix bug in VHSx0xClearEvent() that used status bits variable instead of mask. (06/18/2013)
 
 VHSx0x-R2-2-2:    Fix bug in VHSx0xClearEvent() that used placedChannels bitmask instead of number to iterate. (05/01/2012)

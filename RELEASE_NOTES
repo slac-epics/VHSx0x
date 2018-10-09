@@ -1,6 +1,44 @@
-VHSx0x-R1-3-1:
-Cosmetic changes to comply with EPICS 3.14.9 at LCLS
+#==============================================================
+#
+#  Name: RELEASE
+#
+#  Rem: This files describes release notes for
+#       the iseg VHS0x0 driver and device support.      
+#
+#  Auth: 29-Aug-2007, Sheng Peng         (PENGS)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
+#--------------------------------------------------------------
+#  Mod:
+#        18-Jun-2013, G. Brown            (GWBROWN)
+#          release VHSx0x-R2-2-3
+#        20-Mar-2010, S. Hoobler          (SONYA)
+#          release VHSx0x-R2-2-0
+#        29-Apr-2009, K. Luchini          (LUCHINI)
+#          release VHSx0x-R2-0-0
+#
+#==============================================================
+#
+R2.2.4:		2018-10-03
+	Update to git workflow
 
+VHSx0x-R2-2-3:    Fix bug in VHSx0xClearEvent() that used status bits variable instead of mask. (06/18/2013)
+
+VHSx0x-R2-2-2:    Fix bug in VHSx0xClearEvent() that used placedChannels bitmask instead of number to iterate. (05/01/2012)
+
+VHSx0x-R2-2-1:    Use $EPICS_BASE_VER macro in configure/RELEASE
+01/19/2012        Build with base-R3-14-12
+
+VHSx0x-R2-2-0:    Build with base-R3-14-8-2-lcls6
+                  Build with rtems-4.9.4
+
+VHSx0x-R2-1-0:    Build with base-R3-14-8-2-lcls5
+                  Build with rtems-4.9.3
+
+VHSx0x-R2-0-0:
+Build with rtems-4.9.1 and base-r3-14-8-2-lcls3
+
+VHSx0x-R1-3-1: 
+Cosmetic changes to comply with EPICS 3.14.9 at LCLS
 
 VHSx0x-R1-3:
 Merge RELEASE_NOTE into Release
@@ -21,4 +59,5 @@ the LCLS convention for cvs tags.
 
 R1-0:
 The first release of ISEG VHS x0x driver and device support
+
 

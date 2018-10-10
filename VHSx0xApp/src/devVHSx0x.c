@@ -272,7 +272,7 @@ static long init_ai(struct aiRecord * pai)
     {
     case VHSX0X_REGTYPE_CHANNEL:
         chnlnum = pai->inp.value.vmeio.signal;
-        if ( chnlnum < 0 || chnlnum >= VHSx0xGetNumOfCHs(cardnum) )
+        if(chnlnum < 0 || chnlnum >= VHSx0xGetNumOfCHs(cardnum))
         {
             recGblRecordError(S_db_badField, (void *)pai, "devAiVHSx0x Init_record, bad signal");
             pai->pact=TRUE;

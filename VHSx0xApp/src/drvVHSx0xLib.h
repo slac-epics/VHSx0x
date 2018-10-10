@@ -1,5 +1,4 @@
 /***************************************************************************\
- *   $Id: drvVHSx0xLib.h,v 1.1.1.1 2007/03/26 05:38:30 peng Exp $
  *   File:		drvVHSx0xLib.h
  *   Author:		Sheng Peng
  *   Email:		pengsh2003@yahoo.com

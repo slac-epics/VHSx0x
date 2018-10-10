@@ -18,7 +18,14 @@
 #
 #==============================================================
 #
-R2.2.4:		2018-10-03
+R2.3.0:		2018-10-10	Bruce Hill
+	Merged in features from pcds-master.
+		Breakout records for ChannelStatus and ChannelEventStatus registers.
+		archive and autosave templates
+		Support for 2 channel VHS modules
+		Misc diag and error msg improvments
+
+R2.2.4:		2018-10-03	Bruce Hill
 	Update to git workflow
 
 VHSx0x-R2-2-3:    Fix bug in VHSx0xClearEvent() that used status bits variable instead of mask. (06/18/2013)

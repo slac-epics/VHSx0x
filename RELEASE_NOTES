@@ -18,6 +18,11 @@
 #
 #==============================================================
 #
+R2.3.0-1.0.0:	2018-10-10 Bruce Hill
+	Merged in LCLS screens from slac-master
+	Remove redundant status bit breakout records.
+	Whitespace and remove old CVS expansions
+
 R2.2.4-1.0.0:	2018-10-08 Bruce Hill
 	Merge branch 'slac-master' into pcds-master
 	Moved pcds screens to opi/edl to make room for lcls screens during merge.

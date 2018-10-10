@@ -1,30 +1,23 @@
 # VHSx0x iSeg HV Module archive PV list
 $(CHAN):ChannelControlEMCY 10 monitor
 $(CHAN):ChannelControlOnOff 1 monitor
-$(CHAN):ChannelCurrentBoundsExceeded 10 monitor
-$(CHAN):ChannelEmergency 10 monitor
-$(CHAN):ChannelHWCurrentLimit 10 monitor
-$(CHAN):ChannelHWVoltageLimit 10 monitor
+$(CHAN):ChannelIsCurrentControlled
 $(CHAN):ChannelIsEmergency 10 monitor
-$(CHAN):ChannelIsExtInhibit 10 monitor
 $(CHAN):ChannelIsOn 1 monitor
-$(CHAN):ChannelIsTripped 10 monitor
-$(CHAN):ChannelIsCurrentControlled 1
 $(CHAN):ChannelIsVoltageControlled 1
-$(CHAN):ChannelRamping 1
+$(CHAN):ChannelIsRamping 1
 $(CHAN):ChannelStatus 1
-$(CHAN):ChannelVoltageBoundsExceeded 10 monitor
-$(CHAN):ChannelIsCurrentBoundsExceeded 10 monitor
-$(CHAN):ChannelIsCurrentControlled 10 monitor
-$(CHAN):ChannelIsCurrentLimitExceeded 10 monitor
+$(CHAN):ChannelWasCurrentBoundsExceeded 10 monitor
+$(CHAN):ChannelWasCurrentControlled 10 monitor
+$(CHAN):ChannelWasCurrentLimitExceeded 10 monitor
 $(CHAN):ChannelWasExtInhibit 10 monitor
 $(CHAN):ChannelWasTripped 10 monitor
-$(CHAN):ChannelIsVoltageBoundsExceeded 10 monitor
-$(CHAN):ChannelIsVoltageControlled 10 monitor
-$(CHAN):ChannelIsVoltageLimitExceeded 10 monitor
+$(CHAN):ChannelWasVoltageBoundsExceeded 10 monitor
+$(CHAN):ChannelWasVoltageControlled 10 monitor
+$(CHAN):ChannelWasVoltageLimitExceeded 10 monitor
 $(CHAN):CurrentBounds 10 monitor
 $(CHAN):CurrentMax 10 monitor
-$(CHAN):CurrentMeasure 0.2
+$(CHAN):CurrentMeasure 0.2 monitor
 $(CHAN):CurrentNominal 10 monitor
 $(CHAN):CurrentTrip 10 monitor
 $(CHAN):Resistance 10

@@ -4,6 +4,8 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 #=============================
+#USR_CFLAGS += -DUSE_TYPED_RSET -DUSE_TYPED_DSET -DUSE_TYPED_DRVET
+USR_CFLAGS += -DUSE_TYPED_RSET
 #==================================================
 # The following will built and instaled:
 # dbd/VHSx0x.dbd

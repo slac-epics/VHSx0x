@@ -18,6 +18,10 @@
 #
 #==============================================================
 #
+R2.3.0:         2019-10-20      Kukhee Kim
+                - force tagging
+                - fix EPICS_VERSION checking in the source code
+
 R2.3.0:		2018-10-10	Bruce Hill
 	Merged in features from pcds-master.
 		Breakout records for ChannelStatus and ChannelEventStatus registers.

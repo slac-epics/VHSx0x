@@ -13,7 +13,7 @@
 #include "string.h"
 
 #include <epicsVersion.h>
-#if EPICS_VERSION>=3 && EPICS_REVISION>=14
+#if (EPICS_VERSION==3 && EPICS_REVISION>=14) || EPICS_VERSION > 3
 #include <epicsExport.h>
 #include <alarm.h>
 #include <dbCommon.h>
@@ -226,7 +226,7 @@ VHSX0X_DEV_SUP_SET devMbbiDVHSx0x=   {6, NULL, NULL, init_mbbid,  NULL, read_mbb
 
 VHSX0X_DEV_SUP_SET devSiVHSx0x=   {6, NULL, NULL, init_si,  NULL, read_si, NULL};
 
-#if     EPICS_VERSION>=3 && EPICS_REVISION>=14
+#if (EPICS_VERSION==3 && EPICS_REVISION>=14) || EPICS_VERSION > 3
 epicsExportAddress(dset, devAiVHSx0x);
 epicsExportAddress(dset, devAoVHSx0x);
 epicsExportAddress(dset, devBoVHSx0x);

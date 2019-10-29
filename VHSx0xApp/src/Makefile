@@ -32,6 +32,7 @@ DBD += VHSx0x.dbd
 # Add locally compiled object code
 VHSx0x_SRCS += drvVHSx0x.c
 VHSx0x_SRCS += devVHSx0x.c
+VHSx0x_SRCS += interlock.cpp
 
 # The following builds sncExample as a component of VHSx0x
 # Also in VHSx0xInclude.dbd uncomment #registrar(sncExampleRegistrar)

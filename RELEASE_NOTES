@@ -18,6 +18,9 @@
 #
 #==============================================================
 #
+R2.3.0          2019-10-29      Kukhee Kim
+                - add interlock.cpp in src/Makefile
+
 R2.3.0:         2019-10-20      Kukhee Kim
                 - force tagging
                 - fix EPICS_VERSION checking in the source code

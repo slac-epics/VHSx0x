@@ -23,7 +23,9 @@
 
 using namespace		std;
 
+extern "C" {
 int		dbgVHSx0xInterlock	= 0;
+} // extern C
 
 typedef struct	InterlockData
 {
